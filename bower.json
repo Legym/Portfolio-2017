@@ -1,0 +1,22 @@
+{
+  "name": "mygelb",
+  "description": "Everything needed for basic website",
+  "main": "gulpfile.js",
+  "authors": [
+    "Mygel <mbergstresser@redventures.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.3.1",
+    "font-awesome": "^4.7.0",
+    "slick-carousel": "^1.6.0",
+    "jQuery.mmenu": "mmenu#^6.0.0"
+  }
+}

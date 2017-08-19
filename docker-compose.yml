@@ -1,0 +1,15 @@
+version: '3'
+services:
+    apache:
+        image: "httpd:2.4-alpine"
+        ports:
+            - "80:80"
+        volumes:
+            - $PWD/www/public:/usr/local/apache2/htdocs
+            - $PWD/apache/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    hugo:
+        build: .
+        image: hugo-image
+        volumes:
+            - $PWD/www:/usr/local/apache2/htdocs
+        command: /bin/ash -c "cd /usr/local/apache2/htdocs/ && hugo -w"
