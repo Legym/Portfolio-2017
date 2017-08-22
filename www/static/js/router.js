@@ -1,11 +1,11 @@
  /*
  *
- * PAGE SETUP 
+ * PAGE SETUP
  * ----------
- * 
+ *
  * 	DOM-based Routing
  * 	Based on http://goo.gl/EUTi53 by Paul Irish
- *	
+ *
  * 	NOTE: Only fires on body classes that match. If a body class contains a dash,
  * 	replace the dash with an underscore when adding it to the object below.
  *
@@ -26,9 +26,9 @@
 	};
 
 	/**
-	 * SITE ROUTER 
+	 * SITE ROUTER
 	 * ----------
-	 * 
+	 *
 	 * 	The routing fires all common scripts, followed by the page specific scripts.
 	 * 	Add additional events for more control over timing e.g. a finalize event
 	 */
@@ -50,5 +50,5 @@
 	};
 
 	$(document).ready(UTIL.loadEvents);
- 
+
 })(jQuery); // Fully reference jQuery after this point.
