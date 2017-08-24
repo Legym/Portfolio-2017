@@ -41,18 +41,17 @@ gulp.task('lint', function() {
 // Compile Our Sass
 gulp.task('sass', function() {
     gulp.src([
-        // './node_modules/jquery.mmenu/dist/css/',
-        // './node_modules/slick-carousel/slick/', // Work on this?
-        './node_modules/foundation-sites/assets/foundation.scss',
         './www/static/scss/*.scss',
         ])
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass(
         {
             includePaths: [
-                // './node_modules/foundation-sites/scss/',
-                // './node_modules/font-awesome/scss/',
-                // './node_modules/jquery-fancybox/source/scss/'
+                './node_modules/foundation-sites/scss/',
+                './node_modules/font-awesome/scss/',
+                './node_modules/jquery-fancybox/source/scss/',
+                './node_modules/jquery.mmenu/dist/css/',
+                './node_modules/slick-carousel/slick/'
             ]
         }))
         .pipe(autoprefixer({
@@ -69,12 +68,12 @@ gulp.task('sass', function() {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     gulp.src([
-        // './node_modules/jquery.mmenu/dist/js/jquery.mmenu.all.min.js',
-        './node_modules/foundation-sites/dist/js/foundation.js',
-        // './node_modules/slick-carousel/slick/slick.min.js',
-        // './node_modules/jquery-fancybox/source/js/jquery.fancybox.pack.js',
-        // './node_modules/dist/jquery.matchHeight-min.js',
-        // './www/static/js/vendor/parallax.min.js',
+        './node_modules/jquery.mmenu/dist/js/jquery.mmenu.all.min.js',
+        './node_modules/foundation-sites/dist/foundation.js',
+        './node_modules/slick-carousel/slick/slick.min.js',
+        './node_modules/jquery-fancybox/source/js/jquery.fancybox.pack.js',
+        './node_modules/dist/jquery.matchHeight-min.js',
+        './www/static/js/vendor/parallax.min.js',
         './www/static/js/base.js',
         './www/static/js/router.js'
     ])
