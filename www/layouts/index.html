@@ -1,14 +1,249 @@
 {{ partial "header" . }}
 
-	<main>
-		<div class="row">
-			<div class="medium-2 columns">2 columns</div>
-			<div class="medium-10 columns">10 columns</div>
-		</div>
-		<div class="row">
-			<div class="medium-3 columns">3 columns</div>
-			<div class="medium-9 columns">9 columns</div>
-		</div>
-	</main>
+
+<div class="homepage-slideshow">
+    @foreach (var item in items) {
+        var bannerId = Umbraco.Media(item.GetPropertyValue("Image"));
+        var bannerUrl = bannerId.Url;
+
+        <div class="slide-masthead" style="background-image:url('@bannerUrl'); background-size: cover;">
+            <div class="slide-text">
+                @item.GetPropertyValue("title")
+            </div>
+        </div>
+    }
+</div>
+
+<section class="homepage-tech">
+    <div class="row">
+        <div class="small-12 columns">
+            <div class="tech-container">
+                <h2>
+                    Looking for a web developer to <br />
+                     build your product?<br />
+                </h2>
+
+                <p>Wire framing, prototyping, and developing websites is intricate. Having worked at an award winning web agency, Mygel has the skills necessary to build quality websites from the ground up.</p>
+
+                <a class="btn btn-inverse" style="margin: 0" href="/about/">Learn More</a>
+            </div>
+
+            <img src="~/graphics/homepage/main-image.png" alt="Mygelb - Front End developer"/>
+        </div>
+
+    </div>
+</section>
+
+<section class="homepage-message">
+    <div class="parallax-wrapper">
+        <span data-bg="../graphics/homepage/office.jpg" class="hidden"></span>
+        <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
+            <div class="row">
+                <div class="large-8 large-offset-2 columns centered height">
+                    <div class="message-title">
+                        <h2>A large variety of technologies</h2>
+                        <h4>Looking to see what type of services that I can work with?</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <article>
+                    <div class="large-3 small-6 columns service">
+                        <div class="service-style height">
+                            <i class="fa fa-laptop" aria-hidden="true"></i>
+                            <h5>Website Design</h5>
+                            <p>Wire framing websites with Adobe Photoshop or Illustrator is a crucial tool for prototyping a finished product.</p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="large-3 small-6 columns service">
+                        <div class="service-style height">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                            <h5>Website Development</h5>
+                            <p>Delivering clean, organize, and optimize code allows for other developers to reuse and build on a pre existing codebase. </p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="large-3 small-6 columns service">
+                        <div class="service-style height">
+                            <i class="fa fa-mobile" aria-hidden="true"></i>
+                            <h5>Responsive Design</h5>
+                            <p>More and more web browsing is occurring on mobile devices and building websites to fit on any screen is a must.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="large-3 small-6 columns service">
+                        <div class="service-style height">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <h5>Search Engine Optimization</h5>
+                            <p>Ranking a website on Google's search page is important; Knowing best practices helps increase your site's web presence.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+
+            <div class="row">
+                <article>
+                    <div class="large-3 small-6 columns service">
+                        <div class="service-style height">
+                            <i class="fa fa-sitemap" aria-hidden="true"></i>
+                            <h5>Single Page Applications</h5>
+                            <p>More users want websites that are more dynamic and interactive. Angular and React are perfect tools to build data-driven websites.</p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="large-3 small-6 columns service">
+                        <div class="service-style height">
+                            <i class="fa fa-share-square-o" aria-hidden="true"></i>
+                            <h5>Traditional Websites</h5>
+                            <p>Not everyone needs an application and would rather just want to a normal website about their company or idea.</p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="large-3 small-6 columns service">
+                        <div class="service-style height">
+                            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                            <h5>Content Management Systems</h5>
+                            <p>Working with a CMS can be tricky. Setting up Wordpress, Umbraco, and 3rd party systems is handy to know.</p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="large-3 small-6 columns service">
+                        <div class="service-style height">
+                            <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                            <h5>eCommerce Sites</h5>
+                            <p>Buying and selling products online can be complicated and confusing. Experience with shopify and woocommerce has proven beneficial.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="large-12 columns">
+                    <a class="btn btn-inverse" href="/about/#experience">
+                        View More
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Work -->
+<section id="solutions">
+    <div class="row">
+        <div class="small-12 columns">
+            <h2>Latest Work</h2>
+            <a class="solutions-button btn btn-inverse" href="/portfolio">View Projects</a>
+        </div>
+    </div>
+
+    <div id="slider-wrapper">
+        <div id="static-loader-wrapper">
+            <div id="loader"></div>
+        </div>
+
+        <!-- Image Slider -->
+        <div id="slider-imgs" class="homepage-static-slider">
+
+            @{foreach (var project in node.Children.Where("Visible"))
+                {
+                    var projectId = Umbraco.Media(project.GetPropertyValue("projectImage"));
+                    var bannerUrl = projectId.Url;
+
+                    <div class="slide slide-@(projectimage++) inactive">
+                        <img class="lazy" data-lazy="@bannerUrl" alt="@project.Name">
+                    </div>
+                }
+            }
+        </div>
+
+        <!-- Info container -->
+        <div id="slider-info">
+            <div class="slider-wrap">
+                @{foreach (var project in node.Children.Where("Visible"))
+                    {
+                        <div class="info-item item-@(projectmetadata++) animate-out" style="display: none;">
+                            <div class="info-wrap">
+                                <h4>@project.Name</h4>
+                                <div class="hp-slide-caption">@project.Caption</div>
+                            </div>
+                        </div>
+                    }
+                }
+
+                <a id="slider-prev" class="slider-nav" href="#"></a>
+                <a id="slider-next" class="slider-nav" href="#"></a>
+            </div>
+        </div>
+
+        <a class="solutions-button solution-button-bottom btn btn-inverse" href="/portfolio">View Projects</a>
+
+    </div>
+</section>
+
+<section id="explore">
+    <div class="parallax-wrapper">
+        <span data-bg="../graphics/homepage/blog-background.jpg" class="hidden"></span>
+        <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
+
+            <h2>From my blog</h2>
+
+            <div class="row">
+
+                @{foreach (var project in blogNode.Children.Where("Visible").Take(4))
+                    {
+                        var projectId = Umbraco.Media(project.GetPropertyValue("smartBlogImage"));
+                        var bannerUrl = projectId.Url;
+
+                        <div class="medium-6 large-3 columns">
+                            <div class="item">
+
+
+                                @if (project.GetPropertyValue<bool>("disableEnable"))
+                                {
+                                    <div class="disableblog">
+                                        <div class="content" style="background-image: url(@bannerUrl)">
+                                            <h3>@project.Name</h3>
+                                        </div>
+                                        <p class="link">COMING SOON</p>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <a href="@project.Url">
+                                        <div class="content" style="background-image: url(@bannerUrl)">
+                                            <h3>@project.Name</h3>
+
+                                        </div>
+                                        <p class="link">Read More</p>
+                                    </a>
+                                }
+
+
+                            </div>
+                        </div>
+                    }
+                }
+
+                <div class="small-12 columns">
+                    <a class="btn btn-inverse" href="/blog/">View Blog Posts</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+@Html.Partial("Contact")
+
 
 {{ partial "footer" . }}

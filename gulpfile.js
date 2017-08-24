@@ -25,7 +25,7 @@ gulp.task('pip-fonts', function () {
 // Checks for errors
 var onError = function (err) {
     notify.onError({
-        title: "Gulp error in " + err.plugin,
+        title: 'Gulp error in " + err.plugin',
         message: err.toString()
     })(err);
     this.emit('end');
@@ -72,7 +72,7 @@ gulp.task('scripts', function() {
         './node_modules/foundation-sites/dist/foundation.js',
         './node_modules/slick-carousel/slick/slick.min.js',
         './node_modules/jquery-fancybox/source/js/jquery.fancybox.pack.js',
-        './node_modules/dist/jquery.matchHeight-min.js',
+        './node_modules/jquery-match-height/dist/jquery.matchHeight-min.js',
         './www/static/js/vendor/parallax.min.js',
         './www/static/js/base.js',
         './www/static/js/router.js'

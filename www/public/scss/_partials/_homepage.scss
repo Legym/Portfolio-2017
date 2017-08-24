@@ -1,0 +1,757 @@
+﻿.subpage-homepage {
+
+    .slide-masthead {
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .slick-track {
+        height: 100%;
+    }
+
+    .slick-list {
+        height: 100% !important;
+    }
+
+    /* OVerides Slickjs*/
+    .slick-prev,
+    .slick-next {
+        font-size: 0;
+        position: absolute;
+        bottom: 20px;
+        color: #52504e;
+        border: 0;
+        background: none;
+        background-color: rgba(253, 250, 246, .65);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 32%;
+        height: 4.125rem;
+        margin-top: -2.5625rem;
+        width: 2rem;
+        z-index: 1;
+        bottom: 44%;
+
+        @include breakpoint(medium) {
+            width: 3.8125rem;
+            height: 5.125rem;
+            bottom: 40%;
+        }
+
+        @include breakpoint(medium) {
+            width: 3.8125rem;
+            height: 5.125rem;
+            bottom: 50%;
+        }
+    }
+
+    .slick-prev:after {
+	    content: "\f104";
+        font: 40px/1 'FontAwesome';
+    }
+
+    .slick-next:after {
+	       content: "\f105";
+         font: 40px/1 'FontAwesome';
+    }
+
+    .slide-text {
+        position: absolute;
+        top: 35%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+
+        h2 {
+            color: white;
+            font-size: 40px;
+            background-color: #07a1f2;
+            padding: 0.5% 1.1% 0.6%;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            width: 70%;
+            margin: 0 auto;
+
+            @include breakpoint(medium) {
+                font-size: 60px;
+                width: 70%;
+                
+            }
+
+            @include breakpoint(large) {
+               font-size: 120px; 
+               width: 70%;
+               max-width: 625px;
+            }
+        }
+
+        h1 {
+            text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            background-color: rgba(255,255,255,0.5);
+            color: #111;
+            margin: 0 -0.1em;
+            padding: 0.5% 1.1% 0.6%;
+            font-size: 40px;
+            text-transform: uppercase;
+            width: 68%;
+            margin: 0 auto;
+            
+            @include breakpoint(medium) {
+                font-size: 60px;
+                width: 65%;
+            }
+
+            @include breakpoint(large) {
+                font-size: 75px;
+                width: 45%;
+                max-width: 575px;
+            }
+        }
+    }
+
+    .homepage-tech {
+
+        .tech-container {
+            margin-top: 45px;
+            text-align: center;
+
+            @include breakpoint(large) {
+                width: 45%;
+                display: inline-block;
+                margin-top: 100px;
+                margin-bottom: 65px;
+                text-align: left;
+
+            }
+
+            h2 {
+                text-transform: uppercase;
+                font-size: 1.5em;
+
+                @include breakpoint(large) {
+                    font-size: 2.5em;
+                }
+            }
+
+            p {                
+
+                @include breakpoint(large) {
+                    width: 80%;
+                }
+            }
+        }
+        
+        img {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            top: 45px;
+            border: 2px solid white;
+
+            @include breakpoint(large) {
+                width: 55%;
+                display: inline-block;
+                margin-left: -5px;
+                top: 100px;
+                height: 460px;
+                vertical-align: top;
+            }
+
+        }
+    }
+
+    .homepage-message {
+        
+        .parallax-window {
+            padding-bottom: 100px;
+
+            @include breakpoint(medium) {
+                padding-bottom: 60px;
+            }
+        }
+
+        .parallax-content {
+            padding-top: 150px;
+            height: 300px;
+        }
+
+        .message-title {
+            margin: 100px 0 40px 0;
+            text-align: center;
+           
+
+            h2 {
+                color: #111;
+                font-size: 1.5em;
+
+                @include breakpoint(medium) {
+                    font-size: 2.4em;
+                }
+            }
+
+            h4 {
+                color: #111;
+            }
+
+            p {
+                color: #111;
+                display: none;
+
+                @include breakpoint(medium) {
+                    display: block;
+                }
+            }
+        }
+
+        .service {
+            text-align: center;
+            
+            .service-style {
+                box-shadow: 0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084);
+                background-color: white;
+                padding: 20px 10px 16px;
+                margin-bottom: 40px;
+            }
+            
+            .fa {
+                color: rgba(255,255,255,0.5);
+                font-size: 2.4em;
+                color: $primary-color;
+            }
+            
+            h5 {
+                color: #111;
+                text-shadow: 7px 3px 4px #d4d4d4;
+                font-size: 1.2em;
+                margin-top: 15px;
+                margin-bottom: 5px;
+            }
+
+            p {
+                display: none;
+
+                @include breakpoint(medium) {
+                    display: block;
+                    color: #111;
+                }
+            }
+        }
+
+        .btn {
+            margin: 0 auto;
+            display: block;
+            background-color: white;
+        }
+    }
+
+    #solutions {
+	    position: relative;
+        /*padding: 80px 0;*/
+        text-align: center;
+        /*min-height: 550px;*/
+        background-color: white;
+        min-height: 815px;
+
+        @include breakpoint(medium) { 
+            padding: 80px 0 0 0;
+            min-height: 715px;
+        }
+
+        @include breakpoint(large) {
+            min-height: 0;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-top: 40px;
+            
+
+	        @include breakpoint(medium) { 
+		        text-align: left;
+                float: left;
+                margin-top: 0;
+	        }
+        }
+
+        .solutions-button {
+            margin: 0;
+            display: none;
+
+	        @include breakpoint(medium) { 
+                float: right;
+                display: block;
+	        }
+        }
+
+        .solution-button-bottom {
+            display: block;
+            margin: 0 auto;
+            margin-top: 40px;        
+        
+	        @include breakpoint(medium) { 
+                display: none;
+	        }
+
+        }
+
+	    .wrapper {
+		    text-align: center;
+
+		    @include breakpoint(medium) { 
+                text-align: left; 
+		    }
+
+		    h3 {
+			    @include breakpoint(medium) { 
+                    margin-left: 5%; 
+			    }
+		    }
+	    }
+
+        #slider-wrapper {
+	        margin: 40px 15px 10px;
+	        /*max-height: 340px;*/
+	        overflow: hidden;
+	        position: relative;
+            height: 600px;
+
+	        @include breakpoint(medium) { 
+                /*margin: 60px 0;*/
+                height: 300px;
+	        } 
+
+	        &.slick-initialized { 
+		        max-height: none; 
+		        overflow: visible; 
+	        }
+	        // Frontpage Only
+	        .frontpage & {
+		        margin: 25px 15px 10px;
+		        @include breakpoint(medium) { margin: 35px 0 10px; } 
+	        }
+        }
+
+        #slider-imgs {
+	        margin-bottom: -1px;
+
+	        .slide { 
+		        padding: 0; 
+		        position: relative;
+		        transition: opacity 0.4s ease-in;
+		        width: 50%;
+
+		        @include breakpoint(medium) { 
+                    padding: 0 10px;
+                    height: 227px; 
+		        }
+
+		        @include breakpoint(large) { 
+                    width: 360px; 
+		        }
+
+		        &.inactive { opacity: 0.4; }
+		        &.active { opacity: 1; }
+		        img { 
+                    width: 100%;
+                    max-height: 300px;
+                    max-width: 400px;
+                    margin: 0 auto;
+		        }
+	        }
+        }
+
+        #slider-info {
+	        background-color: rgba(0, 0, 0, 0.65);
+            min-height: 260px;
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+
+	        @include breakpoint(medium) {
+		        @include abs-pos ($top: 75.7%, $right: 0%, $bottom: auto, $left: 0);
+		        min-height: 100%;
+		        width: 64.5%;
+		        z-index: 50;
+                min-height: 227px;
+	        }
+
+	        @include breakpoint(large) {
+		        @include abs-pos ($top: 0, $right: auto, $bottom: auto, $left: 50%);
+                margin-right: 10px;
+		        min-height: 228px;
+		        margin-left: -530px;
+		        width: 340px;
+	        }
+
+	        .info-item {
+		        opacity: 0;
+		        padding: 15px 30px;
+		        text-align: center;
+		        transition: opacity 0.2s ease-in;
+
+		        @include breakpoint(medium) { 
+			        position: relative;
+			        top: 20px;
+			        text-align: left; 
+			        transition: opacity 0.3s ease-in, top 0.3s ease-in-out;
+		        }
+
+		        &.animate {
+			        opacity: 1;
+			        top: 0;
+		        }
+		        &.animate-out {
+			        opacity: 0!important;
+			        top: -20px;
+			        transition: opacity 0.3s ease-in, top 0.4s ease-in-out;
+		        }
+		        h4 { 
+			        color: $primary-color; 
+			        font-size: 30px;
+			        line-height: normal;
+			        margin: 10px 0;
+		        }
+		        a,
+		        .btn,
+		        .btn-primary {
+			        margin: 0!important;
+			        text-align: center;
+			        @include breakpoint(medium) { text-align: left; }
+		        }
+		        p { line-height: 1.5em; }
+		        .bio {
+			        p {
+				        &:before,
+				        &:after { content: '"'; }
+			        }
+		        }
+		        .info-wrap {
+			        span {
+				        font-weight: 700;
+			        }
+		        }
+	        }
+
+            .hp-slide-caption {
+                color: white;
+            }
+        }
+
+        .slider-nav {
+	        background-color: $primary-color;
+	        display: block;
+	        height: 58px;
+	        width: 40px;
+	        z-index: 501;
+	        @include breakpoint(medium) { width: 58px;}
+        }
+
+        #slider-next {
+	        @include abs-pos ($top: auto, $right: auto, $bottom: 40%, $left: -15px);
+            background: url(/graphics/slide-arrow-left.png) no-repeat center top;
+	        
+	        margin-top: -27px;
+	        @include breakpoint(medium) {
+		        @include abs-pos ($top: 50%, $right: auto, $bottom: auto, $left: -38px);
+		        background-position: left top;
+		        margin-top: -27px;
+	        }
+	        @include breakpoint(large) { 
+		        @include abs-pos ($top: 50%, $right: auto, $bottom: auto, $left: -78px);
+	        }
+        }
+
+        #slider-prev {
+	        @include abs-pos ($top: auto, $right: -15px, $bottom: 40%, $left: auto);
+	        background: url(/graphics/slide-arrow-right.png) no-repeat center top;
+	        margin-top: -27px;
+	        @include breakpoint(medium) {
+		        @include abs-pos ($top: 50%, $right: -38px, $bottom: auto, $left: auto);
+		        background-position: right top;
+		        margin-top: -27px;
+	        }
+	        @include breakpoint(large) { 
+		        @include abs-pos ($top: 50%, $right: -438px, $bottom: auto, $left: auto);
+	        }
+        }
+
+        // Slider Pre-loader
+        #wrap-slick { position: relative; }
+        #loader-wrapper,
+        #static-loader-wrapper {
+	        background-color: gray;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 998;
+        }
+        #loader,
+        #fp-loader {
+	        display: block;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            width: 150px;
+            height: 150px;
+            margin: -75px 0 0 -75px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: $primary-color;
+
+            -moz-animation-name: spin;
+	        -o-animation-name: spin;
+	        animation-name: spin;
+
+	        -moz-animation-duration: 2s;
+	        -o-animation-duration: 2s;
+	        animation-duration: 2s;
+
+	        -moz-animation-iteration-count: infinite;
+	        -o-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+
+	        -moz-animation-timing-function: linear;
+	        -o-animation-timing-function: linear;
+	        animation-timing-function: linear;
+            &:before {
+    	        content: "";
+	            position: absolute;
+	            top: 5px;
+	            left: 5px;
+	            right: 5px;
+	            bottom: 5px;
+	            border-radius: 50%;
+	            border: 3px solid transparent;
+	            border-top-color: $primary-color;
+
+	            -moz-animation-name: spin;
+		        -o-animation-name: spin;
+		        animation-name: spin;
+
+		        -moz-animation-duration: 3s;
+		        -o-animation-duration: 3s;
+		        animation-duration: 3s;
+
+		        -moz-animation-iteration-count: infinite;
+		        -o-animation-iteration-count: infinite;
+		        animation-iteration-count: infinite;
+
+		        -moz-animation-timing-function: linear;
+		        -o-animation-timing-function: linear;
+		        animation-timing-function: linear;
+            }
+            &:after {
+    	        content: "";
+	            position: absolute;
+	            top: 15px;
+	            left: 15px;
+	            right: 15px;
+	            bottom: 15px;
+	            border-radius: 50%;
+	            border: 3px solid transparent;
+	            border-top-color: $primary-color;
+	    
+	            -moz-animation-name: spin;
+		        -o-animation-name: spin;
+		        animation-name: spin;
+
+		        -moz-animation-duration: 1.5s;
+		        -o-animation-duration: 1.5s;
+		        animation-duration: 1.5s;
+
+		        -moz-animation-iteration-count: infinite;
+		        -o-animation-iteration-count: infinite;
+		        animation-iteration-count: infinite;
+
+		        -moz-animation-timing-function: linear;
+		        -o-animation-timing-function: linear;
+		        animation-timing-function: linear;
+        }
+    }
+}
+
+    #explore {
+        
+
+        h2 {
+            font-size: 2.5em;
+            margin: 40px 0;
+            padding-top: 40px;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+
+            @include breakpoint(medium) {
+                font-size: 3.75em;
+                padding-top: 75px;
+            }
+        }
+
+	    .slick { 
+		    padding: 0 5px;
+		    margin: 0;
+		    position: relative;
+
+		    @include breakpoint(medium) { 
+                padding: 3px 3px; 
+                padding-bottom: 100px;
+		    }
+
+		    .slick-prev {
+			    background-color: transparent;
+		        background-image: url(/graphics/slim-arrow-left-white.png);
+		        background-repeat: no-repeat;
+		        border: none;
+		        color: transparent;
+		        display: block;
+		        height: 65px;
+		        width: 34px;
+		        overflow: hidden;
+		        position: absolute;
+		        top: 40%;
+		        left: 20px;
+			    z-index: 99;
+		    }
+		    .slick-next {
+			    background-color: transparent;
+		        background-image: url(/graphics/slim-arrow-right-white.png);
+		        background-repeat: no-repeat;
+		        border: none;
+		        color: transparent;
+		        display: block;
+		        height: 65px;
+		        width: 34px;
+		        overflow: hidden;
+		        position: absolute;
+		        top: 40%;
+		        right: 20px;
+		        z-index: 99;
+		    }
+	    }
+
+	    .item {
+		    letter-spacing: .09em;
+		    padding: 10px 5px;
+		    position: relative;
+		    text-align: center;
+		    text-transform: uppercase;
+            background-color: white;
+            margin-bottom: 20px;
+            transition: all .3s ease-in;
+
+		    @include breakpoint(medium) {
+                padding: 3px 3px; 
+		    }
+
+            &:hover {
+                background-color: $primary-color;
+            }
+
+		    .content {
+			    background-size: cover;
+			    background-position: bottom center;
+			    height: 255px;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute; 
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    left: 0;
+                    transition: all .5s ease-in;
+                }
+
+                &:hover:before {
+                    background-color: rgba(0, 0, 0, 0.34);
+                }
+
+
+
+			    h3 {
+				    font-size: 30px;
+				    font-weight: normal;
+				    margin: 7px;
+				    opacity: 1;
+				    padding: 0 15%;
+				    position: absolute;
+				    bottom: 75px;
+				    left: 0;
+				    width: 100%;
+				    transition: bottom 300ms linear, opacity 100ms ease-in;
+                    color: white;
+			    }
+
+		    }
+
+		    .link {
+			    margin: 0;
+			    position: absolute;
+			    bottom: 30px;
+			    left: 0;
+			    width: 100%;
+                font-family: "LeagueGothic";
+                font-size: 24px;
+
+			    a {
+				    display: block;
+				    font-size: 13px;
+				    font-weight: bold;
+			    }
+		    }
+
+            .disableblog {
+
+                .content:hover:before {
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+
+                
+
+                h3 {
+                    color: gray;
+                }
+
+                p {
+                    color: red;
+                }
+            }
+
+		    .overlay {
+			    color: white;
+			    font-size: 22px;
+			    height: 100%;
+			    width: 100%;
+			    opacity: 0;
+			    padding: 0 10px;
+			    padding-top: 120px;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    transition: all 300ms linear;
+
+			    p { 
+                    margin: 0; 
+			    }
+		    }
+	    }
+
+        .btn-inverse {
+            width: 250px;
+            display: block;
+            margin: 40px auto;
+            background-color: white;
+
+            @include breakpoint(medium) {
+                margin-top: 40px;
+            }
+        }
+    }
+}

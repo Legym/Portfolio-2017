@@ -1,0 +1,38 @@
+﻿// Absolute Positioning
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+}
+
+$alt-break: 1100px;
+$alt-break-min: 1099px;
+
+
+
+/* Foundation */
+@import 'settings';
+@import 'foundation';
+@include foundation-everything;
+
+@import 'font-awesome';
+
+@import 'slick-theme';
+@import 'slick';
+
+/* Custom */
+@import 'fonts';
+@import 'mixins';
+@import 'global';
+@import 'hamburger';
+
+@import 'homepage';
+@import 'about';
+@import 'portfolio';
+@import 'blog';
+@import 'contact';
+@import 'newsletter';
+
+
