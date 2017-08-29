@@ -47,11 +47,9 @@ gulp.task('sass', function() {
         .pipe(sass(
         {
             includePaths: [
-                './node_modules/foundation-sites/scss/',
+                './node_modules/foundation-sites/assets/',
                 './node_modules/font-awesome/scss/',
                 './node_modules/jquery-fancybox/source/scss/',
-                // './node_modules/jquery.mmenu/src/css/',
-                './node_modules/jquery.mmenu/src/addons/offcanvas/',
                 './node_modules/slick-carousel/slick/'
             ]
         }))
@@ -69,8 +67,9 @@ gulp.task('sass', function() {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     gulp.src([
-        './node_modules/jquery.mmenu/dist/js/jquery.mmenu.all.min.umd.js',
+        './node_modules/jquery.mmenu/src/js/jquery.mmenu.oncanvas.js',
         './node_modules/jquery.mmenu/src/addons/offcanvas/jquery.mmenu.offcanvas.js',
+        './node_modules/jquery.mmenu/src/addons/scrollbugfix/jquery.mmenu.scrollbugfix.js',
         './node_modules/foundation-sites/dist/foundation.js',
         './node_modules/slick-carousel/slick/slick.js',
         './node_modules/jquery-fancybox/source/js/jquery.fancybox.pack.js',
