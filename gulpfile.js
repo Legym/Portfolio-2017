@@ -50,7 +50,8 @@ gulp.task('sass', function() {
                 './node_modules/foundation-sites/scss/',
                 './node_modules/font-awesome/scss/',
                 './node_modules/jquery-fancybox/source/scss/',
-                './node_modules/jquery.mmenu/dist/css/',
+                // './node_modules/jquery.mmenu/src/css/',
+                './node_modules/jquery.mmenu/src/addons/offcanvas/',
                 './node_modules/slick-carousel/slick/'
             ]
         }))
@@ -68,9 +69,10 @@ gulp.task('sass', function() {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     gulp.src([
-        './node_modules/jquery.mmenu/dist/js/jquery.mmenu.all.min.js',
+        './node_modules/jquery.mmenu/dist/js/jquery.mmenu.all.min.umd.js',
+        './node_modules/jquery.mmenu/src/addons/offcanvas/jquery.mmenu.offcanvas.js',
         './node_modules/foundation-sites/dist/foundation.js',
-        './node_modules/slick-carousel/slick/slick.min.js',
+        './node_modules/slick-carousel/slick/slick.js',
         './node_modules/jquery-fancybox/source/js/jquery.fancybox.pack.js',
         './node_modules/jquery-match-height/dist/jquery.matchHeight-min.js',
         './www/static/js/vendor/parallax.min.js',

@@ -1,28 +1,98 @@
 <!doctype html>
-<html>
-  <head>
+<html lang="en">
+    <head>
 	<meta name="generator" content="Hugo 0.20.7" />
     <title>Mygel Bergstresser - Front End Web Developer</title>
 
     
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/app.min.css"/>
-  </head>
-  <body class="page-index">
+</head>
 
+<body class="page-index">
+
+    <header class="header mm-slideout">
+        <a id="top"></a>
+
+        <div class="row">
+            <div class="small-12 columns">
+
+                <div class="header-container">
+                    <a href="/" class="logo">
+
+                        
+                        <div class="mobile-logo">
+                            <img src="/images/logo/front-end-developer-mobile.svg" alt="Mygelb - Front End developer"/>
+                        </div>
+
+
+                        
+                        <div class="desktop-logo">
+                            <img src="/images/logo/front-end-developer.svg" alt="Mygelb - Front End developer"/>
+                        </div>
+
+                    </a>
+
+                    <a id="nav-toggle" href="#menu-mobile">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+
+                    <nav id="menu-mobile">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about/">About</a></li>
+                            <li><a href="/portfolio/">Portfolio</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li><a href="/contact/">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav id="desktop-menu">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about/">About</a></li>
+                            <li><a href="/portfolio/">Portfolio</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li><a href="/contact/">Contact</a></li>
+                            <li>
+                                <div class="searchbox">
+                                    <input id="srch-input" class="search-input" placeholder="Site Search" value="" onkeypress="if (event.keyCode == 13) location = '/search-results?Keywords=' + document.getElementById('srch-input').value" />
+
+                                    <a href="#/" class="search-icon">
+                                        <i class="fa fa-lg fa-search"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="subpage">
+        <main class="main-content">
+            <button id="to-top">
+                <i class="fa fa-chevron-up"></i>
+            </button>
 
 
 <div class="homepage-slideshow">
-    @foreach (var item in items) {
-        var bannerId = Umbraco.Media(item.GetPropertyValue("Image"));
-        var bannerUrl = bannerId.Url;
-
-        <div class="slide-masthead" style="background-image:url('@bannerUrl'); background-size: cover;">
-            <div class="slide-text">
-                @item.GetPropertyValue("title")
-            </div>
+    <div class="slide-masthead" style="background-image:url('/images/hero-mount-helens.jpg'); background-size: cover;">
+        <div class="slide-text">
+            <h2>The Traveling</h2>
+            <h1>Web Developer</h1>
         </div>
-    }
+    </div>
+
+    <div class="slide-masthead" style="background-image:url('/images/hero-backpack.jpg'); background-size: cover;">
+        <div class="slide-text">
+            <h2>The Traveling</h2>
+            <h1>Web Developer</h1>
+        </div>
+    </div>
 </div>
 
 <section class="homepage-tech">
@@ -39,7 +109,7 @@
                 <a class="btn btn-inverse" style="margin: 0" href="/about/">Learn More</a>
             </div>
 
-            <img src="~/graphics/homepage/main-image.png" alt="Mygelb - Front End developer"/>
+            <img src="/images/homepage/main-image.png" alt="Mygelb - Front End developer"/>
         </div>
 
     </div>
@@ -47,7 +117,7 @@
 
 <section class="homepage-message">
     <div class="parallax-wrapper">
-        <span data-bg="../graphics/homepage/office.jpg" class="hidden"></span>
+        <span data-bg="/images/homepage/office.jpg" class="hidden"></span>
         <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
             <div class="row">
                 <div class="large-8 large-offset-2 columns centered height">
@@ -203,7 +273,7 @@
 
 <section id="explore">
     <div class="parallax-wrapper">
-        <span data-bg="../graphics/homepage/blog-background.jpg" class="hidden"></span>
+        <span data-bg="/images/homepage/blog-background.jpg" class="hidden"></span>
         <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
 
             <h2>From my blog</h2>
@@ -254,8 +324,62 @@
     </div>
 </section>
 
-@Html.Partial("Contact")
 
+
+
+	    </main>
+
+		<footer class="footer">
+		    <div class="row">
+
+		        <div class="medium-4 large-5 columns height">
+		            <div class="footer-logo">
+		                <img src="/images/logo/front-end-developer-footer.svg" alt="Mygelb - Front End developer"/>
+		            </div>
+		        </div>
+
+		        <div class="medium-4 large-4 columns height">
+		            <div class="footer-navigation">
+		                <ul>
+		                    <li><a href="/">Home</a></li>
+		                    <li><a href="/About/">About</a></li>
+		                    <li><a href="/Portfolio/">Portfolio</a></li>
+		                    <li><a href="/Blog/">Blog</a></li>
+		                    <li><a href="/Contact/">Contact</a></li>
+		                    <li><a href="/Sitemap/">Sitemap</a></li>
+		                </ul>
+		            </div>
+		        </div>
+
+		        <div class="medium-4 large-3 columns height">
+		            <div class="footer-contact">
+		                <ul>
+		                    <li><a href="https://www.facebook.com/MygelBergstresser" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+		                    <li><a href="https://github.com/legym" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+		                    <li><a href="mailto:MygelBergstresser@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+		                    <li><a href="https://www.linkedin.com/in/mygel-bergstresser-1b83baa3" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+		                </ul>
+
+		                <a href="/newsletter/" class="btn">Subscribe</a>
+
+		            </div>
+		        </div>
+
+		        <div class="medium-12 columns">
+		            <div class="footer-copyright">
+		                <p>2016 © Mygelb.com</p>
+
+		                <p class="author">
+		                    Hand forged by <span>Mygel Bergstresser</span>
+		                </p>
+		            </div>
+		        </div>
+		    </div>
+		</footer>
+
+
+
+</div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="/scripts/mygelb.js"></script>

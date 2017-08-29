@@ -11,12 +11,16 @@ $alt-break: 1100px;
 $alt-break-min: 1099px;
 
 /* Install ZURB Foundation*/
-@import '_partials/settings';
+// @import '_partials/settings';
 @import 'foundation';
 @include foundation-everything;
+
 @import 'font-awesome';
+
 @import 'slick-theme.scss';
 @import 'slick.scss';
+
+@import 'jquery.mmenu.offcanvas';
 
 /* Custom */
 @import '_partials/fonts';

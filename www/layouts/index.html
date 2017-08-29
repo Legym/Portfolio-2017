@@ -1,17 +1,19 @@
 {{ partial "header" . }}
 
-
 <div class="homepage-slideshow">
-    @foreach (var item in items) {
-        var bannerId = Umbraco.Media(item.GetPropertyValue("Image"));
-        var bannerUrl = bannerId.Url;
-
-        <div class="slide-masthead" style="background-image:url('@bannerUrl'); background-size: cover;">
-            <div class="slide-text">
-                @item.GetPropertyValue("title")
-            </div>
+    <div class="slide-masthead" style="background-image:url('/images/hero-mount-helens.jpg'); background-size: cover;">
+        <div class="slide-text">
+            <h2>The Traveling</h2>
+            <h1>Web Developer</h1>
         </div>
-    }
+    </div>
+
+    <div class="slide-masthead" style="background-image:url('/images/hero-backpack.jpg'); background-size: cover;">
+        <div class="slide-text">
+            <h2>The Traveling</h2>
+            <h1>Web Developer</h1>
+        </div>
+    </div>
 </div>
 
 <section class="homepage-tech">
@@ -28,7 +30,7 @@
                 <a class="btn btn-inverse" style="margin: 0" href="/about/">Learn More</a>
             </div>
 
-            <img src="~/graphics/homepage/main-image.png" alt="Mygelb - Front End developer"/>
+            <img src="/images/homepage/main-image.png" alt="Mygelb - Front End developer"/>
         </div>
 
     </div>
@@ -36,7 +38,7 @@
 
 <section class="homepage-message">
     <div class="parallax-wrapper">
-        <span data-bg="../graphics/homepage/office.jpg" class="hidden"></span>
+        <span data-bg="/images/homepage/office.jpg" class="hidden"></span>
         <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
             <div class="row">
                 <div class="large-8 large-offset-2 columns centered height">
@@ -192,7 +194,7 @@
 
 <section id="explore">
     <div class="parallax-wrapper">
-        <span data-bg="../graphics/homepage/blog-background.jpg" class="hidden"></span>
+        <span data-bg="/images/homepage/blog-background.jpg" class="hidden"></span>
         <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
 
             <h2>From my blog</h2>
@@ -243,7 +245,6 @@
     </div>
 </section>
 
-@Html.Partial("Contact")
-
+<!-- @Html.Partial("Contact") -->
 
 {{ partial "footer" . }}
