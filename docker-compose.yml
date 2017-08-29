@@ -3,7 +3,7 @@ services:
     apache:
         image: "httpd:2.4-alpine"
         ports:
-            - "80:80"
+            - "81:81"
         volumes:
             - $PWD/www/public:/usr/local/apache2/htdocs
             - $PWD/apache/httpd.conf:/usr/local/apache2/conf/httpd.conf
