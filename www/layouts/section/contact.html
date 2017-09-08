@@ -1,0 +1,56 @@
+{{ define "main" }}
+
+<section class="contact-intro">
+    <div class="parallax-wrapper">
+        <span data-bg="/images/contact/contact-header.jpg" class="hidden"></span>
+        <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
+            <div class="row">
+                <div class="parallax-content">
+                    <h2>Contact</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-padding contact-content">
+    <div class="row">
+
+        <div class="small-12 columns">
+            {{ partial "breadcrumbs" . }}
+        </div>
+
+        <div class="small-12 large-8 columns">
+            @Umbraco.RenderMacro("FormsRenderForm", new { FormGuid = "b683e77a-a2bf-40d9-bf85-5c4cb5a7b217" })
+        </div>
+
+        <div class="small-12 large-4 columns">
+            <div class="contact-sidebar">
+                <h2>Contact Info</h2>
+                <p>Other ways to contact us below!</p>
+
+                <ul>
+                    <li>
+                        <h4>EMAIL</h4>
+                        <p>MygelBergstresser@gmail.com</p>
+                    </li>
+                    <li>
+                        <h4>PHONE</h4>
+                        <p>704-223-3694</p>
+                    </li>
+                    <li>
+                        <h4>HOURS OF OPERATION</h4>
+                        <p>
+                            Until the job is done, but I try to be off on the weekends.
+                        </p>
+                    </li>
+                    <li>
+                        <a class="btn" href="~/media/Mygel-Bergstresser-resume.pdf">Download Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

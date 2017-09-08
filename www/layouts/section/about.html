@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="about-image-mobile" style="background: url(@m.Url); background-size: cover; background-position: 40%;">
+<section class="about-image-mobile" style="background: url('/images/about/about-profile-image.jpg'); background-size: cover; background-position: 40%;">
     <div class="parallax-content">
         <h6>
             Web Developer<br />
@@ -9,11 +9,9 @@
     </div>
 </section>
 
-
-
 <section id="about-image" class="about-image">
     <div class="parallax-wrapper">
-        <span data-bg="@m.Url" class="hidden"></span>
+        <span data-bg="/images/about/about-profile-image.jpg" class="hidden"></span>
         <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
             <div class="parallax-content">
 
@@ -22,7 +20,7 @@
     </div>
 </section>
 
-<section class="about-intro" style="">
+<section class="about-intro">
     <div class="row">
         <div class="parallax-content">
             <div class="intro-container">
@@ -40,12 +38,12 @@
     </div>
 </section>
 
-
-
 <section class="about-experience">
     <div class="row">
 
-        @Html.Partial("Breadcrumbs")
+        <div class="small-12 columns">
+            {{ partial "breadcrumbs" . }}
+        </div>
 
         <div class="small-12 medium-12 large-6 end columns">
             <h6>History</h6>
@@ -65,7 +63,7 @@
 
 <section id="experience" class="about-process">
     <div class="parallax-wrapper">
-        <span data-bg="../graphics/about/paper-texture.jpg" class="hidden"></span>
+        <span data-bg="/images/about/paper-texture.jpg" class="hidden"></span>
         <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
             <div class="row">
                 <div class="small-12 columns">
@@ -138,7 +136,6 @@
     </div>
 </section>
 
-
 <section class="geolocation">
     <div class="map-cover"></div>
     <div class="row">
@@ -148,7 +145,6 @@
     </div>
     <div id="map"></div>
 </section>
-
 
 <section class="content-padding instagram-background">
     <div class="row">
@@ -166,7 +162,6 @@
         </div>
     </div>
 </section>
-
 
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwJcg6U7SKK_d1dBkFqXOBntzeHtbxdDI&callback=initMap">

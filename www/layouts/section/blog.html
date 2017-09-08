@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+<section id="blog-overview-image" class="about-image">
+    <div class="parallax-wrapper">
+        <span data-bg="/images/blog/blog-hero.jpg" class="hidden"></span>
+        <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
+            <div class="row">
+                <div class="parallax-content">
+                    <h2>Blog</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="blog-content">
+    <div class="row">
+        <div class="small-12 columns">
+            {{ partial "breadcrumbs" . }}
+        </div>
+
+        @RenderBody()
+
+    </div>
+</section>
+
+{{ end }}

@@ -96,8 +96,6 @@
                 }
             }
         }
-
-
     }
 
     .about-experience {
@@ -111,7 +109,7 @@
 
         @include breakpoint(large) {
             background-position: right;
-            background-image: url('../graphics/about/about-experience.jpg');
+            background-image: url('/images/about/about-experience.jpg');
             background-size: cover;
             padding: 100px 0;
         }
@@ -234,8 +232,6 @@
             color: $primary-color;
             text-decoration: underline;
         }
-
-
     }
 
     .about-tools {
@@ -271,7 +267,7 @@
 
         .did-i-know {
             margin-top: 70px;
-            
+
             h4 {
                 text-align: center;
                 font-size: 2em;
@@ -332,10 +328,7 @@
                 padding: 20px 60px;
             }
         }
-        
     }
-
-
 
     .instagram-background {
         padding-top: 30px;
@@ -352,10 +345,9 @@
         @include breakpoint(medium) {
             margin-bottom: 40px;
         }
-              
+
           h3 {
               display: block;
-              
 
               &:nth-of-type(1) {
                 font-size: 32px;
@@ -379,100 +371,101 @@
           }
       }
 
-      .instagram-section {
+        .instagram-section {
 
-        .ttl {
-          margin: 0 auto 30px;
-          width: 90%;
-          overflow: hidden;
+            .ttl {
+              margin: 0 auto 30px;
+              width: 90%;
+              overflow: hidden;
 
-          h3, h2 {
-            display: inline-block;
-            color: black;
-          }
+              h3, h2 {
+                display: inline-block;
+                color: black;
+              }
 
-          h3 {
-            float: left;
-            font-size: 29px;
-            margin-top: 10px;
-            word-spacing: 0.1em;
-            text-transform: uppercase;
-            letter-spacing: .1em;
-            line-height: 1.7;
-          }
+              h3 {
+                float: left;
+                font-size: 29px;
+                margin-top: 10px;
+                word-spacing: 0.1em;
+                text-transform: uppercase;
+                letter-spacing: .1em;
+                line-height: 1.7;
+              }
 
-          h2 {
-            float: right;
-            margin-top: 10px;
+              h2 {
+                float: right;
+                margin-top: 10px;
 
-            em {
-              font-size: 1.2em;
-              color: inherit;
-              word-spacing: 0.1em;
-              letter-spacing: .09em;
+                em {
+                  font-size: 1.2em;
+                  color: inherit;
+                  word-spacing: 0.1em;
+                  letter-spacing: .09em;
+                }
+              }
             }
-          }
+
+            .instagram-slide {
+              width: 75%;
+              margin: 0 auto;
+
+              @include breakpoint(small) {
+                width: 90%;
+              }
+
+              .slick-arrow {
+                position: absolute;
+                top: 75px;
+                overflow: hidden;
+                padding: 0;
+                width: 34px;
+                border: 0;
+                background-color: transparent;
+                &:before {
+                  font-size: 60px;
+                  color: black;
+                }
+              }
+
+              .slick-arrow:first-of-type {
+                left: -23px;
+
+                @include breakpoint(medium) {
+                    left: -40px;
+                }
+
+                @include breakpoint(large) {
+                    left: -55px;
+                }
+              }
+
+              .slick-arrow:nth-of-type(2) {
+                right: -23px;
+
+                @include breakpoint(medium) {
+                    right: -40px;
+                }
+
+                @include breakpoint(large) {
+                    right: -55px;
+                }
+              }
+
+
+
+              .slick-track {
+                width: 100%;
+
+                .instagram-img {
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  background-position: center center;
+                  height: 185px;
+                  margin: 0 15px;
+                }
+              }
+            }
         }
-        .instagram-slide {
-          width: 75%;
-          margin: 0 auto;
-
-          @include breakpoint(small) {
-            width: 90%;
-          }
-
-          .slick-arrow {
-            position: absolute;
-            top: 75px;
-            overflow: hidden;
-            padding: 0;
-            width: 34px;
-            border: 0;
-            background-color: transparent;
-            &:before {
-              font-size: 60px;
-              color: black;
-            }
-          }
-
-          .slick-arrow:first-of-type {
-            left: -23px;
-
-            @include breakpoint(medium) {
-                left: -40px;
-            }
-
-            @include breakpoint(large) {
-                left: -55px;
-            }
-          }
-
-          .slick-arrow:nth-of-type(2) {
-            right: -23px;
-
-            @include breakpoint(medium) {
-                right: -40px;
-            }
-
-            @include breakpoint(large) {
-                right: -55px;
-            }
-          }
-
-
-
-          .slick-track {
-            width: 100%;
-
-            .instagram-img {
-              background-repeat: no-repeat;
-              background-size: cover;
-              background-position: center center;
-              height: 185px;
-              margin: 0 15px;
-            }
-          }
-        }
-      }
     }
 }

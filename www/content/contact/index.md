@@ -1,4 +1,0 @@
-{
-	"type": "contact",
-	"layout": "index"
-}

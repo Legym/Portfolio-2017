@@ -1,4 +1,0 @@
-{
-	"type": "about",
-	"layout": "index"
-}
