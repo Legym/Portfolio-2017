@@ -18,8 +18,8 @@ $slick-font-path: '../fonts/';
 @import 'font-awesome';
 
 
-@import 'slick-theme.scss';
-@import 'slick.scss';
+@import '_partials/slick';
+@import '_partials/slick-theme';
 
 @import './node_modules/jquery.mmenu/src/addons/offcanvas/jquery.mmenu.offcanvas';
 

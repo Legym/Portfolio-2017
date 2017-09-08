@@ -31,7 +31,7 @@
             }
         },
 
-        page_index: {
+        subpage_page: {
             init: function () {
                 FEATURES.homepageSlideshow();
                 FEATURES.staticSlider('.homepage-static-slider', 3);

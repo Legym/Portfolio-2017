@@ -1,0 +1,4 @@
+{
+	"type": "portfolio",
+	"layout": "index"
+}

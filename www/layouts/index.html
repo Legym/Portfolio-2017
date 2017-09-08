@@ -1,4 +1,4 @@
-{{ partial "header" . }}
+{{ define "main" }}
 
 <div class="homepage-slideshow">
     <div class="slide-masthead" style="background-image:url('/images/hero-mount-helens.jpg'); background-size: cover;">
@@ -7,7 +7,6 @@
             <h1>Web Developer</h1>
         </div>
     </div>
-
     <div class="slide-masthead" style="background-image:url('/images/hero-backpack.jpg'); background-size: cover;">
         <div class="slide-text">
             <h2>The Traveling</h2>
@@ -245,6 +244,4 @@
     </div>
 </section>
 
-<!-- @Html.Partial("Contact") -->
-
-{{ partial "footer" . }}
+{{ end }}

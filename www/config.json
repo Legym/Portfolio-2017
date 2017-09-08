@@ -1,0 +1,10 @@
+{
+    "baseURL": "/",
+    "languageCode": "en-us",
+    "title": "Mygel",
+    "defaultExtension": "html",
+    "uglyURLs": false,
+    "canonifyurls": false,
+    "metaDataFormat": "json",
+    "verbose": false
+}

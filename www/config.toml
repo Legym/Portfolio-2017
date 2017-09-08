@@ -1,6 +1,0 @@
-contentDir = "content"
-layoutDir = "layouts"
-publishDir = "public"
-buildDrafts = false
-baseURL = "/"
-canonifyURLs = true
