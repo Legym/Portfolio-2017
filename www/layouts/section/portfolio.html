@@ -24,12 +24,8 @@
             {{ range .Data.Pages }}
                 <div class="project-container height">
                     <figure class="effect-lily">
-                        <img src="@bannerUrl" alt="{{.Title}}" />
+                        <img src="{{ .Params.image }}" alt="{{.Title}}" />
                         <figcaption>
-                            <div>
-                                <h2>{{.Title}}</h2>
-                                <p>@project.Caption</p>
-                            </div>
                             <a href="{{.Permalink}}">View more</a>
                         </figcaption>
                     </figure>
