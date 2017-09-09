@@ -21,7 +21,12 @@
         </div>
 
         <div class="small-12 large-8 columns">
-            @Umbraco.RenderMacro("FormsRenderForm", new { FormGuid = "b683e77a-a2bf-40d9-bf85-5c4cb5a7b217" })
+            <form method="POST" action="http://formspree.io/mygelbergstresser@gmail.com">
+              <input type="name" name="name" placeholder="Name">
+              <input type="email" name="email" placeholder="Your email">
+              <textarea name="message" placeholder="Your message"></textarea>
+              <button type="submit">Send</button>
+            </form>
         </div>
 
         <div class="small-12 large-4 columns">

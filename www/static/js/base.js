@@ -350,7 +350,6 @@ var FEATURES = {
                 window.location.href = '/search-results?Keywords=' + $(this).val();
             }
         });
-
     },
 
     homepageSlideshow: function () {
@@ -367,7 +366,6 @@ var FEATURES = {
         $(window).on("resize", function () {
             $('.homepage-slideshow').height($(window).height() - 50)
         }).resize();
-          
     },
 
     search: function () {

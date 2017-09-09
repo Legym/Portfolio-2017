@@ -1,0 +1,98 @@
+{{ define "main" }}
+
+<section class="portfolio-intro">
+    <div class="parallax-wrapper">
+        <span data-bg="@m.Url" class="hidden"></span>
+        <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
+            <div class="row">
+                <div class="parallax-content">
+                    <h2>{{.Title}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-intro content-padding">
+
+    <div class="row">
+
+        <div class="small-12 columns">
+            {{ partial "breadcrumbs" . }}
+        </div>
+
+        <div class="medium-6 columns">
+
+            <div class="project-header">
+                <h4>Project Details</h4>
+                <h5>Live URL: <a target="_blank" href="@CurrentPage.liveUrl">@CurrentPage.liveUrl</a></h5>
+                <h5>Role: <span>@CurrentPage.role</span></h5>
+            </div>
+
+            <div class="project-body">
+                @if (CurrentPage.GetPropertyValue<bool>("quote"))
+                {
+                    <div class="disclaimer">
+                        <h6>Disclaimer</h6>
+                        @CurrentPage.disclaimer
+                    </div>
+                }
+                @CurrentPage.projectMainText
+            </div>
+        </div>
+
+        <div class="medium-6 columns">
+            <div class="project-slideshow">
+
+                @if (Model.Content.HasValue("projectDisplay"))
+                {
+                    var heroBannerList = Model.Content.GetPropertyValue<string>("projectDisplay").Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse);
+                    var heroBannerCollection = Umbraco.TypedMedia(heroBannerList).Where(x => x != null);
+                    foreach (var heroBanner in heroBannerCollection)
+                    {
+                        <div class="content">
+                            <a class="fancybox" rel="group" href="@heroBanner.Url">
+                                <img src="@heroBanner.Url" />
+                            </a>
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="related-projects project-preview">
+    <div class="row">
+        <div class="small-12 columns">
+            <h3>Related Projects</h3>
+        </div>
+
+        <div class="small-12 columns">
+            @{
+                var node = Umbraco.Content(1075);
+                foreach (var project in node.Children.RandomOrder().Take(3))
+                {
+                    var projectId = Umbraco.Media(project.GetPropertyValue("projectImage"));
+                    var bannerUrl = projectId.Url;
+
+                    <div class="project-container height">
+                        <figure class="effect-lily">
+                            <img src="@bannerUrl" alt="@project.Name" />
+                            <figcaption>
+                                <div>
+                                    @*<h2>@project.Name</h2>*@
+                                    @*<p>@project.Caption</p>*@
+                                </div>
+                                <a href="@project.Url">View more</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
+
+{{ end }}

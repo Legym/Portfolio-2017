@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{{ .Site.BaseURL }}css/app.min.css"/>
     </head>
 
-    <body class="subpage-{{ with .Section }}{{ . }} {{ else }}homepage {{ end }}">
+    <body class="subpage-{{ with .Section }}{{ . }}{{ else }}homepage{{ end }}">
 
         {{ partial "header" . }}
 

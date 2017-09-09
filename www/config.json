@@ -1,9 +1,5 @@
 {
     "baseURL": "/",
     "languageCode": "en-us",
-    "title": "Mygel",
-    "defaultExtension": "html",
-    "canonifyurls": false,
-    "metaDataFormat": "json",
-    "verbose": false
+    "title": "Mygel"
 }
