@@ -1,6 +1,6 @@
 {
-	"type": "projects",
-	"layout": "index",
+	"type": "posts",
+	"layout": "projects",
 	"title": "mukilteo-natural-health",
 	"image": "/images/portfolio/muk-tile.jpg"
 }

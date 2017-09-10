@@ -1,6 +1,6 @@
 {
-	"type": "projects",
-	"layout": "index",
+	"type": "posts",
+	"layout": "projects",
 	"title": "pud3",
 	"image": "/images/portfolio/pud3-tile.jpg"
 }

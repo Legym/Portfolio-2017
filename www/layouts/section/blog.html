@@ -105,12 +105,12 @@
                 {{ range .Data.Pages }}
                     <div class="post">
                         <div class="post-image">
-                            <a href="/blog/posts/2016/augest/the-man-the-myth-the-legend/"><img src="{{ .Params.image }}"></a>
+                            <a href="{{ .Permalink }}"><img src="{{ .Params.image }}"></a>
                             <span>Aug 23</span>
                         </div>
                         <div class="post-metadata">
                             <h3>
-                                <a href="{{.Permalink}}" title="{{.Title}}">The Man. The Myth. The Legend.</a>
+                                <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
                             </h3>
                             <p>This website was originally built to start a career as a web developer. Many redesigns later it turned into a web portfolio, but with one page dedicated to express my observations. Social media is an echo chamber of: memes, motivational quotes...</p>
                         </div>

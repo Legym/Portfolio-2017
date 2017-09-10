@@ -138,7 +138,6 @@
     </div>
 </section>
 
-<!-- Latest Work -->
 <section id="solutions">
     <div class="row">
         <div class="small-12 columns">
@@ -154,32 +153,24 @@
 
         <!-- Image Slider -->
         <div id="slider-imgs" class="homepage-static-slider">
-
-            @{foreach (var project in node.Children.Where("Visible"))
-                {
-                    var projectId = Umbraco.Media(project.GetPropertyValue("projectImage"));
-                    var bannerUrl = projectId.Url;
-
-                    <div class="slide slide-@(projectimage++) inactive">
-                        <img class="lazy" data-lazy="@bannerUrl" alt="@project.Name">
-                    </div>
-                }
-            }
+            {{ range ( first 4 ( where .Data.Pages.Reverse "Section" "portfolio" ) ) }}
+                <div class="slide slide-@(projectimage++) inactive">
+                    <img class="lazy" data-lazy="{{ .Params.image }}" alt="{{ .Params.title }}">
+                </div>
+            {{ end }}
         </div>
 
         <!-- Info container -->
         <div id="slider-info">
             <div class="slider-wrap">
-                @{foreach (var project in node.Children.Where("Visible"))
-                    {
-                        <div class="info-item item-@(projectmetadata++) animate-out" style="display: none;">
-                            <div class="info-wrap">
-                                <h4>@project.Name</h4>
-                                <div class="hp-slide-caption">@project.Caption</div>
-                            </div>
+                {{ range ( first 4 ( where .Data.Pages.Reverse "Section" "portfolio" ) ) }}
+                    <div class="info-item item-@(projectmetadata++) animate-out" style="display: none;">
+                        <div class="info-wrap">
+                            <h4>{{ .Params.title }}</h4>
+                            <div class="hp-slide-caption">@project.Caption</div>
                         </div>
-                    }
-                }
+                    </div>
+                {{ end }}
 
                 <a id="slider-prev" class="slider-nav" href="#"></a>
                 <a id="slider-next" class="slider-nav" href="#"></a>
@@ -200,40 +191,34 @@
 
             <div class="row">
 
-                @{foreach (var project in blogNode.Children.Where("Visible").Take(4))
-                    {
-                        var projectId = Umbraco.Media(project.GetPropertyValue("smartBlogImage"));
-                        var bannerUrl = projectId.Url;
+                {{ range ( first 4 ( where .Data.Pages.Reverse "Section" "blog" ) ) }}
 
-                        <div class="medium-6 large-3 columns">
-                            <div class="item">
+                    <div class="medium-6 large-3 columns">
+                        <div class="item">
 
-
-                                @if (project.GetPropertyValue<bool>("disableEnable"))
-                                {
+                            <!-- If the blog is enabled -->
+                            {{ if .Params.enabled }}
+                                <a href="@project.Url">
                                     <div class="disableblog">
-                                        <div class="content" style="background-image: url(@bannerUrl)">
-                                            <h3>@project.Name</h3>
+                                        <div class="content" style="background-image: url({{ .Params.image }})">
+                                            <h3>{{ .Params.title }}</h3>
                                         </div>
-                                        <p class="link">COMING SOON</p>
+                                        <p class="link">{{ .Params.title }}</p>
                                     </div>
-                                }
-                                else
-                                {
-                                    <a href="@project.Url">
-                                        <div class="content" style="background-image: url(@bannerUrl)">
-                                            <h3>@project.Name</h3>
+                                </a>
+                            {{ else }}
+                                <div class="disableblog">
+                                    <div class="content" style="background-image: url({{ .Params.image }})">
+                                        <h3>{{ .Params.title }}</h3>
+                                    </div>
+                                    <p class="link">COMING SOON</p>
+                                </div>
+                            {{ end }}
 
-                                        </div>
-                                        <p class="link">Read More</p>
-                                    </a>
-                                }
-
-
-                            </div>
                         </div>
-                    }
-                }
+                    </div>
+                {{ end }}
+
 
                 <div class="small-12 columns">
                     <a class="btn btn-inverse" href="/blog/">View Blog Posts</a>

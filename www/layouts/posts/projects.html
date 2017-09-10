@@ -52,7 +52,7 @@
                     {
                         <div class="content">
                             <a class="fancybox" rel="group" href="@heroBanner.Url">
-                                <img src="@heroBanner.Url" />
+                                <img src="{{ .Permalink }}" />
                             </a>
                         </div>
                     }
@@ -70,27 +70,17 @@
         </div>
 
         <div class="small-12 columns">
-            @{
-                var node = Umbraco.Content(1075);
-                foreach (var project in node.Children.RandomOrder().Take(3))
-                {
-                    var projectId = Umbraco.Media(project.GetPropertyValue("projectImage"));
-                    var bannerUrl = projectId.Url;
 
-                    <div class="project-container height">
-                        <figure class="effect-lily">
-                            <img src="@bannerUrl" alt="@project.Name" />
-                            <figcaption>
-                                <div>
-                                    @*<h2>@project.Name</h2>*@
-                                    @*<p>@project.Caption</p>*@
-                                </div>
-                                <a href="@project.Url">View more</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                }
-            }
+            {{ range ( last 3 ( where .Site.Pages "Section" "portfolio" ) ) }}
+                <div class="project-container height">
+                    <figure class="effect-lily">
+                        <img src="{{ .Params.image }}" alt="{{ .Params.title }}" />
+                        <figcaption>
+                            <a href="{{ .Permalink }}">View more</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            {{ end }}
         </div>
     </div>
 </section>

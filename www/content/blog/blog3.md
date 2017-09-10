@@ -1,6 +1,6 @@
 {
 	"type": "posts",
 	"layout": "blog-post",
-	"title": "blog2",
+	"title": "blog3",
 	"image": "/images/blog/blog-hero.jpg"
 }
