@@ -1,9 +1,4 @@
-﻿
-
-
-
-
-.subpage-blog {
+﻿.subpage-blog {
 
     .parallax-window {
 
@@ -53,7 +48,6 @@
                 }
             }
         }
-
     }
 
     .blog-sidebar-mobile {
@@ -62,7 +56,7 @@
         @include breakpoint(medium) {
             margin-top: 0;
         }
-        
+
         @include breakpoint(large) {
             display: none;
         }
@@ -97,8 +91,6 @@
         @include breakpoint(large) {
             display: block;
         }
-
-
     }
 
     .inner-template-mobile-sidebar {
@@ -107,7 +99,6 @@
             display: none;
         }
     }
-
 
     /* Blog Articles */
     .blog-main-content {
@@ -211,7 +202,6 @@
 
 
         /* Comments */
-
         #commentsContainer {
 
             h3 {
@@ -285,7 +275,6 @@
                 text-align: left;
             }
         }
-
     }
 
     .share-mobile-style {
@@ -329,92 +318,50 @@
     ul.breadcrumb > li > span.bchighlight {color: #FFF;  font-weight: bold;}
     /* -------------------------------------------------------------- */
 
+    .pagination {
+        display: block;
+        margin-bottom: 1em;
+        color: white;
+        text-align: center;
 
+        @include breakpoint(medium) {
+            text-align: right;
+        }
 
+        span {
+            display: inline-block;
+            margin: 0 3px;
+            color: black;
+            background: white;
+            border: 1px solid #dcdcdc;
+            padding: 5px;
+            transition: all .3s ease-out;
+            text-align: center;
+            font-size: 16px;
 
-.pagination {
-    display: block;
-    margin-bottom: 1em;
-    color: white;
-    text-align: center;
-
-    @include breakpoint(medium) {
-        text-align: right;
-    }
-	
-	span {
-		display: inline-block;
-        margin: 0 3px;
-		color: black;
-		background: white;
-		border: 1px solid #dcdcdc;
-		padding: 5px;
-        transition: all .3s ease-out;
-		text-align: center;
-        font-size: 16px;
-    
             &.pageCurrent {
                 background: #111;
                 color: white;
             }
-		}
-    
-	span:hover {
-		background: #111;
-		color: white;
-	} 
-}
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* Validation */
-    .validation-summary-valid {display: none;}
-    .validation-summary-errors {color: #DD0000;}
-    .valid {}
-    .input-validation-error {color: #DD0000 !important;}
-    /* -------------------------------------------------------------- */
-
+        span:hover {
+            background: #111;
+            color: white;
+        }
+    }
 }
 
 
 .responsive-accordion {
-	margin: 0 0 20px;
-	padding: 0;
-	list-style-type: none;
+    margin: 0 0 20px;
+    padding: 0;
+    list-style-type: none;
 
-	.responsive-accordion-panel {
-		position: relative;
-		bottom: 10px;
-		display: block;
-
-        a {
-            color: #111;
-            font-family: sans-serif;
-            display: block;
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
-	}
-
-	.responsive-accordion-panel ul {
-		padding-left: 0;
-
-		li {
-			background-image: none;
-			padding-left: 0;
-		}
+    .responsive-accordion-panel {
+        position: relative;
+        bottom: 10px;
+        display: block;
 
         a {
             color: #111;
@@ -423,91 +370,106 @@
             font-size: 14px;
             letter-spacing: 1px;
         }
-	}
+    }
 
-	> li {
-		margin: 0;
-		background-image: none;
-		padding: 0;
+    .responsive-accordion-panel ul {
+        padding-left: 0;
+
+        li {
+            background-image: none;
+            padding-left: 0;
+        }
+
+        a {
+            color: #111;
+            font-family: sans-serif;
+            display: block;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+    }
+
+    > li {
+        margin: 0;
+        background-image: none;
+        padding: 0;
         margin-bottom: 20px;
 
 
-		.responsive-accordion-head { 
-			cursor: pointer;
+        .responsive-accordion-head { 
+            cursor: pointer;
             margin-bottom: 17px;
 
-			&.active { 
+            &.active { 
                 font-weight: 700; 
-			}
-		}
+            }
+        }
 
-		&:first-child {
-			padding-top: 10px;
-		}
+        &:first-child {
+            padding-top: 10px;
+        }
 
-		&:last-child { 
+        &:last-child { 
             margin-bottom: 0; 
-		}
-	}
+        }
+    }
 
-	.responsive-accordion-head {
+    .responsive-accordion-head {
         position: relative;
         border-bottom: 1px solid #dcdcdc;
         margin-bottom: 17px;
 
-		h3 {
-			margin-top: 2px;
-			color: #111;
-			font-size: 24px;
+        h3 {
+            margin-top: 2px;
+            color: #111;
+            font-size: 24px;
 
-		}
+        }
 
-		p {
-			margin: 0;
-			width: 16px;
-			span {
-				@include transition(all 750ms ease-in-out);
-				display: block;
-				position: absolute;
-				width: 16px;
-				height: 16px;
+        p {
+            margin: 0;
+            width: 16px;
+            span {
+                @include transition(all 750ms ease-in-out);
+                display: block;
+                position: absolute;
+                width: 16px;
+                height: 16px;
                 right: 0;
 
-				i {
-					@include rotate (-90);
-					display: block;
-					position: absolute;
-					top: 50%;
-					background-color: #111;
-					width: 100%;
-					height: 2px;
-					overflow: hidden;
-					text-indent: 100%;
-					white-space: nowrap;
-				}
+                i {
+                    @include rotate (-90);
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    background-color: #111;
+                    width: 100%;
+                    height: 2px;
+                    overflow: hidden;
+                    text-indent: 100%;
+                    white-space: nowrap;
+                }
 
-				&:before {
-					@include transition(all 750ms ease-in-out);
-					position: absolute;
-					top: 50%;
-					right: 0;
-					left: 0;
-					background-color: black;
-					width: 100%;
-					height: 2px;
-					content: '';
-				}
-			}
-		}
+                &:before {
+                    @include transition(all 750ms ease-in-out);
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    left: 0;
+                    background-color: black;
+                    width: 100%;
+                    height: 2px;
+                    content: '';
+                }
+            }
+        }
 
-		&.active p span {
-			@include rotate (-90);
+        &.active p span {
+            @include rotate (-90);
 
-			&:before {
-				opacity: 0;
-			}
-		}
-	}
+            &:before {
+                opacity: 0;
+            }
+        }
+    }
 }
-
-

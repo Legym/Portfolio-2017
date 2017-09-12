@@ -47,12 +47,12 @@
     }
 
     .slick-prev:after {
-	    content: "\f104";
+        content: "\f104";
         font: 40px/1 'FontAwesome';
     }
 
     .slick-next:after {
-	       content: "\f105";
+           content: "\f105";
          font: 40px/1 'FontAwesome';
     }
 
@@ -247,7 +247,7 @@
     }
 
     #solutions {
-	    position: relative;
+        position: relative;
         /*padding: 80px 0;*/
         text-align: center;
         /*min-height: 550px;*/
@@ -269,21 +269,21 @@
             margin-top: 40px;
             
 
-	        @include breakpoint(medium) { 
-		        text-align: left;
+            @include breakpoint(medium) { 
+                text-align: left;
                 float: left;
                 margin-top: 0;
-	        }
+            }
         }
 
         .solutions-button {
             margin: 0;
             display: none;
 
-	        @include breakpoint(medium) { 
+            @include breakpoint(medium) { 
                 float: right;
                 display: block;
-	        }
+            }
         }
 
         .solution-button-bottom {
@@ -291,149 +291,149 @@
             margin: 0 auto;
             margin-top: 40px;        
         
-	        @include breakpoint(medium) { 
+            @include breakpoint(medium) { 
                 display: none;
-	        }
+            }
 
         }
 
-	    .wrapper {
-		    text-align: center;
+        .wrapper {
+            text-align: center;
 
-		    @include breakpoint(medium) { 
+            @include breakpoint(medium) { 
                 text-align: left; 
-		    }
+            }
 
-		    h3 {
-			    @include breakpoint(medium) { 
+            h3 {
+                @include breakpoint(medium) { 
                     margin-left: 5%; 
-			    }
-		    }
-	    }
+                }
+            }
+        }
 
         #slider-wrapper {
-	        margin: 40px 15px 10px;
-	        /*max-height: 340px;*/
-	        overflow: hidden;
-	        position: relative;
+            margin: 40px 15px 10px;
+            /*max-height: 340px;*/
+            overflow: hidden;
+            position: relative;
             height: 600px;
 
-	        @include breakpoint(medium) { 
+            @include breakpoint(medium) { 
                 /*margin: 60px 0;*/
                 height: 300px;
-	        } 
+            } 
 
-	        &.slick-initialized { 
-		        max-height: none; 
-		        overflow: visible; 
-	        }
-	        // Frontpage Only
-	        .frontpage & {
-		        margin: 25px 15px 10px;
-		        @include breakpoint(medium) { margin: 35px 0 10px; } 
-	        }
+            &.slick-initialized { 
+                max-height: none; 
+                overflow: visible; 
+            }
+            // Frontpage Only
+            .frontpage & {
+                margin: 25px 15px 10px;
+                @include breakpoint(medium) { margin: 35px 0 10px; } 
+            }
         }
 
         #slider-imgs {
-	        margin-bottom: -1px;
+            margin-bottom: -1px;
 
-	        .slide { 
-		        padding: 0; 
-		        position: relative;
-		        transition: opacity 0.4s ease-in;
-		        width: 50%;
+            .slide { 
+                padding: 0; 
+                position: relative;
+                transition: opacity 0.4s ease-in;
+                width: 50%;
 
-		        @include breakpoint(medium) { 
+                @include breakpoint(medium) { 
                     padding: 0 10px;
                     height: 227px; 
-		        }
+                }
 
-		        @include breakpoint(large) { 
+                @include breakpoint(large) { 
                     width: 360px; 
-		        }
+                }
 
-		        &.inactive { opacity: 0.4; }
-		        &.active { opacity: 1; }
-		        img { 
+                &.inactive { opacity: 0.4; }
+                &.active { opacity: 1; }
+                img { 
                     width: 100%;
                     max-height: 300px;
                     max-width: 400px;
                     margin: 0 auto;
-		        }
-	        }
+                }
+            }
         }
 
         #slider-info {
-	        background-color: rgba(0, 0, 0, 0.65);
+            background-color: rgba(0, 0, 0, 0.65);
             min-height: 260px;
             position: relative;
             max-width: 400px;
             margin: 0 auto;
 
-	        @include breakpoint(medium) {
-		        @include abs-pos ($top: 75.7%, $right: 0%, $bottom: auto, $left: 0);
-		        min-height: 100%;
-		        width: 64.5%;
-		        z-index: 50;
+            @include breakpoint(medium) {
+                @include abs-pos ($top: 75.7%, $right: 0%, $bottom: auto, $left: 0);
+                min-height: 100%;
+                width: 64.5%;
+                z-index: 50;
                 min-height: 227px;
-	        }
+            }
 
-	        @include breakpoint(large) {
-		        @include abs-pos ($top: 0, $right: auto, $bottom: auto, $left: 50%);
+            @include breakpoint(large) {
+                @include abs-pos ($top: 0, $right: auto, $bottom: auto, $left: 50%);
                 margin-right: 10px;
-		        min-height: 228px;
-		        margin-left: -530px;
-		        width: 340px;
-	        }
+                min-height: 228px;
+                margin-left: -530px;
+                width: 340px;
+            }
 
-	        .info-item {
-		        opacity: 0;
-		        padding: 15px 30px;
-		        text-align: center;
-		        transition: opacity 0.2s ease-in;
+            .info-item {
+                opacity: 0;
+                padding: 15px 30px;
+                text-align: center;
+                transition: opacity 0.2s ease-in;
 
-		        @include breakpoint(medium) { 
-			        position: relative;
-			        top: 20px;
-			        text-align: left; 
-			        transition: opacity 0.3s ease-in, top 0.3s ease-in-out;
-		        }
+                @include breakpoint(medium) { 
+                    position: relative;
+                    top: 20px;
+                    text-align: left; 
+                    transition: opacity 0.3s ease-in, top 0.3s ease-in-out;
+                }
 
-		        &.animate {
-			        opacity: 1;
-			        top: 0;
-		        }
-		        &.animate-out {
-			        opacity: 0!important;
-			        top: -20px;
-			        transition: opacity 0.3s ease-in, top 0.4s ease-in-out;
-		        }
-		        h4 { 
-			        color: $primary-color; 
-			        font-size: 30px;
-			        line-height: normal;
-			        margin: 10px 0;
-		        }
-		        a,
-		        .btn,
-		        .btn-primary {
-			        margin: 0!important;
-			        text-align: center;
-			        @include breakpoint(medium) { text-align: left; }
-		        }
-		        p { line-height: 1.5em; }
-		        .bio {
-			        p {
-				        &:before,
-				        &:after { content: '"'; }
-			        }
-		        }
-		        .info-wrap {
-			        span {
-				        font-weight: 700;
-			        }
-		        }
-	        }
+                &.animate {
+                    opacity: 1;
+                    top: 0;
+                }
+                &.animate-out {
+                    opacity: 0!important;
+                    top: -20px;
+                    transition: opacity 0.3s ease-in, top 0.4s ease-in-out;
+                }
+                h4 { 
+                    color: $primary-color; 
+                    font-size: 30px;
+                    line-height: normal;
+                    margin: 10px 0;
+                }
+                a,
+                .btn,
+                .btn-primary {
+                    margin: 0!important;
+                    text-align: center;
+                    @include breakpoint(medium) { text-align: left; }
+                }
+                p { line-height: 1.5em; }
+                .bio {
+                    p {
+                        &:before,
+                        &:after { content: '"'; }
+                    }
+                }
+                .info-wrap {
+                    span {
+                        font-weight: 700;
+                    }
+                }
+            }
 
             .hp-slide-caption {
                 color: white;
@@ -441,48 +441,48 @@
         }
 
         .slider-nav {
-	        background-color: $primary-color;
-	        display: block;
-	        height: 58px;
-	        width: 40px;
-	        z-index: 501;
-	        @include breakpoint(medium) { width: 58px;}
+            background-color: $primary-color;
+            display: block;
+            height: 58px;
+            width: 40px;
+            z-index: 501;
+            @include breakpoint(medium) { width: 58px;}
         }
 
         #slider-next {
-	        @include abs-pos ($top: auto, $right: auto, $bottom: 40%, $left: -15px);
+            @include abs-pos ($top: auto, $right: auto, $bottom: 40%, $left: -15px);
             background: url(/images/slide-arrow-left.png) no-repeat center top;
-	        
-	        margin-top: -27px;
-	        @include breakpoint(medium) {
-		        @include abs-pos ($top: 50%, $right: auto, $bottom: auto, $left: -38px);
-		        background-position: left top;
-		        margin-top: -27px;
-	        }
-	        @include breakpoint(large) { 
-		        @include abs-pos ($top: 50%, $right: auto, $bottom: auto, $left: -78px);
-	        }
+            
+            margin-top: -27px;
+            @include breakpoint(medium) {
+                @include abs-pos ($top: 50%, $right: auto, $bottom: auto, $left: -38px);
+                background-position: left top;
+                margin-top: -27px;
+            }
+            @include breakpoint(large) { 
+                @include abs-pos ($top: 50%, $right: auto, $bottom: auto, $left: -78px);
+            }
         }
 
         #slider-prev {
-	        @include abs-pos ($top: auto, $right: -15px, $bottom: 40%, $left: auto);
-	        background: url(/images/slide-arrow-right.png) no-repeat center top;
-	        margin-top: -27px;
-	        @include breakpoint(medium) {
-		        @include abs-pos ($top: 50%, $right: -38px, $bottom: auto, $left: auto);
-		        background-position: right top;
-		        margin-top: -27px;
-	        }
-	        @include breakpoint(large) { 
-		        @include abs-pos ($top: 50%, $right: -438px, $bottom: auto, $left: auto);
-	        }
+            @include abs-pos ($top: auto, $right: -15px, $bottom: 40%, $left: auto);
+            background: url(/images/slide-arrow-right.png) no-repeat center top;
+            margin-top: -27px;
+            @include breakpoint(medium) {
+                @include abs-pos ($top: 50%, $right: -38px, $bottom: auto, $left: auto);
+                background-position: right top;
+                margin-top: -27px;
+            }
+            @include breakpoint(large) { 
+                @include abs-pos ($top: 50%, $right: -438px, $bottom: auto, $left: auto);
+            }
         }
 
         // Slider Pre-loader
         #wrap-slick { position: relative; }
         #loader-wrapper,
         #static-loader-wrapper {
-	        background-color: gray;
+            background-color: gray;
             position: absolute;
             top: 0;
             left: 0;
@@ -492,7 +492,7 @@
         }
         #loader,
         #fp-loader {
-	        display: block;
+            display: block;
             position: relative;
             left: 50%;
             top: 50%;
@@ -504,73 +504,73 @@
             border-top-color: $primary-color;
 
             -moz-animation-name: spin;
-	        -o-animation-name: spin;
-	        animation-name: spin;
+            -o-animation-name: spin;
+            animation-name: spin;
 
-	        -moz-animation-duration: 2s;
-	        -o-animation-duration: 2s;
-	        animation-duration: 2s;
+            -moz-animation-duration: 2s;
+            -o-animation-duration: 2s;
+            animation-duration: 2s;
 
-	        -moz-animation-iteration-count: infinite;
-	        -o-animation-iteration-count: infinite;
-	        animation-iteration-count: infinite;
+            -moz-animation-iteration-count: infinite;
+            -o-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 
-	        -moz-animation-timing-function: linear;
-	        -o-animation-timing-function: linear;
-	        animation-timing-function: linear;
+            -moz-animation-timing-function: linear;
+            -o-animation-timing-function: linear;
+            animation-timing-function: linear;
             &:before {
-    	        content: "";
-	            position: absolute;
-	            top: 5px;
-	            left: 5px;
-	            right: 5px;
-	            bottom: 5px;
-	            border-radius: 50%;
-	            border: 3px solid transparent;
-	            border-top-color: $primary-color;
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                right: 5px;
+                bottom: 5px;
+                border-radius: 50%;
+                border: 3px solid transparent;
+                border-top-color: $primary-color;
 
-	            -moz-animation-name: spin;
-		        -o-animation-name: spin;
-		        animation-name: spin;
+                -moz-animation-name: spin;
+                -o-animation-name: spin;
+                animation-name: spin;
 
-		        -moz-animation-duration: 3s;
-		        -o-animation-duration: 3s;
-		        animation-duration: 3s;
+                -moz-animation-duration: 3s;
+                -o-animation-duration: 3s;
+                animation-duration: 3s;
 
-		        -moz-animation-iteration-count: infinite;
-		        -o-animation-iteration-count: infinite;
-		        animation-iteration-count: infinite;
+                -moz-animation-iteration-count: infinite;
+                -o-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
 
-		        -moz-animation-timing-function: linear;
-		        -o-animation-timing-function: linear;
-		        animation-timing-function: linear;
+                -moz-animation-timing-function: linear;
+                -o-animation-timing-function: linear;
+                animation-timing-function: linear;
             }
             &:after {
-    	        content: "";
-	            position: absolute;
-	            top: 15px;
-	            left: 15px;
-	            right: 15px;
-	            bottom: 15px;
-	            border-radius: 50%;
-	            border: 3px solid transparent;
-	            border-top-color: $primary-color;
-	    
-	            -moz-animation-name: spin;
-		        -o-animation-name: spin;
-		        animation-name: spin;
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                right: 15px;
+                bottom: 15px;
+                border-radius: 50%;
+                border: 3px solid transparent;
+                border-top-color: $primary-color;
+        
+                -moz-animation-name: spin;
+                -o-animation-name: spin;
+                animation-name: spin;
 
-		        -moz-animation-duration: 1.5s;
-		        -o-animation-duration: 1.5s;
-		        animation-duration: 1.5s;
+                -moz-animation-duration: 1.5s;
+                -o-animation-duration: 1.5s;
+                animation-duration: 1.5s;
 
-		        -moz-animation-iteration-count: infinite;
-		        -o-animation-iteration-count: infinite;
-		        animation-iteration-count: infinite;
+                -moz-animation-iteration-count: infinite;
+                -o-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
 
-		        -moz-animation-timing-function: linear;
-		        -o-animation-timing-function: linear;
-		        animation-timing-function: linear;
+                -moz-animation-timing-function: linear;
+                -o-animation-timing-function: linear;
+                animation-timing-function: linear;
         }
     }
 }
@@ -593,70 +593,70 @@
             }
         }
 
-	    .slick { 
-		    padding: 0 5px;
-		    margin: 0;
-		    position: relative;
+        .slick { 
+            padding: 0 5px;
+            margin: 0;
+            position: relative;
 
-		    @include breakpoint(medium) { 
+            @include breakpoint(medium) { 
                 padding: 3px 3px; 
                 padding-bottom: 100px;
-		    }
+            }
 
-		    .slick-prev {
-			    background-color: transparent;
-		        background-image: url(/images/slim-arrow-left-white.png);
-		        background-repeat: no-repeat;
-		        border: none;
-		        color: transparent;
-		        display: block;
-		        height: 65px;
-		        width: 34px;
-		        overflow: hidden;
-		        position: absolute;
-		        top: 40%;
-		        left: 20px;
-			    z-index: 99;
-		    }
-		    .slick-next {
-			    background-color: transparent;
-		        background-image: url(/images/slim-arrow-right-white.png);
-		        background-repeat: no-repeat;
-		        border: none;
-		        color: transparent;
-		        display: block;
-		        height: 65px;
-		        width: 34px;
-		        overflow: hidden;
-		        position: absolute;
-		        top: 40%;
-		        right: 20px;
-		        z-index: 99;
-		    }
-	    }
+            .slick-prev {
+                background-color: transparent;
+                background-image: url(/images/slim-arrow-left-white.png);
+                background-repeat: no-repeat;
+                border: none;
+                color: transparent;
+                display: block;
+                height: 65px;
+                width: 34px;
+                overflow: hidden;
+                position: absolute;
+                top: 40%;
+                left: 20px;
+                z-index: 99;
+            }
+            .slick-next {
+                background-color: transparent;
+                background-image: url(/images/slim-arrow-right-white.png);
+                background-repeat: no-repeat;
+                border: none;
+                color: transparent;
+                display: block;
+                height: 65px;
+                width: 34px;
+                overflow: hidden;
+                position: absolute;
+                top: 40%;
+                right: 20px;
+                z-index: 99;
+            }
+        }
 
-	    .item {
-		    letter-spacing: .09em;
-		    padding: 10px 5px;
-		    position: relative;
-		    text-align: center;
-		    text-transform: uppercase;
+        .item {
+            letter-spacing: .09em;
+            padding: 10px 5px;
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
             background-color: white;
             margin-bottom: 20px;
             transition: all .3s ease-in;
 
-		    @include breakpoint(medium) {
+            @include breakpoint(medium) {
                 padding: 3px 3px; 
-		    }
+            }
 
             &:hover {
                 background-color: $primary-color;
             }
 
-		    .content {
-			    background-size: cover;
-			    background-position: bottom center;
-			    height: 255px;
+            .content {
+                background-size: cover;
+                background-position: bottom center;
+                height: 255px;
                 position: relative;
 
                 &:before {
@@ -675,37 +675,37 @@
 
 
 
-			    h3 {
-				    font-size: 30px;
-				    font-weight: normal;
-				    margin: 7px;
-				    opacity: 1;
-				    padding: 0 15%;
-				    position: absolute;
-				    bottom: 75px;
-				    left: 0;
-				    width: 100%;
-				    transition: bottom 300ms linear, opacity 100ms ease-in;
+                h3 {
+                    font-size: 30px;
+                    font-weight: normal;
+                    margin: 7px;
+                    opacity: 1;
+                    padding: 0 15%;
+                    position: absolute;
+                    bottom: 75px;
+                    left: 0;
+                    width: 100%;
+                    transition: bottom 300ms linear, opacity 100ms ease-in;
                     color: white;
-			    }
+                }
 
-		    }
+            }
 
-		    .link {
-			    margin: 0;
-			    position: absolute;
-			    bottom: 30px;
-			    left: 0;
-			    width: 100%;
+            .link {
+                margin: 0;
+                position: absolute;
+                bottom: 30px;
+                left: 0;
+                width: 100%;
                 font-family: "LeagueGothic";
                 font-size: 24px;
 
-			    a {
-				    display: block;
-				    font-size: 13px;
-				    font-weight: bold;
-			    }
-		    }
+                a {
+                    display: block;
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+            }
 
             .disableblog {
 
@@ -724,24 +724,24 @@
                 }
             }
 
-		    .overlay {
-			    color: white;
-			    font-size: 22px;
-			    height: 100%;
-			    width: 100%;
-			    opacity: 0;
-			    padding: 0 10px;
-			    padding-top: 120px;
-			    position: absolute;
-			    top: 0;
-			    left: 0;
-			    transition: all 300ms linear;
+            .overlay {
+                color: white;
+                font-size: 22px;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                padding: 0 10px;
+                padding-top: 120px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: all 300ms linear;
 
-			    p { 
+                p { 
                     margin: 0; 
-			    }
-		    }
-	    }
+                }
+            }
+        }
 
         .btn-inverse {
             width: 250px;

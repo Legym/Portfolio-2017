@@ -162,10 +162,10 @@ p {
 
         .subpage-about & {
             text-shadow: 0 15px 200px #0C0C0C;
-            color: white;     
+            color: white;
             background: inherit;
             padding: inherit;
-            display: block;   
+            display: block;
         }
     }
 
@@ -189,7 +189,7 @@ p {
 
 .breadcrumbs {
     display: none;
-    
+
     @include breakpoint(medium) {
         display: block;
         float: right;
@@ -228,7 +228,6 @@ p {
         @include breakpoint(large) {
             padding: inherit;
             width: 365px;
-            
         }
 
         .mobile-logo {
@@ -260,7 +259,7 @@ p {
 
     #desktop-menu {
         display: none;
-    
+
         @include breakpoint(large) {
            display: inline-block;
            vertical-align: top;
@@ -340,10 +339,6 @@ p {
 
     .content-padding {
         padding-top: 30px;
-
-        .subpage-blog & {
-            padding-bottom: 30px;
-        }
     }
 }
 
@@ -370,14 +365,13 @@ p {
         @include breakpoint(large) {
             width: 325px;
         }
-
     }
 
     /* Navigation  */
     .footer-navigation {
         text-align: center;
         margin-bottom: 25px;
-        
+
         @include breakpoint(medium) {
             text-align: inherit;
             margin-bottom: 0;
@@ -423,7 +417,6 @@ p {
         }
     }
 
-
     /* Social Media / Button */
     .footer-contact {
 
@@ -456,7 +449,6 @@ p {
                 color: $primary-color;
             }
         }
-
     }
 
     /* Credits */
@@ -478,10 +470,9 @@ p {
 
             @include breakpoint(medium) {
                 display: inline-block;
-                vertical-align: top;                
+                vertical-align: top;
             }
         }
-
 
         .author {
 
@@ -497,34 +488,34 @@ p {
 }
 
 #to-top {
-	display: none;
+    display: none;
     color: rgb(255, 255, 255);
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.298039);
-	border: 0;
-	font-size: 32px;
-	text-transform: none;
-	margin: 20px;
-	padding: 10px 10px 15px 10px;
-	position: fixed;
-	bottom: -100px;
-	right: 0;
-	z-index: 999;
-	transition: all .4s ease-in-out;
+    border: 0;
+    font-size: 32px;
+    text-transform: none;
+    margin: 20px;
+    padding: 10px 10px 15px 10px;
+    position: fixed;
+    bottom: -100px;
+    right: 0;
+    z-index: 999;
+    transition: all .4s ease-in-out;
 
     @include breakpoint(medium) {
         padding: 20px 20px 25px 20px;
     }
 
-	.fa {
-	    display: block;
-	    font-size: 16px;
-	    color: white;
-	}
+    .fa {
+        display: block;
+        font-size: 16px;
+        color: white;
+    }
 
-	&.in {
-	    bottom: 0;
-	}
+    &.in {
+        bottom: 0;
+    }
 }
 
 .conact-partial {
@@ -547,7 +538,3 @@ p {
         margin-top: 30px;
     }
 }
-
-
-
-
