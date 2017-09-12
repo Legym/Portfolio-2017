@@ -2,5 +2,5 @@
 	"type": "posts",
 	"layout": "projects",
 	"title": "mygelb",
-	"image": "/images/portfolio/mygelb-tile.png"
+	"portfolio_tile": "/images/portfolio/mygelb-tile.png"
 }

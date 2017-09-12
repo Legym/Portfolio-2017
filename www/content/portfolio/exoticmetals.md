@@ -2,5 +2,5 @@
 	"type": "posts",
 	"layout": "projects",
 	"title": "exoticmetals",
-	"image": "/images/portfolio/exoticmetals-tile.png"
+	"portfolio_tile": "/images/portfolio/exoticmetals-tile.png"
 }

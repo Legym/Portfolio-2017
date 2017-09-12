@@ -2,5 +2,5 @@
 	"type": "posts",
 	"layout": "projects",
 	"title": "mukilteo-natural-health",
-	"image": "/images/portfolio/muk-tile.jpg"
+	"portfolio_tile": "/images/portfolio/muk-tile.jpg"
 }

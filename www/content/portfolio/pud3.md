@@ -2,5 +2,5 @@
 	"type": "posts",
 	"layout": "projects",
 	"title": "pud3",
-	"image": "/images/portfolio/pud3-tile.jpg"
+	"portfolio_tile": "/images/portfolio/pud3-tile.jpg"
 }

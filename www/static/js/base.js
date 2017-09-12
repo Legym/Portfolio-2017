@@ -24,12 +24,8 @@
 
 var FEATURES = {
 
-    hireMe: function() {
-        console.log("Thanks for taking a peek! If you work with amazing people I want to be part of it.");
-    },
-
     fancybox: function() {
-        $(".fancybox").fancybox();
+        $('.fancybox').fancybox();
     },
 
     currentPage: function () {
@@ -43,16 +39,16 @@ var FEATURES = {
     },
 
     blogSocialMedia: function () {
-        $("#share").jsSocials({
+        $('#share').jsSocials({
             showLabel: false,
             showCount: false,
-            shares: ["twitter", "facebook", "googleplus",]
+            shares: ['twitter', 'facebook', 'googleplus']
         });
 
-        $("#share-mobile").jsSocials({
+        $('#share-mobile').jsSocials({
             showLabel: false,
             showCount: false,
-            shares: ["twitter", "facebook", "googleplus", ]
+            shares: ['twitter', 'facebook', 'googleplus']
         });
     },
 
@@ -67,7 +63,6 @@ var FEATURES = {
                 header.css("position", "relative");
             }
         });
-
     },
 
     blogOvSidebar: function () {
@@ -122,7 +117,6 @@ var FEATURES = {
             slidesToShow: 1,
             fade: true,
         });
-
     },
 
     staticSlider: function (param, number) {
@@ -274,7 +268,6 @@ var FEATURES = {
                         autoplay: true,
                         autoplaySpeed: 3500,
                         centerMode: true,
-                        autoplay: false,
                         arrows: true,
                         dots: false,
                         infinite: true
@@ -288,7 +281,6 @@ var FEATURES = {
                             autoplay: true,
                             autoplaySpeed: 3500,
                             centerMode: true,
-                            autoplay: false,
                             arrows: true,
                             dots: false,
                             infinite: true
@@ -301,7 +293,6 @@ var FEATURES = {
                         slidesToScroll: 1,
                         autoplay: true,
                         autoplaySpeed: 3500,
-                        autoplay: false,
                         arrows: true,
                         dots: false,
                         infinite: true
@@ -311,10 +302,11 @@ var FEATURES = {
         });
 
         $.ajax({
-            type: "GET",
-            dataType: "jsonp",
-            cache: false,
-            url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=1723043700.1677ed0.2563c0e77aee46b1b05144fde13bd641",
+            type: 'GET',
+            dataType: 'jsonp',
+            get: 'user',
+            userId: 'mygel_bergstresser',
+            url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=1723043700.1677ed0.49b29dec3a8a42b0866a2be62e85feb3',
             success: function (data) {
                 for (var i = 0; i < 15; i++) {
                     x = i + 1;
@@ -363,8 +355,8 @@ var FEATURES = {
             fade: true,
         });
 
-        $(window).on("resize", function () {
-            $('.homepage-slideshow').height($(window).height() - 50)
+        $(window).on('resize', function () {
+            $('.homepage-slideshow').height($(window).height() - 50);
         }).resize();
     },
 

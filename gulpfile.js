@@ -41,6 +41,7 @@ gulp.task('lint', function() {
 // Compile Our Sass
 gulp.task('sass', function() {
     gulp.src([
+        './node_modules/jssocials/dist/jssocials-theme-flat.css',
         './www/static/scss/*.scss',
         ])
         .pipe(plumber({ errorHandler: onError }))
@@ -50,7 +51,8 @@ gulp.task('sass', function() {
                 './node_modules/foundation-sites/assets/',
                 './node_modules/font-awesome/scss/',
                 './node_modules/jquery-fancybox/source/scss/',
-                './node_modules/slick-carousel/slick/'
+                './node_modules/slick-carousel/slick/',
+                './node_modules/jssocials/styles/'
             ]
         }))
         .pipe(autoprefixer({
@@ -73,6 +75,8 @@ gulp.task('scripts', function() {
         './node_modules/foundation-sites/dist/foundation.js',
         './node_modules/slick-carousel/slick/slick.js',
         './node_modules/jquery-fancybox/source/js/jquery.fancybox.pack.js',
+        './node_modules/jssocials/src/jssocials.js',
+        './node_modules/jssocials/src/jssocials.shares.js',
         './node_modules/jquery-match-height/dist/jquery.matchHeight-min.js',
         './www/static/js/vendor/parallax.min.js',
         './www/static/js/base.js',

@@ -11,17 +11,19 @@ $alt-break: 1100px;
 $alt-break-min: 1099px;
 
 $slick-font-path: '../fonts/';
+$image-path: '../images/fancybox/';
 
 /* Install ZURB Foundation*/
 @import 'foundation';
-
 @import 'font-awesome';
-
+@import 'jquery.fancybox';
 
 @import '_partials/slick';
 @import '_partials/slick-theme';
 
 @import './node_modules/jquery.mmenu/src/addons/offcanvas/jquery.mmenu.offcanvas';
+
+@import 'jssocials';
 
 /* Custom */
 @import '_partials/fonts';

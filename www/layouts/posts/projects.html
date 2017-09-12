@@ -2,7 +2,7 @@
 
 <section class="portfolio-intro">
     <div class="parallax-wrapper">
-        <span data-bg="@m.Url" class="hidden"></span>
+        <span data-bg="{{ .Params.hero }}" class="hidden"></span>
         <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
             <div class="row">
                 <div class="parallax-content">
@@ -14,7 +14,6 @@
 </section>
 
 <section class="project-intro content-padding">
-
     <div class="row">
 
         <div class="small-12 columns">
@@ -43,21 +42,13 @@
 
         <div class="medium-6 columns">
             <div class="project-slideshow">
-
-                @if (Model.Content.HasValue("projectDisplay"))
-                {
-                    var heroBannerList = Model.Content.GetPropertyValue<string>("projectDisplay").Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse);
-                    var heroBannerCollection = Umbraco.TypedMedia(heroBannerList).Where(x => x != null);
-                    foreach (var heroBanner in heroBannerCollection)
-                    {
-                        <div class="content">
-                            <a class="fancybox" rel="group" href="@heroBanner.Url">
-                                <img src="{{ .Permalink }}" />
-                            </a>
-                        </div>
-                    }
-                }
-
+                {{ range .Params.project }}
+                    <div class="content">
+                        <a class="fancybox" rel="group" href="{{ . }}">
+                            <img src="{{ . }}" />
+                        </a>
+                    </div>
+                {{ end }}
             </div>
         </div>
     </div>
@@ -74,7 +65,7 @@
             {{ range ( last 3 ( where .Site.Pages "Section" "portfolio" ) ) }}
                 <div class="project-container height">
                     <figure class="effect-lily">
-                        <img src="{{ .Params.image }}" alt="{{ .Params.title }}" />
+                        <img src="{{ .Params.portfolio_tile }}" alt="{{ .Params.title }}" />
                         <figcaption>
                             <a href="{{ .Permalink }}">View more</a>
                         </figcaption>

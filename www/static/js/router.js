@@ -27,7 +27,6 @@
                 FEATURES.matchHeight();
                 FEATURES.currentPage();
                 FEATURES.fancybox();
-                // FEATURES.hireMe();
             }
         },
 
@@ -69,20 +68,11 @@
                 FEATURES.parallax(
                     '#experience .parallax-wrapper > .parallax-window',
                     '#experience .parallax-wrapper > span[data-bg]'
-                )
-            }
-        },
-
-        subpage_portfolio: {
-            init: function () {
-                FEATURES.parallax(
-                    '.parallax-wrapper > .parallax-window',
-                    '.parallax-wrapper > span[data-bg]'
                 );
             }
         },
 
-        subpage_project: {
+        subpage_portfolio: {
             init: function () {
                 FEATURES.parallax(
                     '.parallax-wrapper > .parallax-window',

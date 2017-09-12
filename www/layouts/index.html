@@ -198,13 +198,11 @@
 
                             <!-- If the blog is enabled -->
                             {{ if .Params.enabled }}
-                                <a href="@project.Url">
-                                    <div class="disableblog">
-                                        <div class="content" style="background-image: url({{ .Params.image }})">
-                                            <h3>{{ .Params.title }}</h3>
-                                        </div>
-                                        <p class="link">{{ .Params.title }}</p>
+                                <a href="{{ .Permalink }}">
+                                    <div class="content" style="background-image: url({{ .Params.image }})">
+                                        <h3>{{ .Params.title }}</h3>
                                     </div>
+                                    <p class="link">Read More</p>
                                 </a>
                             {{ else }}
                                 <div class="disableblog">
