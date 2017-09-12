@@ -50,6 +50,7 @@ gulp.task('sass', function() {
             includePaths: [
                 './node_modules/foundation-sites/assets/',
                 './node_modules/font-awesome/scss/',
+                './node_modules/jquery.mmenu/src/addons/offcanvas',
                 './node_modules/jquery-fancybox/source/scss/',
                 './node_modules/slick-carousel/slick/',
                 './node_modules/jssocials/styles/'

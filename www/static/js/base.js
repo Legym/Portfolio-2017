@@ -323,24 +323,13 @@ var FEATURES = {
 
     mmenu: function () {
 
-        $("#menu-mobile").mmenu({
-            searchfield: {
-                add: true,
-                search: false
+        $('#menu-mobile').mmenu({
+            'offCanvas': {
+                'position': 'right'
             },
-
-            "offCanvas": {
-                "position": "right"
-            },
-            "extensions": [
-                "pageshadow"
+            'extensions': [
+                'pageshadow'
             ],
-        });
-
-        $(".mm-search input").keyup(function (e) {
-            if (e.keyCode == 13) {
-                window.location.href = '/search-results?Keywords=' + $(this).val();
-            }
         });
     },
 
@@ -358,61 +347,6 @@ var FEATURES = {
         $(window).on('resize', function () {
             $('.homepage-slideshow').height($(window).height() - 50);
         }).resize();
-    },
-
-    search: function () {
-
-        /* 
-            Please set anchor tag of search button to <a href="#/"></a>
-            to prevent page from jumping.
-        */
-
-        /* Hides searchbar if clicking anywhere else on page other than input */
-        $(document).click(function () {
-            $('.search-input').removeClass("search-show");
-
-            /* Removes click event listner and adds new event handler: showSearch()*/
-            $('.search-icon').unbind('click').bind('click', showSearch);
-        });
-
-
-        /* Always shows searchbar when clicking on search icon */
-        $('.search-icon').bind('click', showSearch);
-
-
-        /* 
-            When searchbar is displayed and user clicks inside, prevent searchbar from entering Bubbling phase and hiding searchbar
-        */
-        $('.search-input').click(function (ev) {
-            ev.stopPropagation();
-        });
-
-        /* Shows searchbar */
-        function showSearch(ev) {
-
-            /* 
-                Shows searchbar with CSS3 and binds executeSearch to searchbar 
-            */
-            $('.search-input').addClass("search-show");
-            $('.search-icon').bind('click', executeSearch);
-            ev.stopPropagation();
-        }
-
-        /* Executes Search. */
-        function executeSearch() {
-            var searchvalue = $('.search-input').val();
-
-            /* 
-                If user presses the search button with text in input, perform search.
-                If user presses the search button with no text, hide searchbar
-
-            */
-            if ($.trim(searchvalue) !== '') {
-                location.href = '/search/' + searchvalue;
-            } else {
-                $('.search-input').toggleClass("search-show");
-            }
-        }
     },
 
     mapCover: function () {

@@ -9,7 +9,7 @@ html, body { height: auto; }
         opacity: 1;
         width: 50%;
         border-bottom: 3px solid $primary-color;
-    }        
+    }
 }
 
 .subpage-blog #desktop-menu li:nth-of-type(4) a {
@@ -20,7 +20,7 @@ html, body { height: auto; }
         opacity: 1;
         width: 50%;
         border-bottom: 3px solid $primary-color;
-    }        
+    }
 }
 
 /* Mmenu plugin styles*/
@@ -35,28 +35,6 @@ html, body { height: auto; }
     > li:not(.mm-divider):after {
         border-bottom-width: 0;
     }
-
-
-}
-
-.mm-panels {
-
-    .mm-hassearch {
-        padding-top: 100px !important;
-
-        .mm-search {
-            top: 55px !important;
-        }
-
-        input {
-            border-radius: 0;
-            background-color: white;
-            border: 1px solid #d0d0d0 !important;
-            padding: 15px;
-        }
-    }
-
-
 }
 
 /* Global Styles */
@@ -352,47 +330,6 @@ p {
             }
         }
     }
-   
-
-    .searchbox {
-
-        @include breakpoint(medium) {
-            position: relative
-        }
-
-		.search-input {
-            position: absolute;
-            opacity: 0;
-            top: 60px;
-            height: 25px;
-            width: 250px; 
-            font-size: 24px;
-            height: 40px;
-            text-indent: 10px;
-            margin: 0 auto;
-            right: 0;
-            transition: all 0.3s linear;  
-            z-index: -1;
-            border: 3px solid rgba(145, 143, 140, 0.2);
-            border-top: 0;   
-		}
-
-		.search-icon i {
-			display: inline-block;
-            vertical-align: baseline;
-            font-size: 1em;
-		}	
-        
-        .search-show {
-            top: 73px;
-            left: inherit;
-            opacity: 1;
-            z-index: 99999;
-            right: 0;       
-            border: 3px solid rgba(145, 143, 140, 0.2);
-            border-top: 0;   
-        }          					
-	}				    																														
 }
 
 .main-content {

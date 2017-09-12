@@ -21,18 +21,18 @@ $image-path: '../images/fancybox/';
 @import '_partials/slick';
 @import '_partials/slick-theme';
 
-@import './node_modules/jquery.mmenu/src/addons/offcanvas/jquery.mmenu.offcanvas';
+@import 'jquery.mmenu.offcanvas';
 
 @import 'jssocials';
 
 /* Custom */
-@import '_partials/fonts';
-@import '_partials/mixins';
-@import '_partials/global';
-@import '_partials/hamburger';
-@import '_partials/homepage';
-@import '_partials/about';
-@import '_partials/portfolio';
-@import '_partials/blog';
-@import '_partials/contact';
-@import '_partials/newsletter';
+@import '_partials/fonts',
+		'_partials/mixins',
+		'_partials/global',
+		'_partials/hamburger',
+		'_partials/homepage',
+		'_partials/about',
+		'_partials/portfolio',
+		'_partials/blog',
+		'_partials/contact',
+		'_partials/newsletter';

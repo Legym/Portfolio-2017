@@ -155,7 +155,7 @@
         <div id="slider-imgs" class="homepage-static-slider">
             {{ range ( first 4 ( where .Data.Pages.Reverse "Section" "portfolio" ) ) }}
                 <div class="slide slide-@(projectimage++) inactive">
-                    <img class="lazy" data-lazy="{{ .Params.image }}" alt="{{ .Params.title }}">
+                    <img class="lazy" data-lazy="{{ .Params.portfolio_tile }}" alt="{{ .Params.title }}">
                 </div>
             {{ end }}
         </div>

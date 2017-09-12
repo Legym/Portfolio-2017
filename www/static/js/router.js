@@ -21,7 +21,6 @@
         common: {
             init: function () {
                 FEATURES.mmenu();
-                FEATURES.search();
                 FEATURES.runFoundation();
                 FEATURES.toTop();
                 FEATURES.matchHeight();
