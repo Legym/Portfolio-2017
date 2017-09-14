@@ -19,85 +19,9 @@
             {{ partial "breadcrumbs" . }}
         </div>
 
+        <!-- Desktop Sidebar -->
         <div class="medium-3 columns">
-            <div id="blog-sticky" class="blog-sidebar-desktop" style="position: relative;">
-                <h6>FILTER BY:</h6>
-                <ul class="responsive-accordion">
-                    <li class="inner-template-desktop-sidebar">
-                        <div class="responsive-accordion-head accordion-default">
-                            <p><span><i>plus</i></span></p>
-                            <h3 class="sidebar_header">View By Tag</h3>
-                        </div>
-                        <div class="link-cnt responsive-accordion-panel accordion-default" style="display: none;">
-                            <a href="/blog/?tag=Travel">Travel</a>
-                            <a href="/blog/?tag=Personal">Personal</a>
-                            <a href="/blog/?tag=Seattle">Seattle</a>
-                            <a href="/blog/?tag=Backpacking">Backpacking</a>
-                            <a href="/blog/?tag=Development">Development</a>
-                        </div>
-                    </li>
-
-                    <select class="inner-template-mobile-sidebar" onchange="document.location = this.value">
-                        <option value="#">View By Tag</option>
-                            <option value="/blog/?tag=Travel">Travel</option>
-                            <option value="/blog/?tag=Personal">Personal</option>
-                            <option value="/blog/?tag=Seattle">Seattle</option>
-                            <option value="/blog/?tag=Backpacking">Backpacking</option>
-                            <option value="/blog/?tag=Development">Development</option>
-                    </select>
-
-                    <li class="inner-template-desktop-sidebar">
-                        <div class="responsive-accordion-head accordion-default">
-                            <p><span><i>plus</i></span></p>
-                            <h3 class="sidebar_header">View By Category</h3>
-                        </div>
-                        <div class="link-cnt responsive-accordion-panel accordion-default" style="display: none;">
-                            <a class="smartCategory" href="/blog/?category=Traveling">Traveling</a>
-                            <a class="smartCategory" href="/blog/?category=Development">Development</a>
-                        </div>
-                    </li>
-
-                    <select class="inner-template-mobile-sidebar" onchange="document.location = this.value">
-                        <option value="#">Search By Category</option>
-                        <option value="?category=Traveling">Traveling</option>
-                        <option value="?category=Development">Development</option>
-                    </select>
-
-                    <li class="category blog_sidebar">
-                        <div class="responsive-accordion-head accordion-default">
-                            <p><span><i>plus</i></span></p>
-                            <h3 class="sidebar_header">Archive</h3>
-                        </div>
-
-                        <div class="link-cnt responsive-accordion-panel accordion-default" style="display: none;">
-                            <ul class="smartArchive">
-                                <li>
-                                    <a href="/blog/posts/2016/" title="Posts in 2016">2016</a>
-                                    <ul style="display: none;">
-                                        <li>
-                                            <a href="/blog/posts/2016/augest/" title="Posts in Augest 2016">Augest</a>
-                                            <ul style="display: none;">
-                                                <li>
-                                                    <a href="/blog/posts/2016/augest/the-man-the-myth-the-legend/" title="The Man. The Myth. The Legend.">The Man. The Myth. The Legend.</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/blog/posts/2016/augest/seattle-welcome-to-the-city/" title="Seattle: Welcome to the city!">Seattle: Welcome to the city!</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/blog/posts/2016/augest/what-gear-you-should-bring-for-backpacking/" title="What gear you should bring for backpacking">What gear you should bring for backpacking</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/blog/posts/2016/augest/the-life-of-a-web-developer/" title="The life of a web developer">The life of a web developer</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            {{ partial "blog-sidebar" . }}
         </div>
 
         <div class="large-9 columns blog-main-content">
