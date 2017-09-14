@@ -29,13 +29,17 @@ var FEATURES = {
     },
 
     currentPage: function () {
-        var $linkURL = $("#desktop-menu ul li > a");
+        var $linkURL = $("#desktop-menu ul li a");
 
         $linkURL.filter(function () {
-            return this.href == location.href.replace(/#.*/, "");
-        }).addClass("menu-active");
+            return this.href == location.href.replace(/#.*/);
+        }).addClass('menu-active');
 
-        $('#desktop-menu ul li > a[href^="/' + location.pathname.split("/")[4] + '"]').addClass('menu-active');
+        if (location.pathname.split('/')[1] === '') {
+            //
+        } else {
+            $('#desktop-menu ul li > a[href^="/' + location.pathname.split('/')[1] + '"]').addClass('menu-active');
+        }
     },
 
     blogSocialMedia: function () {

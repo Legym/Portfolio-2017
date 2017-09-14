@@ -149,7 +149,7 @@
     .about-process {
         text-align: center;
 
-        ul.qualifications {            
+        ul.qualifications {
             text-align: left;
             margin-top: 30px;
             position: relative;
@@ -172,7 +172,7 @@
             li {
                 color: $primary-color;
                 margin-bottom: 20px;
-                
+
                 @include breakpoint(medium) {
                     margin-bottom: 10px;
                 }
@@ -289,7 +289,7 @@
 
     .geolocation {
         position: relative;
-        height: 400px; 
+        height: 400px;
 
         @include breakpoint(medium) {
             height: 600px;
