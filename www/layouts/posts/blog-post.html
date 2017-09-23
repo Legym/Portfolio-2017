@@ -1,96 +1,79 @@
 {{ define "main" }}
 
-<section id="blog-overview-image" class="about-image">
-    <div class="parallax-wrapper">
-        <span data-bg="{{ .Params.image }}" class="hidden"></span>
-        <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
-            <div class="row">
-                <div class="parallax-content">
-                    <h2>Blog</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="blog-content content-padding">
     <div class="row">
         <div class="small-12 columns">
 			{{ partial "breadcrumbs" . }}
 		</div>
 
-		<div class="small-12 columns">
+		<div class="small-12 columns blog-main-content blog-detail-post">
+		    <div id="postPageBody">
+		        <h2>The Man. The Myth. The Legend.</h2>
+				By <a href="/blog/?author=Mygel Bergstresser">Mygel Bergstresser</a> at Aug 23, 2016
+		        <p>This website was originally built to start a career as a web developer. Many redesigns later it turned into a web portfolio, but with one page dedicated to express my observations. Social media is an echo chamber of: memes, motivational quotes, passive aggressive statements, and squabbling over petty events when in reality there are larger issues that we need solutions for. This little page on the internet is a place to collect my thoughts and share my story.<br><br>My name is Mygel Bergstresser and I am a 25 year old who is dedicated to finding truth, happiness, and making this planet a little better than how I found it. I am not an activist looking to spread an agenda by painting life black or white. I am not a supporter of violence, harassment, and belittling one another. I am not an Elon Musk on the verge of pushing mankind into the next phase of civilization; don’t get me wrong I would love to! I am just a guy floating through this experience we call life. Speaking of life…</p>
+				<p>&nbsp;</p>
+				<h4>What’s with the name?</h4>
+				<p>On June 30th 1991, Mount Pinatubo erupted in the Philippines. It killed over 700&nbsp;people, lowered the global temperature by 33.08 degrees Fahrenheit, and the entire island tried to evacuate as the world watched in awe. During labor one of the delivery nurses asked my mother to name me after her son which was named Mygel. Pretty cool huh?</p>
+				<p>&nbsp;</p>
+				<h4>Quirks, Facts, and Skills</h4>
+				<p>1. My best one mile time is under 5:00 minutes. You can safely make the assumption I’m athletic. <br>2.&nbsp;Born in the Philippines, but was raised in North Carolina.&nbsp;<br>3. Always loved solving problems.<br>4. Hobbies: Photography, building websites, cooking, fixing cars, fixing houses, hiking, traveling<br>5. I aim to produce more content than I consume<br>6. I'm big into the EDM/Electro House scene. <br>7. I don’t keep up with sports, celebrities, or Pokémon Go.<br>8.&nbsp;I wish Tom Cruise was my spirit animal.&nbsp;<br>9. You can’t talk about blood around me. I’ll eventually pass out. I’m okay to look at it though. <br>10. Give me a cider, mix drink, or wine. Rum &amp; coke please!</p>
+		    </div>
 
-			<!-- Desktop Sidebar -->
-			<div class="medium-3 columns">
-				{{ partial "blog-sidebar" . }}
+		    <div class="social-media">
+		        <h6>Share:</h6>
+		        <div id="share"></div>
+		    </div>
+
+	        <div id="commentsContainer">
+	        	<h3>Comments</h3>
 			</div>
 
-			<div class="small-12 large-9 columns blog-main-content blog-detail-post">
-			    <div id="postPageBody">
-			        <h2>The Man. The Myth. The Legend.</h2>
-					By <a href="/blog/?author=Mygel Bergstresser">Mygel Bergstresser</a> at Aug 23, 2016
-			        <div id="share-mobile" class="share-mobile-style"></div>
-			        <p>This website was originally built to start a career as a web developer. Many redesigns later it turned into a web portfolio, but with one page dedicated to express my observations. Social media is an echo chamber of: memes, motivational quotes, passive aggressive statements, and squabbling over petty events when in reality there are larger issues that we need solutions for. This little page on the internet is a place to collect my thoughts and share my story.<br><br>My name is Mygel Bergstresser and I am a 25 year old who is dedicated to finding truth, happiness, and making this planet a little better than how I found it. I am not an activist looking to spread an agenda by painting life black or white. I am not a supporter of violence, harassment, and belittling one another. I am not an Elon Musk on the verge of pushing mankind into the next phase of civilization; don’t get me wrong I would love to! I am just a guy floating through this experience we call life. Speaking of life…</p>
-					<p>&nbsp;</p>
-					<h4>What’s with the name?</h4>
-					<p>On June 30th 1991, Mount Pinatubo erupted in the Philippines. It killed over 700&nbsp;people, lowered the global temperature by 33.08 degrees Fahrenheit, and the entire island tried to evacuate as the world watched in awe. During labor one of the delivery nurses asked my mother to name me after her son which was named Mygel. Pretty cool huh?</p>
-					<p>&nbsp;</p>
-					<h4>Quirks, Facts, and Skills</h4>
-					<p>1. My best one mile time is under 5:00 minutes. You can safely make the assumption I’m athletic. <br>2.&nbsp;Born in the Philippines, but was raised in North Carolina.&nbsp;<br>3. Always loved solving problems.<br>4. Hobbies: Photography, building websites, cooking, fixing cars, fixing houses, hiking, traveling<br>5. I aim to produce more content than I consume<br>6. I'm big into the EDM/Electro House scene. <br>7. I don’t keep up with sports, celebrities, or Pokémon Go.<br>8.&nbsp;I wish Tom Cruise was my spirit animal.&nbsp;<br>9. You can’t talk about blood around me. I’ll eventually pass out. I’m okay to look at it though. <br>10. Give me a cider, mix drink, or wine. Rum &amp; coke please!</p>
-			    </div>
+			<br>
 
-		        <div id="commentsContainer">
-		        	<h3>Comments</h3>
-				</div>
+			<h3>Post a comment</h3>
+			<form action="/blog/posts/2016/augest/the-man-the-myth-the-legend/" enctype="multipart/form-data" id="commentForm" method="post">
+		        <div class="row">
+		            <div class="large-12 columns">
+		                <label>
+		                    <input data-val="true" data-val-required="Name is required" id="strName" name="strName" placeholder="Name" type="text" value="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+		                </label>
+		            </div>
+		        </div>
 
-				<br>
+		        <div class="row">
+		            <div class="large-6 columns">
+		                <label>
+		                    <input data-val="true" data-val-regex="Invalid Email Address" data-val-regex-pattern="^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$" data-val-required="Email is required" id="strEmail" name="strEmail" placeholder="Email" type="text" value="">
+		                </label>
+		            </div>
+		            <div class="large-6 columns">
+		                <label>
+		                    <input id="strWebsite" name="strWebsite" placeholder="Website" type="text" value="">
+		                </label>
+		            </div>
+		        </div>
 
-				<h3>Post a comment</h3>
-				<form action="/blog/posts/2016/augest/the-man-the-myth-the-legend/" enctype="multipart/form-data" id="commentForm" method="post">
-			        <div class="row">
-			            <div class="large-12 columns">
-			                <label>
-			                    <input data-val="true" data-val-required="Name is required" id="strName" name="strName" placeholder="Name" type="text" value="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
-			                </label>
-			            </div>
-			        </div>
+		        <div class="row">
+		            <div class="large-12 columns">
+		                <label>
+		                    <textarea cols="20" data-val="true" data-val-required="Comment is required" id="strComment" name="strComment" placeholder="Your Comment" rows="2"></textarea>
+		                </label>
+		            </div>
+		        </div>
 
-			        <div class="row">
-			            <div class="large-6 columns">
-			                <label>
-			                    <input data-val="true" data-val-regex="Invalid Email Address" data-val-regex-pattern="^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$" data-val-required="Email is required" id="strEmail" name="strEmail" placeholder="Email" type="text" value="">
-			                </label>
-			            </div>
-			            <div class="large-6 columns">
-			                <label>
-			                    <input id="strWebsite" name="strWebsite" placeholder="Website" type="text" value="">
-			                </label>
-			            </div>
-			        </div>
+		        <div class="row">
+		            <div class="large-12 columns">
+		                <input data-val="true" data-val-regex="Invalid answer to security question" data-val-regex-pattern="^4$" data-val-required="Security question is required" id="strSecurity" name="strSecurity" placeholder="Security Question: What is 2 + 2?" type="text" value="">
+		            </div>
 
-			        <div class="row">
-			            <div class="large-12 columns">
-			                <label>
-			                    <textarea cols="20" data-val="true" data-val-required="Comment is required" id="strComment" name="strComment" placeholder="Your Comment" rows="2"></textarea>
-			                </label>
-			            </div>
-			        </div>
+		            <div class="large-12 columns">
+		                <input data-val="true" data-val-number="The field intId must be a number." data-val-required="Error getting post ID" id="intId" name="intId" type="hidden" value="1117">
+		                <input type="submit" name="Submit" value="Submit" id="submitButton" class="btn btn-inverse">
+		            </div>
+		        </div>
 
-			        <div class="row">
-			            <div class="large-12 columns">
-			                <input data-val="true" data-val-regex="Invalid answer to security question" data-val-regex-pattern="^4$" data-val-required="Security question is required" id="strSecurity" name="strSecurity" placeholder="Security Question: What is 2 + 2?" type="text" value="">
-			            </div>
-
-			            <div class="large-12 columns">
-			                <input data-val="true" data-val-number="The field intId must be a number." data-val-required="Error getting post ID" id="intId" name="intId" type="hidden" value="1117">
-			                <input type="submit" name="Submit" value="Submit" id="submitButton" class="btn btn-inverse">
-			            </div>
-			        </div>
-
-					<input name="ufprt" type="hidden" value="">
-				</form>
-			</div>
+				<input name="ufprt" type="hidden" value="">
+			</form>
 		</div>
     </div>
 </section>

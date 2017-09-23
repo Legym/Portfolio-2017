@@ -1,5 +1,5 @@
 ﻿.subpage-newsletter {
-    
+
     @include breakpoint(medium) {
         text-align: left;
     }
@@ -27,11 +27,11 @@
         background-color: white;
         border: 1px solid #cacaca;
         transition: all .3s ease;
-        
+
         &:hover {
             color: white;
             background-color: $primary-color;
-        }        
+        }
     }
 
     .field-validation-error {

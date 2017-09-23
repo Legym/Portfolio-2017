@@ -138,50 +138,6 @@
     </div>
 </section>
 
-<section id="solutions">
-    <div class="row">
-        <div class="small-12 columns">
-            <h2>Latest Work</h2>
-            <a class="solutions-button btn btn-inverse" href="/portfolio">View Projects</a>
-        </div>
-    </div>
-
-    <div id="slider-wrapper">
-        <div id="static-loader-wrapper">
-            <div id="loader"></div>
-        </div>
-
-        <!-- Image Slider -->
-        <div id="slider-imgs" class="homepage-static-slider">
-            {{ range ( first 4 ( where .Data.Pages.Reverse "Section" "portfolio" ) ) }}
-                <div class="slide slide-@(projectimage++) inactive">
-                    <img class="lazy" data-lazy="{{ .Params.portfolio_tile }}" alt="{{ .Params.title }}">
-                </div>
-            {{ end }}
-        </div>
-
-        <!-- Info container -->
-        <div id="slider-info">
-            <div class="slider-wrap">
-                {{ range ( first 4 ( where .Data.Pages.Reverse "Section" "portfolio" ) ) }}
-                    <div class="info-item item-@(projectmetadata++) animate-out" style="display: none;">
-                        <div class="info-wrap">
-                            <h4>{{ .Params.title }}</h4>
-                            <div class="hp-slide-caption">@project.Caption</div>
-                        </div>
-                    </div>
-                {{ end }}
-
-                <a id="slider-prev" class="slider-nav" href="#"></a>
-                <a id="slider-next" class="slider-nav" href="#"></a>
-            </div>
-        </div>
-
-        <a class="solutions-button solution-button-bottom btn btn-inverse" href="/portfolio">View Projects</a>
-
-    </div>
-</section>
-
 <section id="explore">
     <div class="parallax-wrapper">
         <span data-bg="/images/homepage/blog-background.jpg" class="hidden"></span>

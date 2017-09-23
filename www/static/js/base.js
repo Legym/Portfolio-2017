@@ -24,12 +24,8 @@
 
 var FEATURES = {
 
-    fancybox: function() {
-        $('.fancybox').fancybox();
-    },
-
     currentPage: function () {
-        var $linkURL = $("#desktop-menu ul li a");
+        var $linkURL = $('#desktop-menu ul li a');
 
         $linkURL.filter(function () {
             return this.href == location.href.replace(/#.*/);
@@ -48,68 +44,6 @@ var FEATURES = {
             showCount: false,
             shares: ['twitter', 'facebook', 'googleplus']
         });
-
-        $('#share-mobile').jsSocials({
-            showLabel: false,
-            showCount: false,
-            shares: ['twitter', 'facebook', 'googleplus']
-        });
-    },
-
-    blogOvSticky: function () {
-
-        $(document).scroll(function () {
-            var y = $(document).scrollTop(),
-                header = $("#blog-sticky");
-            if (y >= 500) {
-                header.css({ position: "fixed", "top": "11%", "width": "100%" });
-            } else {
-                header.css("position", "relative");
-            }
-        });
-    },
-
-    blogOvSidebar: function () {
-        $('.responsive-accordion').each(function () {
-            // Set Expand/Collapse Icons
-            $('.responsive-accordion-minus', this).hide();
-
-            // Hide panels
-            $('.responsive-accordion-panel', this).hide();
-
-            // Bind the click event handler
-            $('.responsive-accordion-head', this).click(function (e) {
-                // Get elements
-                var thisAccordion = $(this).parent().parent(),
-                    thisHead = $(this),
-                    thisPlus = thisHead.find('.responsive-accordion-plus'),
-                    thisMinus = thisHead.find('.responsive-accordion-minus'),
-                    thisPanel = thisHead.siblings('.responsive-accordion-panel');
-
-                // Reset all plus/mins symbols on all headers
-                thisAccordion.find('.responsive-accordion-plus').show();
-                thisAccordion.find('.responsive-accordion-minus').hide();
-
-                // Reset all head/panels active statuses except for current
-                // thisAccordion.find('.responsive-accordion-head').not(this).removeClass('active');
-                // thisAccordion.find('.responsive-accordion-panel').not(this).removeClass('active').slideUp();
-
-                // Toggle current head/panel active statuses
-                if (thisHead.hasClass('active')) {
-                    thisHead.removeClass('active');
-                    thisPlus.show();
-                    thisMinus.hide();
-                    thisPanel.removeClass('active').slideUp();
-                } else {
-                    thisHead.addClass('active');
-                    thisPlus.hide();
-                    thisMinus.show();
-                    thisPanel.addClass('active').slideDown();
-                }
-            });
-
-            $('.accordion-default', this).click();
-        });
     },
 
     projectSlideshow: function () {
@@ -120,98 +54,6 @@ var FEATURES = {
             speed: 300,
             slidesToShow: 1,
             fade: true,
-        });
-    },
-
-    staticSlider: function (param, number) {
-        $(window).load(function () {
-            // On initialization of slick slider...
-            $(param).on('init', function (event, slick) {
-                // Remove Preloader
-                $("#static-loader-wrapper").fadeOut(300, function () {
-                    $(this).remove();
-                });
-
-                $('#slider-wrapper, #slider-info').addClass('slick-initialized');
-
-                // remove display none from first slide-info container and give animate class
-                $('#slider-info .item-0').show(function () {
-                    $(this).removeClass('animate-out');
-                    $(this).addClass('animate');
-                });
-
-                // Remove inactive class from first slide and add active class
-                $('.slide-0').removeClass('inactive');
-                $('.slide-0').addClass('active');
-            })
-            // Slick settings
-            .slick({
-                arrows: false,
-                slidesToShow: number,
-                dots: false,
-                centerMode: true,
-                variableWidth: true,
-                responsive: [
-                  {
-                      breakpoint: 1100,
-                      settings: {
-                          centerMode: true,
-                          slidesToShow: 2,
-                          variableWidth: false,
-                      }
-                  },
-                  {
-                      breakpoint: 1025,
-                      settings: {
-                          fade: true,
-                          speed: 500,
-                          centerMode: false,
-                          slidesToShow: 1,
-                          variableWidth: false,
-                      }
-                  }
-                ]
-            })
-            // Callback functions: Slider works by adding classes to info-container outside of the actual slider
-            // After slide change show info-slide and add animate class, remove inactive from slide and add active
-            .on('afterChange', function (event, slick, currentSlide) {
-                $('#slider-info .item-' + currentSlide + '').show(function () {
-                    $(this).removeClass('animate-out');
-                    $(this).addClass('animate');
-                });
-
-                $('.slide-' + currentSlide + '').removeClass('inactive');
-                $('.slide-' + currentSlide + '').addClass('active');
-            })
-            // Before slide change display none info-slide and remove the animate class, remove active from slide and add inactive.
-            .on('beforeChange', function (event, slick, currentSlide) {
-                $('#slider-info .item-' + currentSlide + '').removeClass('animate');
-                $('#slider-info .item-' + currentSlide + '').addClass('animate-out');
-                $('#slider-info .item-' + currentSlide + '').fadeOut();
-
-                $('.slide-' + currentSlide + '').removeClass('active');
-                $('.slide-' + currentSlide + '').addClass('inactive');
-            });
-            // Custom slider next button
-            $("#slider-next").click(function (e) {
-                e.preventDefault();
-                $(param).slick('slickPrev');
-            });
-            // Custom slider Previous button
-            $("#slider-prev").click(function (e) {
-                e.preventDefault();
-                $(param).slick('slickNext');
-            });
-
-            // Enable swipe slide change events for slider-info container
-            //$("#slider-info").swipe({
-            //    swipeLeft: function (event, direction, distance, duration, fingerCount) {
-            //        $(param).slick('slickNext');
-            //    },
-            //    swipeRight: function (event, direction, distance, duration, fingerCount) {
-            //        $(param).slick('slickPrev');
-            //    }
-            //});
         });
     },
 
@@ -321,22 +163,6 @@ var FEATURES = {
         });
     },
 
-    runFoundation: function () {
-        $(document).foundation();
-    },
-
-    mmenu: function () {
-
-        $('#menu-mobile').mmenu({
-            'offCanvas': {
-                'position': 'right'
-            },
-            'extensions': [
-                'pageshadow'
-            ],
-        });
-    },
-
     homepageSlideshow: function () {
 
         $('.homepage-slideshow').slick({
@@ -361,5 +187,6 @@ var FEATURES = {
 
     matchHeight: function () {
         $('.height').matchHeight();
+        $(document).foundation();
     }
 };

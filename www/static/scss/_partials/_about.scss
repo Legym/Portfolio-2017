@@ -28,8 +28,8 @@
 
         @include breakpoint(medium) {
             display: block;
-            width: 50%; 
-            display: inline-block; 
+            width: 50%;
+            display: inline-block;
             vertical-align: top;
         }
     }
@@ -39,9 +39,9 @@
 
         @include breakpoint(medium) {
             display: block;
-            width: 50%; 
-            display: inline-block; 
-            vertical-align: top; 
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
             margin-left: -5px;
         }
 
@@ -87,7 +87,7 @@
                 text-align: left;
                 margin-top: 10px;
 
-                @include breakpoint(medium) { 
+                @include breakpoint(medium) {
                     line-height: 1.6em;
                     margin: 0 auto;
                     margin-top: 10px;

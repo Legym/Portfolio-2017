@@ -1,18 +1,5 @@
 {{ define "main" }}
 
-<section id="blog-overview-image" class="about-image">
-    <div class="parallax-wrapper">
-        <span data-bg="/images/blog/blog-hero.jpg" class="hidden"></span>
-        <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
-            <div class="row">
-                <div class="parallax-content">
-                    <h2>Blog</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="blog-content content-padding">
     <div class="row">
         <div class="small-12 columns">
@@ -21,7 +8,40 @@
 
         <!-- Desktop Sidebar -->
         <div class="medium-3 columns">
-            {{ partial "blog-sidebar" . }}
+            <div id="blog-sticky" class="blog-sidebar-desktop">
+                <h6>FILTER BY:</h6>
+
+                <ul class="vertical menu accordion-menu" data-accordion-menu>
+                    <li>
+                        <a href="#">View By Tag</a>
+                        <ul class="menu vertical" style="display: none;">
+                            <li>
+                                {{ if isset .Site.Taxonomies "tags" }}
+                                    {{ if not (eq (len .Site.Taxonomies.tags) 0) }}
+                                        {{ range $name, $items := .Site.Taxonomies.tags }}
+                                            <a href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | title }}</a>
+                                        {{ end }}
+                                    {{ end }}
+                                {{ end }}
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">View By Category</a>
+                        <ul class="menu vertical" style="display: none;">
+                            <li>
+                                {{ if isset .Site.Taxonomies "categories" }}
+                                    {{- if not (eq (len .Site.Taxonomies.categories) 0) }}
+                                        {{ range $name, $items := .Site.Taxonomies.categories }}
+                                            <a class="smartCategory" href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | title }}</a>
+                                        {{ end }}
+                                    {{ end }}
+                                {{ end }}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <div class="large-9 columns blog-main-content">

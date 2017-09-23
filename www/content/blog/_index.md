@@ -1,4 +1,3 @@
 {
-	"type": "section",
-	"layout": "blog"
+	"type": "section"
 }
