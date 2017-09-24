@@ -1,5 +1,18 @@
 {{ define "main" }}
 
+<section class="contact-intro">
+    <div class="parallax-wrapper">
+        <span data-bg="/images/contact/contact-header.jpg" class="hidden"></span>
+        <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
+            <div class="row">
+                <div class="parallax-content">
+                    <h2>Contact</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="content-padding contact-content">
     <div class="row">
 
@@ -13,13 +26,13 @@
                 <p>Have questions or comments? I look forward to hearing from you!</p>
 
                 <label>Name *</label>
-                <input type="name" name="name" placeholder="Name">
+                <input type="name" name="name">
 
                 <label>Email *</label>
-                <input type="email" name="email" placeholder="Your email">
+                <input type="email" name="email">
 
                 <label>Message *</label>
-                <textarea name="message" placeholder="Your message"></textarea>
+                <textarea name="message"></textarea>
                 <button class="btn primary" type="submit">Send</button>
             </form>
         </div>

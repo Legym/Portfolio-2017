@@ -5,10 +5,8 @@
         display: none;
 
         @include breakpoint(large) {
-            max-width: 230px;
             display: block;
-            position: fixed;
-            width: 100%;
+            max-width: 400px;
 
             h6 {
                 font-size: 25px;
@@ -112,6 +110,8 @@
             margin-bottom: 40px;
             border-bottom: 1px solid #efefef;
             padding-bottom: 20px;
+            width: 49%;
+            display: inline-block;
         }
 
         .post-image {
@@ -124,7 +124,8 @@
             }
 
             @include breakpoint(large) {
-                display: inline-block;
+                width: 100%;
+                display: block;
             }
 
             img {

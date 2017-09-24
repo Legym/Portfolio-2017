@@ -21,7 +21,7 @@
         common: {
             init: function () {
                 FEATURES.toTop();
-                FEATURES.matchHeight();
+                FEATURES.runFoundaton();
                 FEATURES.currentPage();
             }
         },
@@ -43,6 +43,10 @@
         subpage_blog: {
             init: function () {
                 FEATURES.blogSocialMedia();
+                FEATURES.parallax(
+                    '#blog-overview-image .parallax-wrapper > .parallax-window',
+                    '#blog-overview-image .parallax-wrapper > span[data-bg]'
+                );
             }
         },
 
@@ -58,6 +62,7 @@
                     '#experience .parallax-wrapper > .parallax-window',
                     '#experience .parallax-wrapper > span[data-bg]'
                 );
+                FEATURES.initMap();
             }
         },
 
@@ -72,7 +77,10 @@
 
         subpage_contact: {
             init: function () {
-                // FEATURES.functionName()
+                FEATURES.parallax(
+                    '.parallax-wrapper > .parallax-window',
+                    '.parallax-wrapper > span[data-bg]'
+                );
             }
         },
 

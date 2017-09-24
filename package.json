@@ -7,7 +7,6 @@
     "font-awesome": "^4.6.1",
     "gulp": "^3.9.1",
     "slick-carousel": "^1.6.0",
-    "jquery-match-height": "^0.7.2",
     "jssocials": "^1.5.0"
   },
   "devDependencies": {

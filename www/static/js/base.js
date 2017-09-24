@@ -24,6 +24,26 @@
 
 var FEATURES = {
 
+    runFoundaton: function () {
+        $(document).foundation();
+    },
+
+    initMap: function () {
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 6,
+            mapTypeControl: false,
+            center: { lat: 35.450204, lng: -80.2654087 }
+        });
+
+        var image = 'https://mygelb.com/graphics/marker.png';
+        var beachMarker = new google.maps.Marker({
+            position: { lat: 35.450204, lng: -80.2654087 },
+            map: map,
+            icon: image
+        });
+    },
+
     currentPage: function () {
         var $linkURL = $('#desktop-menu ul li a');
 
@@ -184,9 +204,4 @@ var FEATURES = {
             $('.map-cover').hide();
         });
     },
-
-    matchHeight: function () {
-        $('.height').matchHeight();
-        $(document).foundation();
-    }
 };

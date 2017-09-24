@@ -72,7 +72,6 @@ gulp.task('scripts', function() {
         './node_modules/slick-carousel/slick/slick.js',
         './node_modules/jssocials/src/jssocials.js',
         './node_modules/jssocials/src/jssocials.shares.js',
-        './node_modules/jquery-match-height/dist/jquery.matchHeight-min.js',
         './www/static/js/vendor/parallax.min.js',
         './www/static/js/base.js',
         './www/static/js/router.js'

@@ -70,6 +70,20 @@
 
     textarea {
         height: 150px;
+        margin-bottom: 30px;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: .5rem;
+        border: 1px solid #cacaca;
+        margin: 0 0 1rem;
+        font-family: inherit;
+        font-size: 1rem;
+        color: #0a0a0a;
+        background-color: #fefefe;
+        box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
+        border-radius: 0;
+        transition: box-shadow .5s,border-color .25s ease-in-out;
     }
 
     button {

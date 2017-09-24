@@ -67,28 +67,28 @@
     <div class="parallax-wrapper">
         <span data-bg="/images/about/paper-texture.jpg" class="hidden"></span>
         <div class="parallax-window" data-parallax="scroll" data-ios-fix="true" data-android-fix="true">
-            <div class="row">
+            <div class="row" data-equalizer>
                 <div class="small-12 columns">
                     <h2>SKILLS & EXPERTISE</h2>
                     <h4>Understanding the Core concepts before anything else is vital.</h4>
                 </div>
 
                 <div class="large-4 columns">
-                    <div class="service-style height">
+                    <div class="service-style" data-equalizer-watch>
                         <i class="fa fa-html5" aria-hidden="true"></i>
                         <h6>HTML5</h6>
                     </div>
                 </div>
 
                 <div class="large-4 columns">
-                    <div class="service-style height">
+                    <div class="service-style" data-equalizer-watch>
                         <i class="fa fa-css3" aria-hidden="true"></i>
                         <h6>JavaScript</h6>
                     </div>
                 </div>
 
                 <div class="large-4 columns">
-                    <div class="service-style height">
+                    <div class="service-style" data-equalizer-watch>
                         <i class="fa fa-code" aria-hidden="true"></i>
                         <h6>CSS3</h6>
                     </div>
@@ -164,27 +164,5 @@
         </div>
     </div>
 </section>
-
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwJcg6U7SKK_d1dBkFqXOBntzeHtbxdDI&callback=initMap">
-</script>
-
-<script>
-    function initMap() {
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 6,
-            mapTypeControl: false,
-            center: { lat: 35.450204, lng: -80.2654087 }
-        });
-
-        var image = 'https://mygelb.com/graphics/marker.png';
-        var beachMarker = new google.maps.Marker({
-            position: { lat: 35.450204, lng: -80.2654087 },
-            map: map,
-            icon: image
-        });
-    }
-</script>
 
 {{ end }}
