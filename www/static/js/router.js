@@ -94,7 +94,7 @@
             init: function () {
                 // FEATURES.functionName()
             }
-        },
+        }
     };
 
     /**

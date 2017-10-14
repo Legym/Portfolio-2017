@@ -1,6 +1,7 @@
 $slick-font-path: '../fonts/';
 
-/* Install ZURB Foundation*/
+// Install ZURB Foundation
+// @import '_partials/foundation';
 @import 'util/util',
 		'global',
 		'grid/grid',
@@ -10,28 +11,28 @@ $slick-font-path: '../fonts/';
 		'components/accordion-menu',
 		'components/menu';
 
-@include foundation-global-styles;
-@include foundation-grid;
-@include foundation-typography;
-@include foundation-breadcrumbs;
-@include foundation-accordion;
-@include foundation-accordion-menu;
-@include foundation-menu;
+@include foundation-global-styles();
+@include foundation-grid();
+@include foundation-typography();
+@include foundation-breadcrumbs();
+@include foundation-accordion();
+@include foundation-accordion-menu();
+@include foundation-menu();
 
-/* Plugins */
+
+// Plugins
 @import 'font-awesome',
 		'jssocials',
-		'_partials/slick',
-		'_partials/slick-theme';
+		'jssocials-theme-flat';
 
-/* Custom */
+// Custom
 @import '_partials/fonts',
-		'_partials/mixins',
 		'_partials/global',
-		'_partials/hamburger',
 		'_partials/homepage',
 		'_partials/about',
-		'_partials/portfolio',
+		'_partials/experience',
 		'_partials/blog',
 		'_partials/contact',
-		'_partials/newsletter';
+		'_partials/newsletter',
+		'_partials/slick',
+		'_partials/slick-theme';

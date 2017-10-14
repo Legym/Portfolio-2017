@@ -98,7 +98,11 @@ var FEATURES = {
 
       //hide or show the "back to top" link
       $(window).scroll(function(){
-        ( $(this).scrollTop() > offset ) ? $back_to_top.fadeIn().addClass('in') : $back_to_top.fadeOut().removeClass('in');
+        if (( $(this).scrollTop() > offset )) {
+            $back_to_top.fadeIn().addClass('in');
+        } else {
+            $back_to_top.fadeOut().removeClass('in');
+        }
       });
 
       //smooth scroll to top
@@ -191,7 +195,7 @@ var FEATURES = {
             infinite: true,
             speed: 300,
             slidesToShow: 1,
-            fade: true,
+            fade: true
         });
 
         $(window).on('resize', function () {
@@ -203,5 +207,5 @@ var FEATURES = {
         $('.map-cover').on('click', function () {
             $('.map-cover').hide();
         });
-    },
+    }
 };

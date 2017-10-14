@@ -8,9 +8,9 @@
         }
 
         h6 {
-            font-size: 1.8em;
             color: #fff;
-            padding: inherit;
+            font-size: 1.8em;
+            padding: 0;
             text-align: right;
 
             @include breakpoint(medium) {
@@ -27,10 +27,9 @@
         display: none;
 
         @include breakpoint(medium) {
-            display: block;
-            width: 50%;
             display: inline-block;
             vertical-align: top;
+            width: 50%;
         }
     }
 
@@ -38,18 +37,17 @@
         display: none;
 
         @include breakpoint(medium) {
-            display: block;
-            width: 50%;
             display: inline-block;
-            vertical-align: top;
             margin-left: -5px;
+            vertical-align: top;
+            width: 50%;
         }
 
         .intro-container {
 
             @include breakpoint(medium) {
-                width: 50%;
                 margin-left: 100px;
+                width: 50%;
             }
 
             @include breakpoint(large) {
@@ -57,42 +55,42 @@
             }
 
             h2 {
-                color: black;
-                text-shadow: none;
-                letter-spacing: 0;
-                text-align: left;
-                margin: 0 10px 10px;
-                line-height: 36px;
-                margin-bottom: 10px;
+                color: #000;
                 font-size: 1.6em;
+                letter-spacing: 0;
+                line-height: 36px;
+                margin: 0 10px 10px;
+                margin-bottom: 10px;
+                text-align: left;
+                text-shadow: none;
 
                 @include breakpoint(medium) {
-                    margin: 0 auto;
-                    line-height: 55px;
                     font-size: 2.75em;
+                    line-height: 55px;
+                    margin: 0 auto;
                 }
 
                 @include breakpoint(large) {
-                    margin: 0 auto;
-                    line-height: 70px;
                     font-size: 3.75em;
+                    line-height: 70px;
+                    margin: 0 auto;
                 }
             }
 
             p {
+                color: #000;
                 font-family: 'Lato';
                 line-height: 1.4em;
-                color: black;
                 margin: 0 14px;
-                text-align: left;
                 margin-top: 10px;
+                text-align: left;
 
                 @include breakpoint(medium) {
                     line-height: 1.6em;
                     margin: 0 auto;
+                    margin-left: 0;
                     margin-top: 10px;
                     width: 80%;
-                    margin-left: 0;
                 }
             }
         }
@@ -100,23 +98,23 @@
 
     .about-experience {
         background-color: #d4d4d4;
-        width: 100%;
         height: 100%;
+        width: 100%;
 
         @include breakpoint(medium) {
             padding: 50px 0;
         }
 
         @include breakpoint(large) {
-            background-position: right;
             background-image: url('/images/about/about-experience.jpg');
+            background-position: right;
             background-size: cover;
             padding: 100px 0;
         }
 
         .btn-resume {
-            background: white;
-            color: black;
+            background: #fff;
+            color: #000;
             margin-top: 10px;
 
             @include breakpoint(medium) {
@@ -125,22 +123,22 @@
         }
 
         h6 {
-            margin-top: 40px;
             font-size: 2rem;
             letter-spacing: 0;
-            text-shadow: 7px 3px 4px #d4d4d4;
+            margin-top: 40px;
             text-align: left;
+            text-shadow: 7px 3px 4px #d4d4d4;
 
             @include breakpoint(medium) {
-                text-align: left;
-                margin: 25px 0;
-                margin-top: 0;
                 font-size: 2em;
+                margin: 25px 0;
                 margin-bottom: 25px;
+                margin-top: 0;
+                text-align: left;
             }
 
             @include breakpoint(large) {
-                margin: 30px 0 5px 0;
+                margin: 30px 0 5px;
             }
 
         }
@@ -150,9 +148,9 @@
         text-align: center;
 
         ul.qualifications {
-            text-align: left;
             margin-top: 30px;
             position: relative;
+            text-align: left;
 
             @include breakpoint(medium) {
                 margin: 0;
@@ -160,13 +158,13 @@
             }
 
             &:before {
-                content: "";
-                width: 90%;
-                margin: 0 auto;
-                height: 1px;
                 background-color: #8a8a8a;
-                top: -30px;
+                content: '';
+                height: 1px;
+                margin: 0 auto;
                 position: absolute;
+                top: -30px;
+                width: 90%;
             }
 
             li {
@@ -191,10 +189,10 @@
         }
 
         .service-style {
+            background-color: #fff;
             box-shadow: 7px 3px 4px #111;
-            background-color: white;
-            padding: 20px 10px 16px;
             margin-bottom: 40px;
+            padding: 20px 10px 16px;
         }
 
         .parallax-window {
@@ -202,30 +200,28 @@
         }
 
         h2 {
-            color: white;
-            text-shadow: 7px 3px 4px black;
+            color: #fff;
+            text-shadow: 7px 3px 4px #000;
         }
 
         h4 {
+            color: #fff;
             font-size: 1.6em;
-            color: white;
             margin-bottom: 40px;
         }
 
         .fa {
-            color: rgba(255,255,255,0.5);
-            font-size: 3.4em;
-            color: white;
-            transition: all .3s ease-in;
             color: $primary-color;
+            font-size: 3.4em;
+            transition: .3s ease-in;
         }
 
         h6 {
             color: #111;
-            text-shadow: 7px 3px 4px #d4d4d4;
             font-size: 1.2em;
-            margin-top: 15px;
             margin-bottom: 5px;
+            margin-top: 15px;
+            text-shadow: 7px 3px 4px #d4d4d4;
         }
 
         span {
@@ -235,16 +231,16 @@
     }
 
     .about-tools {
-        padding: 100px 0;
         background-image: url('../graphics/about/about-tech.jpg');
-        background-size: cover;
         background-position: 50%;
-        width: 100%;
+        background-size: cover;
         height: 100%;
+        padding: 100px 0;
+        width: 100%;
 
         h2 {
-            margin: 40px 0;
             letter-spacing: 0;
+            margin: 40px 0;
             text-transform: uppercase;
         }
 
@@ -269,14 +265,12 @@
             margin-top: 70px;
 
             h4 {
-                text-align: center;
                 font-size: 2em;
                 margin-bottom: 20px;
+                text-align: center;
             }
 
             ul {
-                -webkit-column-count: 2; /* Chrome, Safari, Opera */
-                -moz-column-count: 2; /* Firefox */
                 column-count: 2;
             }
 
@@ -288,8 +282,8 @@
     }
 
     .geolocation {
-        position: relative;
         height: 400px;
+        position: relative;
 
         @include breakpoint(medium) {
             height: 600px;
@@ -297,31 +291,31 @@
 
         #map {
             height: 100%;
-            width: 100%;
             top: 0;
+            width: 100%;
         }
 
         .map-cover {
+            cursor: pointer;
+            height: 100%;
             position: absolute;
             width: 100%;
-            height: 100%;
             z-index: 2;
-            cursor: pointer;
         }
 
         h2 {
-            position: absolute;
-            top: 20px;
-            margin: 0 auto;
+            display: inline-block;
+            font-size: 2.2em;
             left: 0;
+            margin: 0 auto;
+            position: absolute;
             right: 0;
             text-align: center;
-            text-transform: uppercase;
-            display: inline-block;
-            text-shadow: 7px 3px 4px #d4d4d4;
-            z-index: 3;
-            font-size: 2.2em;
             text-decoration: underline;
+            text-shadow: 7px 3px 4px #d4d4d4;
+            text-transform: uppercase;
+            top: 20px;
+            z-index: 3;
 
             @include breakpoint(medium) {
                 font-size: 4em;
@@ -331,138 +325,140 @@
     }
 
     .instagram-background {
-        padding-top: 30px;
-        background-size: cover;
         background-position: center bottom;
+        background-size: cover;
+        padding-top: 30px;
 
         @include breakpoint(medium) {
             padding: 60px 0;
         }
 
-      .top-title {
-        margin-bottom: 20px;
+        .top-title {
+            margin-bottom: 20px;
 
-        @include breakpoint(medium) {
-            margin-bottom: 40px;
+            @include breakpoint(medium) {
+                margin-bottom: 40px;
+            }
+
+            h3 {
+                display: block;
+
+                &:nth-of-type(1) {
+                    font-size: 32px;
+                    text-align: center;
+
+                    @include breakpoint(medium) {
+                        float: left;
+                        text-align: left;
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    display: none;
+
+                    @include breakpoint(medium) {
+                        display: block;
+                        text-align: right;
+                        vertical-align: top;
+                    }
+                }
+            }
         }
-
-          h3 {
-              display: block;
-
-              &:nth-of-type(1) {
-                font-size: 32px;
-                text-align: center;
-
-                @include breakpoint(medium) {
-                    float: left;
-                    text-align: left;
-                }
-              }
-
-              &:nth-of-type(2) {
-                  display: none;
-
-                @include breakpoint(medium) {
-                    display: block;
-                    text-align: right;
-                    vertical-align: top;
-                }
-              }
-          }
-      }
 
         .instagram-section {
 
             .ttl {
-              margin: 0 auto 30px;
-              width: 90%;
-              overflow: hidden;
+                margin: 0 auto 30px;
+                overflow: hidden;
+                width: 90%;
 
-              h3, h2 {
-                display: inline-block;
-                color: black;
-              }
-
-              h3 {
-                float: left;
-                font-size: 29px;
-                margin-top: 10px;
-                word-spacing: 0.1em;
-                text-transform: uppercase;
-                letter-spacing: .1em;
-                line-height: 1.7;
-              }
-
-              h2 {
-                float: right;
-                margin-top: 10px;
-
-                em {
-                  font-size: 1.2em;
-                  color: inherit;
-                  word-spacing: 0.1em;
-                  letter-spacing: .09em;
+                h3,
+                h2 {
+                    color: #000;
+                    display: inline-block;
                 }
-              }
+
+                h3 {
+                    float: left;
+                    font-size: 29px;
+                    letter-spacing: .1em;
+                    line-height: 1.7;
+                    margin-top: 10px;
+                    text-transform: uppercase;
+                    word-spacing: .1em;
+                }
+
+                h2 {
+                    float: right;
+                    margin-top: 10px;
+
+                    em {
+                        color: inherit;
+                        font-size: 1.2em;
+                        letter-spacing: .9em;
+                        word-spacing: .1em;
+                    }
+                }
             }
 
             .instagram-slide {
-              width: 75%;
-              margin: 0 auto;
+                margin: 0 auto;
+                width: 75%;
 
-              @include breakpoint(small) {
-                width: 90%;
-              }
-
-              .slick-arrow {
-                position: absolute;
-                top: 75px;
-                overflow: hidden;
-                padding: 0;
-                width: 34px;
-                border: 0;
-                background-color: transparent;
-                &:before {
-                  font-size: 60px;
-                  color: black;
-                }
-              }
-
-              .slick-arrow:first-of-type {
-                left: -23px;
-
-                @include breakpoint(medium) {
-                    left: -40px;
+                @include breakpoint(small) {
+                    width: 90%;
                 }
 
-                @include breakpoint(large) {
-                    left: -55px;
+                .slick-arrow {
+                    background-color: transparent;
+                    border: 0;
+                    overflow: hidden;
+                    padding: 0;
+                    position: absolute;
+                    top: 75px;
+                    width: 34px;
+
+                    &:before {
+                        color: #000;
+                        font-size: 60px;
+                    }
                 }
-              }
 
-              .slick-arrow:nth-of-type(2) {
-                right: -23px;
+                .slick-arrow:first-of-type {
+                    left: -23px;
 
-                @include breakpoint(medium) {
-                    right: -40px;
+                    @include breakpoint(medium) {
+                        left: -40px;
+                    }
+
+                    @include breakpoint(large) {
+                        left: -55px;
+                    }
                 }
 
-                @include breakpoint(large) {
-                    right: -55px;
-                }
-              }
+                .slick-arrow:nth-of-type(2) {
+                    right: -23px;
 
-              .slick-track {
-                width: 100%;
+                    @include breakpoint(medium) {
+                        right: -40px;
+                    }
 
-                .instagram-img {
-                  background-repeat: no-repeat;
-                  background-size: cover;
-                  background-position: center center;
-                  height: 185px;
-                  margin: 0 15px;
+                    @include breakpoint(large) {
+                        right: -55px;
+                    }
                 }
-              }
+
+                .slick-track {
+                    width: 100%;
+
+                    .instagram-img {
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        height: 185px;
+                        margin: 0 15px;
+                    }
+                }
             }
         }
     }

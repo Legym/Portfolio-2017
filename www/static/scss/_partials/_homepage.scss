@@ -14,46 +14,44 @@
         height: 100% !important;
     }
 
-    /* OVerides Slickjs*/
     .slick-prev,
     .slick-next {
-        font-size: 0;
-        position: absolute;
-        bottom: 20px;
-        color: #52504e;
-        border: 0;
         background: none;
         background-color: rgba(253, 250, 246, .65);
         background-position: center;
         background-repeat: no-repeat;
         background-size: 32%;
+        border: 0;
+        bottom: 44%;
+        color: #52504e;
+        font-size: 0;
         height: 4.125rem;
         margin-top: -2.5625rem;
+        position: absolute;
         width: 2rem;
         z-index: 1;
-        bottom: 44%;
 
         @include breakpoint(medium) {
-            width: 3.8125rem;
-            height: 5.125rem;
             bottom: 40%;
+            height: 5.125rem;
+            width: 3.8125rem;
         }
 
         @include breakpoint(medium) {
-            width: 3.8125rem;
-            height: 5.125rem;
             bottom: 50%;
+            height: 5.125rem;
+            width: 3.8125rem;
         }
     }
 
     .slick-prev:after {
-        content: "\f104";
+        content: '\f104';
         font: 40px/1 'FontAwesome';
     }
 
     .slick-next:after {
-           content: "\f105";
-         font: 40px/1 'FontAwesome';
+        content: '\f105';
+        font: 40px/1 'FontAwesome';
     }
 
     .slide-text {
@@ -65,11 +63,11 @@
         text-align: center;
 
         h2 {
-            color: white;
+            color: #fff;
             font-size: 40px;
             background-color: #07a1f2;
-            padding: 0.5% 1.1% 0.6%;
-            text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            padding: .5% 1.1% .6%;
+            text-shadow: 0 3px 10px rgba(0, 0, 0, .2);
             width: 70%;
             margin: 0 auto;
 
@@ -86,15 +84,14 @@
         }
 
         h1 {
-            text-shadow: 0 3px 10px rgba(0,0,0,0.2);
-            background-color: rgba(255,255,255,0.5);
+            background-color: rgba(255, 255, 255, .5);
             color: #111;
-            margin: 0 -0.1em;
-            padding: 0.5% 1.1% 0.6%;
             font-size: 40px;
+            margin: 0 auto;
+            padding: .5% 1.1% .6%;
+            text-shadow: 0 3px 10px rgba(0, 0, 0, .2);
             text-transform: uppercase;
             width: 68%;
-            margin: 0 auto;
 
             @include breakpoint(medium) {
                 font-size: 60px;
@@ -103,8 +100,8 @@
 
             @include breakpoint(large) {
                 font-size: 75px;
-                width: 45%;
                 max-width: 575px;
+                width: 45%;
             }
         }
     }
@@ -147,7 +144,7 @@
             margin: 0 auto;
             position: relative;
             top: 45px;
-            border: 2px solid white;
+            border: 2px solid #fff;
 
             @include breakpoint(large) {
                 width: 55%;
@@ -207,14 +204,14 @@
             text-align: center;
 
             .service-style {
-                box-shadow: 0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084);
-                background-color: white;
+                box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .14), 0 2px 2px 0 rgba(0, 0, 0, .098), 0 1px 5px 0 rgba(0, 0, 0, .084);
+                background-color: #fff;
                 padding: 20px 10px 16px;
                 margin-bottom: 40px;
             }
 
             .fa {
-                color: rgba(255,255,255,0.5);
+                color: rgba(255,255,255,.5);
                 font-size: 2.4em;
                 color: $primary-color;
             }
@@ -240,65 +237,23 @@
         .btn {
             margin: 0 auto;
             display: block;
-            background-color: white;
+            background-color: #fff;
         }
     }
 
     #explore {
 
         h2 {
+            color: #fff;
             font-size: 2.5em;
+            letter-spacing: 0;
             margin-bottom: 40px;
             padding-top: 40px;
-            letter-spacing: 0;
             text-transform: uppercase;
             text-align: center;
-            color: white;
 
             @include breakpoint(medium) {
                 font-size: 3.75em;
-            }
-        }
-
-        .slick {
-            padding: 0 5px;
-            margin: 0;
-            position: relative;
-
-            @include breakpoint(medium) {
-                padding: 3px 3px;
-                padding-bottom: 100px;
-            }
-
-            .slick-prev {
-                background-color: transparent;
-                background-image: url(/images/slim-arrow-left-white.png);
-                background-repeat: no-repeat;
-                border: none;
-                color: transparent;
-                display: block;
-                height: 65px;
-                width: 34px;
-                overflow: hidden;
-                position: absolute;
-                top: 40%;
-                left: 20px;
-                z-index: 99;
-            }
-            .slick-next {
-                background-color: transparent;
-                background-image: url(/images/slim-arrow-right-white.png);
-                background-repeat: no-repeat;
-                border: none;
-                color: transparent;
-                display: block;
-                height: 65px;
-                width: 34px;
-                overflow: hidden;
-                position: absolute;
-                top: 40%;
-                right: 20px;
-                z-index: 99;
             }
         }
 
@@ -308,7 +263,7 @@
             position: relative;
             text-align: center;
             text-transform: uppercase;
-            background-color: white;
+            background-color: #fff;
             margin-bottom: 20px;
             transition: all .3s ease-in;
 
@@ -327,17 +282,17 @@
                 position: relative;
 
                 &:before {
-                    content: "";
+                    content: '';
                     position: absolute;
                     width: 100%;
                     height: 100%;
-                    background-color: rgba(0, 0, 0, 0.8);
+                    background-color: rgba(0, 0, 0, .8);
                     left: 0;
                     transition: all .5s ease-in;
                 }
 
                 &:hover:before {
-                    background-color: rgba(0, 0, 0, 0.34);
+                    background-color: rgba(0, 0, 0, .34);
                 }
 
                 h3 {
@@ -351,7 +306,7 @@
                     left: 0;
                     width: 100%;
                     transition: bottom 300ms linear, opacity 100ms ease-in;
-                    color: white;
+                    color: #fff;
                 }
 
             }
@@ -362,7 +317,7 @@
                 bottom: 30px;
                 left: 0;
                 width: 100%;
-                font-family: "LeagueGothic";
+                font-family: 'LeagueGothic';
                 font-size: 24px;
 
                 a {
@@ -375,7 +330,7 @@
             .disableblog {
 
                 .content:hover:before {
-                    background-color: rgba(0, 0, 0, 0.8);
+                    background-color: rgba(0, 0, 0, .8);
                 }
 
                 h3 {
@@ -388,7 +343,7 @@
             }
 
             .overlay {
-                color: white;
+                color: #fff;
                 font-size: 22px;
                 height: 100%;
                 width: 100%;
@@ -410,7 +365,7 @@
             width: 250px;
             display: block;
             margin: 40px auto;
-            background-color: white;
+            background-color: #fff;
 
             @include breakpoint(medium) {
                 margin-top: 40px;

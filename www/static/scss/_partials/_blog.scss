@@ -1,6 +1,5 @@
 ﻿.subpage-blog {
 
-    /* Sidebar Outer Template */
     .blog-sidebar-desktop {
         display: none;
 
@@ -9,14 +8,14 @@
             max-width: 400px;
 
             h6 {
-                font-size: 25px;
-                display: inline-block;
-                line-height: 28px;
-                padding: 8px 20px;
                 background-color: $primary-color;
-                width: 100%;
-                color: white;
+                color: #fff;
+                display: inline-block;
+                font-size: 25px;
+                line-height: 28px;
                 margin-bottom: 10px;
+                padding: 8px 20px;
+                width: 100%;
             }
 
             ul {
@@ -50,28 +49,24 @@
         }
 
         h3 {
-            text-align: center;
             margin-bottom: 10px;
+            text-align: center;
         }
 
         select {
             margin-bottom: 20px;
         }
 
-        form.custom .custom.dropdown{
+        form.custom .custom.dropdown {
             height: 45px;
-        }
-
-        form.custom .custom.dropdown{
             padding-top: 5px;
         }
 
-        form.custom .custom.dropdown .selector{
+        form.custom .custom.dropdown .selector {
             top: 5px;
         }
     }
 
-    /* Sidebar Inner Template */
     .inner-template-desktop-sidebar {
         display: none;
 
@@ -87,7 +82,6 @@
         }
     }
 
-    /* Blog Articles */
     .blog-main-content {
 
         a {
@@ -107,39 +101,39 @@
         }
 
         .post {
-            margin-bottom: 40px;
             border-bottom: 1px solid #efefef;
-            padding-bottom: 20px;
-            width: 49%;
             display: inline-block;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            width: 33%;
         }
 
         .post-image {
-            position: relative;
             margin-bottom: 20px;
+            position: relative;
 
             @include breakpoint(medium) {
-                width: 49%;
                 display: inline-block;
+                width: 49%;
             }
 
             @include breakpoint(large) {
-                width: 100%;
                 display: block;
+                width: 100%;
             }
 
             img {
-                width: 100%;
                 max-height: 100%;
+                width: 100%;
             }
 
             span {
-                position: absolute;
-                left: 0;
-                top: 0;
                 background-color: $primary-color;
+                color: #fff;
+                left: 0;
                 padding: 10px;
-                color: white;
+                position: absolute;
+                top: 0;
             }
         }
 
@@ -147,10 +141,10 @@
 
             @include breakpoint(medium) {
                 display: inline-block;
-                vertical-align: top;
                 padding-left: 20px;
-                width: 49%;
                 text-align: left;
+                vertical-align: top;
+                width: 49%;
             }
 
             @include breakpoint(large) {
@@ -160,9 +154,9 @@
             h3 {
                 color: #111;
                 font-size: 1.4em;
+                letter-spacing: .02em;
                 line-height: 1.2em;
                 text-transform: uppercase;
-                letter-spacing: .02em;
 
                 @include breakpoint(medium) {
                     font-size: 2em;
@@ -176,22 +170,19 @@
         }
 
         .btn {
-            color: black;
+            background-color: #fff;
             border: 1px solid #cacaca;
-            background-color: white;
-            transition: all .3s ease-in;
+            color: #000;
             margin: 0;
             max-width: 100%;
+            transition: .3s ease-in;
 
             &:hover {
-                color: white;
                 background-color: $primary-color;
+                color: #fff;
             }
         }
 
-
-
-        /* Comments */
         #commentsContainer {
 
             h3 {
@@ -213,54 +204,55 @@
             vertical-align: top;
 
             .avatar {
-                width: 48px;
-                height: 48px;
                 background-size: cover;
+                height: 48px;
+                width: 48px;
             }
         }
 
         .comment-block {
             display: inline-block;
-            vertical-align: top;
             margin-left: 9px;
+            vertical-align: top;
 
             ul {
-                margin: 0;
                 line-height: 10px;
+                margin: 0;
                 margin-bottom: 3px;
             }
 
             li {
-                list-style: none;
                 display: inline-block;
-                font-size: 14px;
                 font-family: Lato;
+                font-size: 14px;
+                list-style: none;
 
                 span {
-                    color: black;
+                    color: #000;
                     font-size: 12px;
                     font-weight: 700;
 
                     &:after {
-                        content: "•";
+                        color: rgba(0, 39, 59, .35);
+                        content: '•';
                         font-size: 60%;
                         margin-left: 8px;
-                        color: rgba(0,39,59,.35);
                         vertical-align: bottom;
                     }
                 }
             }
 
             .comment-date {
-                font-weight: 500;
+                color: rgba(0, 39, 59, .35);
                 font-size: 12px;
-                color: rgba(0,39,59,.35);
+                font-weight: 500;
             }
         }
 
         #commentForm {
 
-            [type=text], textarea {
+            [type='text'],
+            textarea {
                 letter-spacing: 1px;
                 text-align: left;
             }
@@ -283,15 +275,15 @@
         }
 
         p {
-            font-size: 18px;
             color: #555;
+            font-size: 18px;
         }
     }
 
     .pagination {
+        color: #fff;
         display: block;
         margin-bottom: 1em;
-        color: white;
         text-align: center;
 
         @include breakpoint(medium) {
@@ -299,25 +291,25 @@
         }
 
         span {
-            display: inline-block;
-            margin: 0 3px;
-            color: black;
-            background: white;
+            background: #fff;
             border: 1px solid #dcdcdc;
-            padding: 5px;
-            transition: all .3s ease-out;
-            text-align: center;
+            color: #000;
+            display: inline-block;
             font-size: 16px;
+            margin: 0 3px;
+            padding: 5px;
+            text-align: center;
+            transition: .3s ease-out;
 
             &.pageCurrent {
                 background: #111;
-                color: white;
+                color: #fff;
             }
         }
 
         span:hover {
             background: #111;
-            color: white;
+            color: #fff;
         }
     }
 }
