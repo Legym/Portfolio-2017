@@ -3,7 +3,7 @@ $slick-font-path: '../fonts/';
 // Install ZURB Foundation
 // @import '_partials/foundation';
 @import 'util/util',
-		'global',
+		'_global',
 		'grid/grid',
 		'typography/typography',
 		'components/breadcrumbs',

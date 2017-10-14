@@ -55,21 +55,21 @@
     }
 
     .slide-text {
-        position: absolute;
-        top: 35%;
         left: 0;
-        right: 0;
         margin: 0 auto;
+        position: absolute;
+        right: 0;
         text-align: center;
+        top: 35%;
 
         h2 {
+            background-color: #07a1f2;
             color: #fff;
             font-size: 40px;
-            background-color: #07a1f2;
+            margin: 0 auto;
             padding: .5% 1.1% .6%;
             text-shadow: 0 3px 10px rgba(0, 0, 0, .2);
             width: 70%;
-            margin: 0 auto;
 
             @include breakpoint(medium) {
                 font-size: 60px;
@@ -78,8 +78,8 @@
 
             @include breakpoint(large) {
                font-size: 120px;
-               width: 70%;
                max-width: 625px;
+               width: 70%;
             }
         }
 
@@ -113,17 +113,17 @@
             text-align: center;
 
             @include breakpoint(large) {
-                width: 45%;
                 display: inline-block;
-                margin-top: 100px;
                 margin-bottom: 65px;
+                margin-top: 100px;
                 text-align: left;
+                width: 45%;
 
             }
 
             h2 {
-                text-transform: uppercase;
                 font-size: 1.5em;
+                text-transform: uppercase;
 
                 @include breakpoint(large) {
                     font-size: 2.5em;
@@ -139,20 +139,20 @@
         }
 
         img {
-            width: 80%;
+            border: 2px solid #fff;
             display: block;
             margin: 0 auto;
             position: relative;
             top: 45px;
-            border: 2px solid #fff;
+            width: 80%;
 
             @include breakpoint(large) {
-                width: 55%;
                 display: inline-block;
+                height: 460px;
                 margin-left: -5px;
                 top: 100px;
-                height: 460px;
                 vertical-align: top;
+                width: 55%;
             }
 
         }
@@ -169,12 +169,12 @@
         }
 
         .parallax-content {
-            padding-top: 150px;
             height: 300px;
+            padding-top: 150px;
         }
 
         .message-title {
-            margin: 100px 0 40px 0;
+            margin: 100px 0 40px;
             text-align: center;
 
             h2 {
@@ -204,40 +204,39 @@
             text-align: center;
 
             .service-style {
-                box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .14), 0 2px 2px 0 rgba(0, 0, 0, .098), 0 1px 5px 0 rgba(0, 0, 0, .084);
                 background-color: #fff;
-                padding: 20px 10px 16px;
+                box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .14), 0 2px 2px 0 rgba(0, 0, 0, .098), 0 1px 5px 0 rgba(0, 0, 0, .084);
                 margin-bottom: 40px;
+                padding: 20px 10px 16px;
             }
 
             .fa {
-                color: rgba(255,255,255,.5);
-                font-size: 2.4em;
                 color: $primary-color;
+                font-size: 2.4em;
             }
 
             h5 {
                 color: #111;
-                text-shadow: 7px 3px 4px #d4d4d4;
                 font-size: 1.2em;
-                margin-top: 15px;
                 margin-bottom: 5px;
+                margin-top: 15px;
+                text-shadow: 7px 3px 4px #d4d4d4;
             }
 
             p {
                 display: none;
 
                 @include breakpoint(medium) {
-                    display: block;
                     color: #111;
+                    display: block;
                 }
             }
         }
 
         .btn {
-            margin: 0 auto;
-            display: block;
             background-color: #fff;
+            display: block;
+            margin: 0 auto;
         }
     }
 
@@ -249,8 +248,8 @@
             letter-spacing: 0;
             margin-bottom: 40px;
             padding-top: 40px;
-            text-transform: uppercase;
             text-align: center;
+            text-transform: uppercase;
 
             @include breakpoint(medium) {
                 font-size: 3.75em;
@@ -258,17 +257,17 @@
         }
 
         .item {
+            background-color: #fff;
             letter-spacing: .09em;
+            margin-bottom: 20px;
             padding: 10px 5px;
             position: relative;
             text-align: center;
             text-transform: uppercase;
-            background-color: #fff;
-            margin-bottom: 20px;
-            transition: all .3s ease-in;
+            transition: .3s ease-in;
 
             @include breakpoint(medium) {
-                padding: 3px 3px;
+                padding: 3px;
             }
 
             &:hover {
@@ -276,19 +275,19 @@
             }
 
             .content {
-                background-size: cover;
                 background-position: bottom center;
+                background-size: cover;
                 height: 255px;
                 position: relative;
 
                 &:before {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
                     background-color: rgba(0, 0, 0, .8);
+                    content: '';
+                    height: 100%;
                     left: 0;
-                    transition: all .5s ease-in;
+                    position: absolute;
+                    transition: .5s ease-in;
+                    width: 100%;
                 }
 
                 &:hover:before {
@@ -296,29 +295,29 @@
                 }
 
                 h3 {
+                    bottom: 75px;
+                    color: #fff;
                     font-size: 30px;
                     font-weight: normal;
+                    left: 0;
                     margin: 7px;
                     opacity: 1;
                     padding: 0 15%;
                     position: absolute;
-                    bottom: 75px;
-                    left: 0;
-                    width: 100%;
                     transition: bottom 300ms linear, opacity 100ms ease-in;
-                    color: #fff;
+                    width: 100%;
                 }
 
             }
 
             .link {
-                margin: 0;
-                position: absolute;
                 bottom: 30px;
-                left: 0;
-                width: 100%;
                 font-family: 'LeagueGothic';
                 font-size: 24px;
+                left: 0;
+                margin: 0;
+                position: absolute;
+                width: 100%;
 
                 a {
                     display: block;
@@ -334,11 +333,11 @@
                 }
 
                 h3 {
-                    color: gray;
+                    color: #808080;
                 }
 
                 p {
-                    color: red;
+                    color: #ff0000;
                 }
             }
 
@@ -346,14 +345,14 @@
                 color: #fff;
                 font-size: 22px;
                 height: 100%;
-                width: 100%;
+                left: 0;
                 opacity: 0;
                 padding: 0 10px;
                 padding-top: 120px;
                 position: absolute;
                 top: 0;
-                left: 0;
-                transition: all 300ms linear;
+                transition: 300ms linear;
+                width: 100%;
 
                 p {
                     margin: 0;
@@ -362,10 +361,10 @@
         }
 
         .btn-inverse {
-            width: 250px;
+            background-color: #fff;
             display: block;
             margin: 40px auto;
-            background-color: #fff;
+            width: 250px;
 
             @include breakpoint(medium) {
                 margin-top: 40px;
