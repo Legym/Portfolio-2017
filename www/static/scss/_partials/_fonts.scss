@@ -9,5 +9,9 @@
 	}
 }
 
-@include font-face('LeagueGothic', '../../fonts/', 'leaguegothic-regular-webfont');
+// Custom Fonts
+@include font-face('LeagueGothic', '../../fonts/leaguegothic/', 'leaguegothic-regular-webfont');
+@include font-face('Lato', '../../fonts/lato/', 'Lato-Regular');
+
+// Font Icons
 @include font-face('Fontello', '../../fonts/', 'fontello');
