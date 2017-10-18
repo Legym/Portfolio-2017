@@ -73,17 +73,8 @@ var FEATURES = {
             infinite: true,
             speed: 300,
             slidesToShow: 1,
-            fade: true,
+            fade: true
         });
-    },
-
-    parallax: function (pWindow, background) {
-        var $pWindow = $(pWindow);
-
-        var $background = $(background);
-        var bgPath = $background.data('bg');
-
-        $pWindow.parallax({ imageSrc: bgPath });
     },
 
     toTop: function() {

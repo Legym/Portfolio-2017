@@ -11,7 +11,11 @@ var notify          = require('gulp-notify');                   // Ability to se
 var sourcemaps      = require('gulp-sourcemaps');               // Adds sourcemaps to css files
 var sassLint        = require('gulp-sass-lint');                // Enforce SCSS Style Guide
 
-/* Move plugin fonts from node_modules to proper destination */
+/*
+* Move plugin fonts from node_modules to proper destination
+*
+*
+*/
 gulp.task('pip-fonts', function () {
     gulp.src([
         './node_modules/font-awesome/fonts/*',
@@ -20,7 +24,12 @@ gulp.task('pip-fonts', function () {
         .pipe(gulp.dest('./www/static/fonts/'));
 });
 
-// Checks for errors
+
+/*
+* Checks for errors
+*
+*
+*/
 var onError = function (error) {
     notify.onError({
         title: 'Gulp error in ' + error.plugin,
@@ -29,13 +38,18 @@ var onError = function (error) {
     this.emit('end');
 };
 
-// Compile Our Sass
+/*
+* Compile Our Sass
+*
+*
+*/
 gulp.task('sass-compile', function() {
     gulp.src([
-        './www/static/scss/*.scss',
-        './www/static/scss/_partials/*.scss'
+        './www/static/scss/**/'
     ])
         .pipe(plumber({errorHandler: onError}))
+
+        /* Lints project sass */
         .pipe(sassLint({
             files: { ignore: [
                 // Ignore sass files
@@ -96,7 +110,8 @@ gulp.task('sass-compile', function() {
         }))
         .pipe(sassLint.format())
         .pipe(sassLint.failOnError())
-        .pipe(sourcemaps.init())
+
+        /* Resolve sass imports for app.css */
         .pipe(sass({
             includePaths: [
                 './node_modules/foundation-sites/scss/',
@@ -105,11 +120,15 @@ gulp.task('sass-compile', function() {
                 './node_modules/jssocials/styles/'
             ]
         }).on('error', sass.logError))
+
         .pipe(autoprefixer({
             browsers: ['last 5 versions']
         }))
-        .pipe(cleanCSS())
-        .pipe(rename('app.min.css'))
+
+        /* Generate sourcemaps */
+        .pipe(sourcemaps.init())
+            .pipe(cleanCSS())
+            .pipe(rename('app.min.css'))
         .pipe(sourcemaps.write('./'))
 
         .pipe(gulp.dest('./www/static/css/'))
@@ -119,14 +138,24 @@ gulp.task('sass-compile', function() {
         }));
 });
 
-// Checks custom JS for errors
+
+/*
+* Checks custom JS for errors
+*
+*
+*/
 gulp.task('javascript-linting', function() {
     return gulp.src('./www/static/js/base.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
 
-// Concatenate & Minify JS
+
+/*
+* Concatenate & Minify JS
+*
+*
+*/
 gulp.task('javascript-compile', function() {
     gulp.src([
         './node_modules/foundation-sites/dist/foundation.js',
@@ -148,10 +177,20 @@ gulp.task('javascript-compile', function() {
         }));
 });
 
-// Project Initialization
+
+/*
+* Project Initialization
+*
+*
+*/
 gulp.task('pip', ['pip-fonts']);
 
-// Watch Files For Changes
+
+/*
+*  Watch Files For Changes
+*
+*
+*/
 gulp.task('watch', function() {
     gulp.watch(
         './www/static/js/*.js',
@@ -164,6 +203,7 @@ gulp.task('watch', function() {
         ['sass-compile']
     );
 });
+
 
 // Default Task
 gulp.task('default', ['sass-compile', 'javascript-compile', 'javascript-linting', 'watch']);

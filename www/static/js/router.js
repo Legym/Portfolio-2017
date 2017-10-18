@@ -29,24 +29,12 @@
         subpage_homepage: {
             init: function () {
                 FEATURES.homepageSlideshow();
-                FEATURES.parallax(
-                    '.homepage-message .parallax-wrapper > .parallax-window',
-                    '.homepage-message .parallax-wrapper > span[data-bg]'
-                );
-                FEATURES.parallax(
-                    '#explore .parallax-wrapper > .parallax-window',
-                    '#explore .parallax-wrapper > span[data-bg]'
-                );
             }
         },
 
         subpage_blog: {
             init: function () {
                 FEATURES.blogSocialMedia();
-                FEATURES.parallax(
-                    '#blog-overview-image .parallax-wrapper > .parallax-window',
-                    '#blog-overview-image .parallax-wrapper > span[data-bg]'
-                );
             }
         },
 
@@ -54,39 +42,19 @@
             init: function () {
                 FEATURES.mapCover();
                 FEATURES.instagramSlider('.instagram-slide');
-                FEATURES.parallax(
-                    '#about-image .parallax-wrapper > .parallax-window',
-                    '#about-image .parallax-wrapper > span[data-bg]'
-                );
-                FEATURES.parallax(
-                    '#experience .parallax-wrapper > .parallax-window',
-                    '#experience .parallax-wrapper > span[data-bg]'
-                );
                 FEATURES.initMap();
             }
         },
 
         subpage_sitemap: {
             init: function () {
-                FEATURES.parallax(
-                    '.parallax-wrapper > .parallax-window',
-                    '.parallax-wrapper > span[data-bg]'
-                );
+                //
             }
         },
 
         subpage_contact: {
             init: function () {
-                FEATURES.parallax(
-                    '.parallax-wrapper > .parallax-window',
-                    '.parallax-wrapper > span[data-bg]'
-                );
-            }
-        },
-
-        subpage_search: {
-            init: function () {
-                // FEATURES.functionName()
+                //
             }
         },
 
