@@ -1,7 +1,13 @@
-﻿@font-face {
-    font-family: 'LeagueGothic';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../../fonts/leaguegothic-regular-webfont.woff2') format('woff2'),
-         url('../../fonts/leaguegothic-regular-webfont.woff') format('woff');
+﻿@mixin font-face($font-name, $font-path, $font-file) {
+	@font-face {
+	    font-family: '#{$font-name}';
+	    src: url('#{$font-path}/#{$font-file}.eot'),
+	    	 url('#{$font-path}/#{$font-file}?#iefix') format('embedded-opentype'),
+	         url('#{$font-path}/#{$font-file}.woff') format('woff'),
+	         url('#{$font-path}/#{$font-file}.ttf') format('truetype'),
+	         url('#{$font-path}/#{$font-file}.svg##{$font-name}') format('svg');
+	}
 }
+
+@include font-face('LeagueGothic', '../../fonts/', 'leaguegothic-regular-webfont');
+@include font-face('Fontello', '../../fonts/', 'fontello');

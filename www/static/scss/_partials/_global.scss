@@ -365,6 +365,13 @@ p {
 
     .footer-contact {
 
+        .fa-facebook {
+
+            &::before {
+                @include icon-facebook();
+            }
+        }
+
         @include breakpoint(medium) {
             float: right;
             min-width: 185px;

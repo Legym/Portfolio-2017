@@ -30,6 +30,7 @@ var onError = function (error) {
 */
 gulp.task('sass-compile', function() {
     gulp.src([
+        './www/static/css/vendor/fontello.css',
         './www/static/scss/**/'
     ])
         .pipe(plumber({errorHandler: onError}))
@@ -37,7 +38,7 @@ gulp.task('sass-compile', function() {
         /* Lints project sass */
         .pipe(sassLint({
             files: { ignore: [
-                // Ignore sass files
+                // '**/fontello.css'
             ]},
             rules: {
                 'class-name-format': [
@@ -100,7 +101,6 @@ gulp.task('sass-compile', function() {
         .pipe(sass({
             includePaths: [
                 './node_modules/foundation-sites/scss/',
-                './node_modules/font-awesome/scss/',
                 './node_modules/slick-carousel/slick/'
             ]
         }).on('error', sass.logError))
@@ -130,6 +130,8 @@ gulp.task('javascript-compile', function() {
     gulp.src([
         './node_modules/foundation-sites/dist/plugins/foundation.core.js',
         './node_modules/foundation-sites/dist/plugins/foundation.util.mediaQuery.js',
+        './node_modules/foundation-sites/dist/plugins/foundation.util.timerAndImageLoader.js',
+        './node_modules/foundation-sites/dist/plugins/foundation.equalizer.js',
         './node_modules/slick-carousel/slick/slick.js',
         './www/static/js/vendor/parallax.min.js',
         './www/static/js/base.js',
@@ -137,10 +139,16 @@ gulp.task('javascript-compile', function() {
     ])
         .pipe(plumber({errorHandler: onError}))
         .pipe(jshint())
+
+        /* Lints Javascript - `.jshintignore will` ignore specific js */
         .pipe(jshint.reporter('default'))
-        .pipe(concat('all.js')) // Add the files together
-        .pipe(uglify()) // Minify
-        .pipe(rename('mygelb.js'))
+
+        /* Generate sourcemaps */
+        .pipe(sourcemaps.init())
+            .pipe(concat('all.js')) // Add the files together
+            .pipe(uglify()) // Minify
+            .pipe(rename('mygelb.js'))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./www/static/scripts/'))
         .pipe(notify({
             message: 'JS compilation is complete!',
