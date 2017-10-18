@@ -11,7 +11,7 @@
 
 // Custom Fonts
 @include font-face('LeagueGothic', '../../fonts/leaguegothic/', 'leaguegothic-regular-webfont');
-@include font-face('Lato', '../../fonts/lato/', 'Lato-Regular');
+@include font-face('Lato', '../../fonts/lato/', 'lato-regular-webfont');
 
 // Font Icons
-@include font-face('Fontello', '../../fonts/', 'fontello');
+@include font-face('Fontello', '../../fonts/fontello/', 'fontello');
