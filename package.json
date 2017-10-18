@@ -4,10 +4,8 @@
     "main": "gulpfile.js",
     "dependencies": {
         "foundation-sites": "6.2.1",
-        "font-awesome": "4.6.1",
         "gulp": "3.9.1",
         "slick-carousel": "1.6.0",
-        "jssocials": "1.5.0",
         "jquery-lazyload": "1.9.7"
     },
     "devDependencies": {

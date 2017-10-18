@@ -36,11 +36,10 @@ var FEATURES = {
             center: { lat: 35.450204, lng: -80.2654087 }
         });
 
-        var image = 'https://mygelb.com/graphics/marker.png';
         var beachMarker = new google.maps.Marker({
             position: { lat: 35.450204, lng: -80.2654087 },
             map: map,
-            icon: image
+            icon: 'https://mygelb.com/graphics/marker.png'
         });
     },
 
@@ -56,14 +55,6 @@ var FEATURES = {
         } else {
             $('#desktop-menu ul li > a[href^="/' + location.pathname.split('/')[1] + '"]').addClass('menu-active');
         }
-    },
-
-    blogSocialMedia: function () {
-        $('#share').jsSocials({
-            showLabel: false,
-            showCount: false,
-            shares: ['twitter', 'facebook', 'googleplus']
-        });
     },
 
     projectSlideshow: function () {
@@ -192,11 +183,5 @@ var FEATURES = {
         $(window).on('resize', function () {
             $('.homepage-slideshow').height($(window).height() - 50);
         }).resize();
-    },
-
-    mapCover: function () {
-        $('.map-cover').on('click', function () {
-            $('.map-cover').hide();
-        });
     }
 };

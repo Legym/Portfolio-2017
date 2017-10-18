@@ -20,9 +20,9 @@
          */
         common: {
             init: function () {
-                FEATURES.toTop();
                 FEATURES.runFoundaton();
                 FEATURES.currentPage();
+                FEATURES.toTop();
             }
         },
 
@@ -34,13 +34,12 @@
 
         subpage_blog: {
             init: function () {
-                FEATURES.blogSocialMedia();
+                //
             }
         },
 
         subpage_about: {
             init: function () {
-                FEATURES.mapCover();
                 FEATURES.instagramSlider('.instagram-slide');
                 FEATURES.initMap();
             }
@@ -60,7 +59,7 @@
 
         subpage_newsletter: {
             init: function () {
-                // FEATURES.functionName()
+                //
             }
         }
     };

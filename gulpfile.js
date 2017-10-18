@@ -11,23 +11,9 @@ var notify          = require('gulp-notify');                   // Ability to se
 var sourcemaps      = require('gulp-sourcemaps');               // Adds sourcemaps to css files
 var sassLint        = require('gulp-sass-lint');                // Enforce SCSS Style Guide
 
-/*
-* Move plugin fonts from node_modules to proper destination
-*
-*
-*/
-gulp.task('pip-fonts', function () {
-    gulp.src([
-        './node_modules/font-awesome/fonts/*',
-        './node_modules/slick-carousel/slick/fonts/*'
-    ])
-        .pipe(gulp.dest('./www/static/fonts/'));
-});
-
 
 /*
 * Checks for errors
-*
 *
 */
 var onError = function (error) {
@@ -40,7 +26,6 @@ var onError = function (error) {
 
 /*
 * Compile Our Sass
-*
 *
 */
 gulp.task('sass-compile', function() {
@@ -116,8 +101,7 @@ gulp.task('sass-compile', function() {
             includePaths: [
                 './node_modules/foundation-sites/scss/',
                 './node_modules/font-awesome/scss/',
-                './node_modules/slick-carousel/slick/',
-                './node_modules/jssocials/styles/'
+                './node_modules/slick-carousel/slick/'
             ]
         }).on('error', sass.logError))
 
@@ -138,35 +122,22 @@ gulp.task('sass-compile', function() {
         }));
 });
 
-
-/*
-* Checks custom JS for errors
-*
-*
-*/
-gulp.task('javascript-linting', function() {
-    return gulp.src('./www/static/js/base.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
-});
-
-
 /*
 * Concatenate & Minify JS
-*
 *
 */
 gulp.task('javascript-compile', function() {
     gulp.src([
-        './node_modules/foundation-sites/dist/foundation.js',
+        './node_modules/foundation-sites/dist/plugins/foundation.core.js',
+        './node_modules/foundation-sites/dist/plugins/foundation.util.mediaQuery.js',
         './node_modules/slick-carousel/slick/slick.js',
-        './node_modules/jssocials/src/jssocials.js',
-        './node_modules/jssocials/src/jssocials.shares.js',
         './www/static/js/vendor/parallax.min.js',
         './www/static/js/base.js',
         './www/static/js/router.js'
     ])
         .pipe(plumber({errorHandler: onError}))
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
         .pipe(concat('all.js')) // Add the files together
         .pipe(uglify()) // Minify
         .pipe(rename('mygelb.js'))
@@ -177,24 +148,13 @@ gulp.task('javascript-compile', function() {
         }));
 });
 
-
-/*
-* Project Initialization
-*
-*
-*/
-gulp.task('pip', ['pip-fonts']);
-
-
 /*
 *  Watch Files For Changes
-*
 *
 */
 gulp.task('watch', function() {
     gulp.watch(
         './www/static/js/*.js',
-        ['javascript-linting'],
         ['javascript-compile']
     );
     gulp.watch([
@@ -206,4 +166,4 @@ gulp.task('watch', function() {
 
 
 // Default Task
-gulp.task('default', ['sass-compile', 'javascript-compile', 'javascript-linting', 'watch']);
+gulp.task('default', ['sass-compile', 'javascript-compile', 'watch']);
