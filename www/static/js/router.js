@@ -23,6 +23,7 @@
                 FEATURES.runFoundaton();
                 FEATURES.currentPage();
                 FEATURES.toTop();
+                FEATURES.hamburgerIcon();
             }
         },
 

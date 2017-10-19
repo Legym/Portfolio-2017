@@ -24,6 +24,16 @@
 
 var FEATURES = {
 
+    hamburgerIcon: function () {
+        var hamburger_icon = document.getElementsByClassName('js-hamburger-icon')[0];
+        var overlay = document.getElementsByClassName('js-navigation-overlay')[0];
+
+        hamburger_icon.addEventListener('click', function() {
+            hamburger_icon.classList.toggle('is-active');
+            overlay.classList.toggle('is-overlay');
+        });
+    },
+
     runFoundaton: function () {
         $(document).foundation();
     },
