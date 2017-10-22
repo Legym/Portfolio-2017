@@ -201,7 +201,6 @@ p {
 
 .footer {
     background-color: #111;
-    margin-top: 60px;
     padding: 20px 0 7px;
 
     .footer-logo {
@@ -377,8 +376,12 @@ p {
 }
 
 .conact-partial {
-    padding-top: 80px;
+    color: #fff;
     text-align: center;
+
+    .parallax-window {
+        padding: 100px 0 120px;
+    }
 
     h3 {
         font-size: 2em;
