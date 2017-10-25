@@ -19,16 +19,16 @@
 
         {{ partial "header" . }}
 
-        <main class="main-content">
+        <main>
             <button id="to-top">
                 <i class="fa fa-chevron-up"></i>
             </button>
 
             {{ block "main" . }} {{ end }}
 
-            {{ partial "footer" . }}
-
         </main>
+
+        {{ partial "footer" . }}
 
         <!-- Javascript -->
         <script src="{{ .Site.BaseURL }}js/vendor/jquery-2.2.4.min.js"></script>

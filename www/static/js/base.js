@@ -88,7 +88,7 @@ var FEATURES = {
 
     homepageSlideshow: function () {
         $(window).on('resize', function () {
-            $('.hero').height($(window).height() - 200);
+            $('.hero__parallax-window').height($(window).height() - 200);
         }).resize();
     }
 };

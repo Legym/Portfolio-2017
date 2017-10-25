@@ -188,17 +188,6 @@ p {
     }
 }
 
-.main-content {
-
-    @include breakpoint(medium) {
-        min-height: 700px;
-    }
-
-    .content-padding {
-        padding-top: 90px;
-    }
-}
-
 .footer {
     background-color: #111;
     padding: 20px 0 7px;
@@ -316,10 +305,6 @@ p {
         padding-top: 10px;
         text-align: center;
 
-        @include breakpoint(medium) {
-            text-align: inherit;
-        }
-
         p {
             color: #fff;
             font-size: 16px;
@@ -328,17 +313,6 @@ p {
             @include breakpoint(medium) {
                 display: inline-block;
                 vertical-align: top;
-            }
-        }
-
-        .author {
-
-            @include breakpoint(medium) {
-                float: right;
-            }
-
-            span {
-                color: $primary-color;
             }
         }
     }
