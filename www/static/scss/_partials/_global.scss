@@ -26,11 +26,6 @@ h2 {
     }
 }
 
-
-a {
-    color: $primary-color;
-}
-
 p {
     font-family: 'Lato';
     font-size: 16px;
@@ -171,18 +166,17 @@ p {
     height: 60px;
     position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
 
-    @include breakpoint(large) {
-        background-color: #111;
+    @include breakpoint(medium) {
+        background-color: transparent;
         height: 73px;
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 99;
     }
 
-    .logo {
+    .header__logo {
         float: left;
         padding-top: 10px;
         width: 120px;
@@ -191,111 +185,11 @@ p {
             padding: inherit;
             width: 365px;
         }
-
-        .mobile-logo {
-            display: block;
-
-            @include breakpoint(large) {
-                display: none;
-            }
-        }
-
-        .desktop-logo {
-            display: none;
-
-            @include breakpoint(large) {
-                display: block;
-                height: 80px;
-            }
-        }
-    }
-
-    #desktop-menu {
-        display: none;
-
-        @include breakpoint(large) {
-           display: inline-block;
-           float: right;
-           vertical-align: top;
-
-            ul {
-                float: right;
-                line-height: 73px;
-                margin: 0;
-                padding: 0;
-
-                li {
-                    display: inline-block;
-
-                    &:nth-last-child(1) {
-                        padding-right: 0;
-                    }
-
-                    &:nth-last-child(1) a:hover:after {
-                        opacity: 0;
-                    }
-                }
-
-                a {
-                    color: #fff;
-                    padding: 23px 1.58rem;
-                    position: relative;
-                    transition: .2s ease-in;
-
-                    &:after {
-                        border-bottom: 2px solid #000;
-                        bottom: 18px;
-                        content: '';
-                        left: 0;
-                        margin: 0 auto;
-                        opacity: 0;
-                        position: absolute;
-                        right: 0;
-                        transition: .25s ease-in;
-                        width: 50%;
-                    }
-
-                    &:hover {
-                        color: $primary-color;
-
-                        &:after {
-                            border-bottom: 3px solid $primary-color;
-                            bottom: 15px;
-                            opacity: 1;
-                            width: 50%;
-                        }
-                    }
-                }
-
-                .menu-active {
-                    color: $primary-color;
-
-                    &:after {
-                        border-bottom: 3px solid $primary-color;
-                        bottom: 15px;
-                        opacity: 1;
-                        width: 50%;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.main-content {
-
-    @include breakpoint(medium) {
-        min-height: 700px;
-    }
-
-    .content-padding {
-        padding-top: 90px;
     }
 }
 
 .footer {
     background-color: #111;
-    margin-top: 60px;
     padding: 20px 0 7px;
 
     .footer-logo {
@@ -411,10 +305,6 @@ p {
         padding-top: 10px;
         text-align: center;
 
-        @include breakpoint(medium) {
-            text-align: inherit;
-        }
-
         p {
             color: #fff;
             font-size: 16px;
@@ -423,17 +313,6 @@ p {
             @include breakpoint(medium) {
                 display: inline-block;
                 vertical-align: top;
-            }
-        }
-
-        .author {
-
-            @include breakpoint(medium) {
-                float: right;
-            }
-
-            span {
-                color: $primary-color;
             }
         }
     }
@@ -471,8 +350,12 @@ p {
 }
 
 .conact-partial {
-    padding-top: 80px;
+    color: #fff;
     text-align: center;
+
+    .parallax-window {
+        padding: 100px 0 120px;
+    }
 
     h3 {
         font-size: 2em;

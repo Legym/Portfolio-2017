@@ -1,38 +1,39 @@
-<header class="header mm-slideout">
-    <a id="top"></a>
+<header class="header">
 
-    <div class="row">
-        <div class="small-12 columns">
+    <a href="javascript:void(0);" id="top"></a>
 
-            <div class="header-container">
-                <a href="/" class="logo">
-                    <!-- Mobile Logo -->
-                    <div class="mobile-logo">
-                        <img src="/images/logo/front-end-developer-mobile.svg" alt="Mygelb - Front End developer"/>
-                    </div>
+    <div class="row column">
+        <a href="/" class="header__logo">
+            <img src="/images/logo/front-end-developer.svg" alt="Mygelb - Front End developer"/>
+        </a>
 
-                    <!-- Desktop Logo -->
-                    <div class="desktop-logo">
-                        <img src="/images/logo/front-end-developer.svg" alt="Mygelb - Front End developer"/>
-                    </div>
-                </a>
-
-                <a id="nav-toggle" href="#menu-mobile">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-
-                <nav id="desktop-menu">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about/">About</a></li>
-                        <li><a href="/experience/">Experience</a></li>
-                        <li><a href="/blog/">Blog</a></li>
-                        <li><a href="/contact/">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        <a class="header__hamburger  js-hamburger-icon" href="javascript:void(0);">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
     </div>
 </header>
+
+<nav class="navigation  js-navigation-overlay">
+    <ul class="menu-list row show-for-large-up">
+
+        <li>
+            <a href="/experience/">
+                <h2>Experience</h2>
+            </a>
+        </li>
+
+        <li>
+            <a href="/blog/">
+                <h2>Blog</h2>
+            </a>
+        </li>
+
+        <li>
+            <a href="/contact/">
+                <h2>Contact</h2>
+            </a>
+        </li>
+    </ul>
+</nav>

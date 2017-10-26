@@ -105,12 +105,11 @@ gulp.task('sass-compile', function() {
             ]
         }).on('error', sass.logError))
 
-        .pipe(autoprefixer({
-            browsers: ['last 5 versions']
-        }))
-
         /* Generate sourcemaps */
         .pipe(sourcemaps.init())
+            .pipe(autoprefixer({
+                browsers: ['last 5 versions']
+            }))
             .pipe(cleanCSS())
             .pipe(rename('app.min.css'))
         .pipe(sourcemaps.write('./'))

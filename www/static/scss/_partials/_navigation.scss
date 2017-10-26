@@ -1,0 +1,18 @@
+.navigation {
+	background: rgba(0, 0, 0, .9);
+	height: 100vh;
+	opacity: 0;
+	padding-top: 100px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: opacity .5s, visibility .5s;
+	visibility: hidden;
+	width: 100vw;
+
+	&.is-overlay {
+		opacity: 1;
+		visibility: visible;
+		z-index: 3;
+	}
+}

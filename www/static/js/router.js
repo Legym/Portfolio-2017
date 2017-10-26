@@ -18,46 +18,28 @@
         /**
          * All pages
          */
-        common: {
+        global: {
             init: function () {
                 FEATURES.runFoundaton();
                 FEATURES.currentPage();
                 FEATURES.toTop();
+                FEATURES.navigationMenu();
             }
         },
 
-        subpage_homepage: {
+        page_homepage: {
             init: function () {
                 FEATURES.homepageSlideshow();
             }
         },
 
-        subpage_blog: {
+        page_blog: {
             init: function () {
                 //
             }
         },
 
-        subpage_about: {
-            init: function () {
-                FEATURES.instagramSlider('.instagram-slide');
-                FEATURES.initMap();
-            }
-        },
-
-        subpage_sitemap: {
-            init: function () {
-                //
-            }
-        },
-
-        subpage_contact: {
-            init: function () {
-                //
-            }
-        },
-
-        subpage_newsletter: {
+        page_contact: {
             init: function () {
                 //
             }
@@ -80,7 +62,7 @@
             }
         },
         loadEvents: function() {
-            UTIL.fire('common');
+            UTIL.fire('global');
 
             $.each(document.body.className.replace(/-/g, '_').split(/\s+/),function(i,classnm) {
                 UTIL.fire(classnm);
@@ -88,6 +70,8 @@
         }
     };
 
-    $(document).ready(UTIL.loadEvents);
+    $(document).ready(
+        UTIL.loadEvents
+    );
 
 }( window.jQuery ));

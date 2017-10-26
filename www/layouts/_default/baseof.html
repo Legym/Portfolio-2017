@@ -15,27 +15,24 @@
         <link rel="stylesheet" href="{{ .Site.BaseURL }}css/app.min.css"/>
     </head>
 
-    <body class="subpage-{{ with .Section }}{{ . }}{{ else }}homepage{{ end }}">
+    <body class="page-{{ with .Section }}{{ . }}{{ else }}homepage{{ end }}">
 
         {{ partial "header" . }}
 
-        <div class="subpage">
-            <main class="main-content">
-                <button id="to-top">
-                    <i class="fa fa-chevron-up"></i>
-                </button>
+        <main>
+            <button id="to-top">
+                <i class="fa fa-chevron-up"></i>
+            </button>
 
-                {{ block "main" . }} {{ end }}
+            {{ block "main" . }} {{ end }}
 
-            </main>
+        </main>
 
-            {{ partial "footer" . }}
-
-        </div>
+        {{ partial "footer" . }}
 
         <!-- Javascript -->
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwJcg6U7SKK_d1dBkFqXOBntzeHtbxdDI"></script>
+        <script src="{{ .Site.BaseURL }}js/vendor/jquery-2.2.4.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
         <script src="{{ .Site.BaseURL }}scripts/mygelb.js"></script>
 
         <!-- Google Analytics -->
