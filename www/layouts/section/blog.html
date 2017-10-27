@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="contact-intro">
+<section class="hero hero-blog">
     <div class="parallax-wrapper">
         <div class="parallax-window" data-parallax="scroll" data-image-src="/images/contact/contact-header.jpg">
             <div class="row">
@@ -12,13 +12,12 @@
     </div>
 </section>
 
-<section class="blog-content">
+<section class="content-deck-1">
     <div class="row">
         <div class="small-12 columns">
             {{ partial "breadcrumbs" . }}
         </div>
 
-        <!-- Desktop Sidebar -->
         <div class="medium-12 columns">
             <div id="blog-sticky" class="blog-sidebar-desktop">
                 <h6>FILTER BY:</h6>
@@ -77,6 +76,8 @@
     </div>
 </section>
 
-{{ partial "contact" . }}
+<section class="content-deck-2">
+    {{ partial "contact" . }}
+</section>
 
 {{ end }}

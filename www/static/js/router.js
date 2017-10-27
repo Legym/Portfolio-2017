@@ -21,7 +21,6 @@
         global: {
             init: function () {
                 FEATURES.runFoundaton();
-                FEATURES.currentPage();
                 FEATURES.toTop();
                 FEATURES.navigationMenu();
             }

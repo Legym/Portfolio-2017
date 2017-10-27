@@ -30,7 +30,6 @@ var onError = function (error) {
 */
 gulp.task('sass-compile', function() {
     gulp.src([
-        './www/static/css/vendor/fontello.css',
         './www/static/scss/**/'
     ])
         .pipe(plumber({errorHandler: onError}))

@@ -19,14 +19,13 @@
 // Plugins
 @import 'slick.scss';
 
+@import '_partials/mixins';
+
 // Custom
 @import '_partials/fonts',
 		'_partials/font-icons',
 		'_partials/global',
 		'_partials/hamburger',
 		'_partials/navigation',
-		'_partials/blog',
-		'_partials/contact',
-		'_partials/experience',
 		'_partials/sections',
 		'_partials/heroes';

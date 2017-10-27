@@ -1,15 +1,4 @@
-﻿@mixin font-face($font-name, $font-path, $font-file) {
-	@font-face {
-	    font-family: '#{$font-name}';
-	    src: url('#{$font-path}/#{$font-file}.eot'),
-	    	 url('#{$font-path}/#{$font-file}?#iefix') format('embedded-opentype'),
-	         url('#{$font-path}/#{$font-file}.woff') format('woff'),
-	         url('#{$font-path}/#{$font-file}.ttf') format('truetype'),
-	         url('#{$font-path}/#{$font-file}.svg##{$font-name}') format('svg');
-	}
-}
-
-// Custom Fonts
+﻿// Custom Fonts
 @include font-face('LeagueGothic', '../../fonts/leaguegothic/', 'leaguegothic-regular-webfont');
 @include font-face('Lato', '../../fonts/lato/', 'lato-regular-webfont');
 

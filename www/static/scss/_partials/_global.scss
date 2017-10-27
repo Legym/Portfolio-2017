@@ -95,20 +95,6 @@ p {
         padding-top: 220px;
     }
 
-    .subpage-about & {
-        height: 300px;
-        padding-top: 60px;
-
-        @include breakpoint(medium) {
-            height: 700px;
-            padding-top: 150px;
-        }
-
-        @include breakpoint(large) {
-            padding-top: 200px;
-        }
-    }
-
     h2 {
         background-color: #07a1f2;
         color: #fff;
@@ -116,32 +102,13 @@ p {
         margin: 0 auto;
         padding: .5% 3.1% .6%;
         text-shadow: 0 3px 10px rgba(0, 0, 0, .2);
-
-        .subpage-about & {
-            background: inherit;
-            color: #fff;
-            display: block;
-            padding: inherit;
-            text-shadow: 0 15px 200px #0c0c0c;
-        }
     }
 
     p {
         color: #fff;
         font-family: 'Lato';
         line-height: 18px;
-
-        .subpage-about & {
-            line-height: 22px;
-            margin: 0 auto;
-            width: 90%;
-
-            @include breakpoint(medium) {
-                width: 100%;
-            }
-        }
     }
-
 }
 
 .breadcrumbs {
@@ -346,30 +313,5 @@ p {
 
     &.in {
         bottom: 0;
-    }
-}
-
-.conact-partial {
-    color: #fff;
-    text-align: center;
-
-    .parallax-window {
-        padding: 100px 0 120px;
-    }
-
-    h3 {
-        font-size: 2em;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-    }
-
-    p {
-        margin: 0 auto;
-        width: 85%;
-    }
-
-    .btn {
-        margin: 0 auto;
-        margin-top: 30px;
     }
 }
