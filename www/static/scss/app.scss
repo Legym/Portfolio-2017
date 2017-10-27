@@ -19,7 +19,9 @@
 // Plugins
 @import 'slick.scss';
 
-@import '_partials/mixins';
+@import '_partials/mixins',
+		'_partials/variables';
+
 
 // Custom
 @import '_partials/fonts',

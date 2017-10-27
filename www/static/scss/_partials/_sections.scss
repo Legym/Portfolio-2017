@@ -1,5 +1,5 @@
 %content-deck-contact {
-    color: #fff;
+    color: $color-white;
     text-align: center;
 
     .parallax-window {
@@ -59,7 +59,7 @@
         }
 
         img {
-            border: 2px solid #fff;
+            border: 2px solid $color-white;
             display: block;
             margin: 0 auto;
             position: relative;
@@ -124,7 +124,7 @@
             text-align: center;
 
             .service-style {
-                background-color: #fff;
+                background-color: $color-white;
                 box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .14), 0 2px 2px 0 rgba(0, 0, 0, .098), 0 1px 5px 0 rgba(0, 0, 0, .084);
                 margin-bottom: 40px;
                 padding: 20px 10px 16px;
@@ -154,7 +154,7 @@
         }
 
         .btn {
-            background-color: #fff;
+            background-color: $color-white;
             display: block;
             margin: 0 auto;
         }
@@ -164,7 +164,7 @@
         background-color: #f6f6f6;
 
         h2 {
-            color: #fff;
+            color: $color-white;
             font-size: 2.5em;
             letter-spacing: 0;
             margin-bottom: 40px;
@@ -178,7 +178,7 @@
         }
 
         .item {
-            background-color: #fff;
+            background-color: $color-white;
             letter-spacing: .09em;
             margin-bottom: 20px;
             padding: 10px 5px;
@@ -217,7 +217,7 @@
 
                 h3 {
                     bottom: 75px;
-                    color: #fff;
+                    color: $color-white;
                     font-size: 30px;
                     font-weight: normal;
                     left: 0;
@@ -263,7 +263,7 @@
             }
 
             .overlay {
-                color: #fff;
+                color: $color-white;
                 font-size: 22px;
                 height: 100%;
                 left: 0;
@@ -282,7 +282,7 @@
         }
 
         .btn-inverse {
-            background-color: #fff;
+            background-color: $color-white;
             display: block;
             margin: 40px auto;
             width: 250px;
@@ -409,14 +409,14 @@
         }
 
         button {
-            background-color: #fff;
+            background-color: $color-white;
             border: 1px solid #2199e8;
             color: #2199e8;
             transition: .3s ease-in;
 
             &:hover {
                 background-color: #07a1f2;
-                color: #fff;
+                color: $color-white;
             }
         }
 
@@ -470,7 +470,7 @@
                     }
 
                     &:hover {
-                        color: #fff;
+                        color: $color-white;
                     }
                 }
             }

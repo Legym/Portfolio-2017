@@ -4,12 +4,12 @@
         position: relative;
 
         &::after {
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, .3);
             content: '';
             display: block;
             height: 100%;
-            top: 0;
             position: absolute;
+            top: 0;
             width: 100%;
         }
 
@@ -17,7 +17,7 @@
             position: relative;
             text-align: center;
             top: 30%;
-            z-index: 3;
+            z-index: 1;
         }
 
         h1 {
@@ -43,8 +43,8 @@
         }
 
         h2 {
-            background-color: #07a1f2;
-            color: #fff;
+            background-color: $color-black;
+            color: $color-white;
             font-size: 40px;
             margin: 0 auto;
             padding: .5% 1.1% .6%;
@@ -68,20 +68,20 @@
 .page-experience {
 
     .hero {
-
+        //
     }
 }
 
 .page-blog {
 
     .hero {
-
+        //
     }
 }
 
 .page-contact {
 
     .hero {
-
+        //
     }
 }

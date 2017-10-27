@@ -118,8 +118,8 @@
     <div class="row">
         <h2>From my blog</h2>
 
-        {{ range ( first 4 ( where .Data.Pages.Reverse "Section" "blog" ) ) }}
-            <div class="medium-6 large-3 columns">
+        {{ range ( first 3 ( where .Data.Pages.Reverse "Section" "blog" ) ) }}
+            <div class="medium-6 large-4 columns">
                 <div class="item">
 
                     <!-- If the blog is enabled -->

@@ -34,8 +34,8 @@ p {
 
 .btn {
     background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid $color-white;
+    color: $color-white;
     display: inline-block;
     font-size: 1.2em;
     line-height: 50px;
@@ -47,12 +47,12 @@ p {
     z-index: 1;
 
     &:hover {
-        color: #fff;
+        color: $color-white;
     }
 
     &:after {
-        background: $primary-color;
-        color: #fff;
+        background: $color-black;
+        color: $color-white;
         content: '';
         height: 1000%;
         left: 0;
@@ -72,7 +72,7 @@ p {
 
 .btn-inverse {
     border: 1px solid #cacaca;
-    color: #111;
+    color: $color-black;
     margin: 40px auto;
     max-width: 250px;
 
@@ -81,7 +81,7 @@ p {
     }
 
     &:after {
-        background: $primary-color;
+        background: $color-black;
     }
 }
 
@@ -96,18 +96,12 @@ p {
     }
 
     h2 {
-        background-color: #07a1f2;
-        color: #fff;
+        background-color: $color-black;
+        color: $color-white;
         display: inline-block;
         margin: 0 auto;
         padding: .5% 3.1% .6%;
         text-shadow: 0 3px 10px rgba(0, 0, 0, .2);
-    }
-
-    p {
-        color: #fff;
-        font-family: 'Lato';
-        line-height: 18px;
     }
 }
 
@@ -119,17 +113,13 @@ p {
         float: right;
     }
 
-    .subpage-about & {
-        float: left;
-    }
-
     li {
         font-size: 1em;
     }
 }
 
 .header {
-    background-color: #111;
+    background-color: $color-black;
     height: 60px;
     position: fixed;
     width: 100%;
@@ -142,21 +132,10 @@ p {
         top: 0;
         width: 100%;
     }
-
-    .header__logo {
-        float: left;
-        padding-top: 10px;
-        width: 120px;
-
-        @include breakpoint(large) {
-            padding: inherit;
-            width: 365px;
-        }
-    }
 }
 
 .footer {
-    background-color: #111;
+    background-color: $color-black;
     padding: 20px 0 7px;
 
     .footer-logo {
@@ -214,7 +193,7 @@ p {
         }
 
         a {
-            color: #fff;
+            color: $color-white;
             transition: .2s ease-in;
 
             &:hover,
@@ -255,7 +234,7 @@ p {
         }
 
         i {
-            color: #fff;
+            color: $color-white;
             transition: .2s ease-in;
 
             &:hover,
@@ -266,14 +245,15 @@ p {
     }
 
     .footer-copyright {
-        border-top: 1px solid #fff;
-        color: #fff;
+        border-top: 1px solid $color-white;
+        color: $color-white;
         margin-top: 15px;
         padding-top: 10px;
         text-align: center;
 
         p {
-            color: #fff;
+            color: $color-white;
+            font-family: 'LeagueGothic';
             font-size: 16px;
             margin: 0;
 
@@ -306,7 +286,7 @@ p {
     }
 
     .fa {
-        color: #fff;
+        color: $color-white;
         display: block;
         font-size: 16px;
     }
