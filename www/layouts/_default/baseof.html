@@ -15,20 +15,20 @@
         <link rel="stylesheet" href="{{ .Site.BaseURL }}css/app.min.css"/>
     </head>
 
-    <body class="page-{{ with .Section }}{{ . }}{{ else }}homepage{{ end }}">
+    <body class="page-{{ with .Section }}{{ . }}{{ else }}homepage{{ end }}  js-no-scroll">
 
         {{ partial "header" . }}
 
-        <main>
+        <main class="wrapper">
             <button id="to-top">
                 <i class="fa fa-chevron-up"></i>
             </button>
 
             {{ block "main" . }} {{ end }}
 
-        </main>
+            {{ partial "footer" . }}
 
-        {{ partial "footer" . }}
+        </main>
 
         <!-- Javascript -->
         <script src="{{ .Site.BaseURL }}js/vendor/jquery-2.2.4.min.js"></script>

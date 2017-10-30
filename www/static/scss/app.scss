@@ -27,7 +27,13 @@
 @import '_partials/fonts',
 		'_partials/font-icons',
 		'_partials/global',
-		'_partials/hamburger',
 		'_partials/navigation',
 		'_partials/sections',
 		'_partials/heroes';
+
+.parallax-mirror {
+
+	&.open {
+		transition-duration: 0.5s;
+	}
+}

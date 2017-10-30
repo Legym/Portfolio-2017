@@ -28,13 +28,100 @@ var FEATURES = {
         $(document).foundation();
     },
 
+    // Returns all classes `parallax-mirror` on current page
+    fetchParallaxImages: function () {
+        var array = [];
+        var nodelist = document.getElementsByClassName('parallax-mirror');
+
+        for (var i = 0; nodelist.length > i; i++) {
+            array.push(nodelist[i].getAttribute('style'));
+        }
+
+        return array;
+    },
+
+    calculateParallaxPosition: function () {
+        var element = FEATURES.fetchParallaxImages();
+
+        var arrReg = /(\.*visibility: visible)(.*translate3d)\((.*)px\)/g;
+        var arr = [];
+
+        for (var i = 0; element.length > i; i++) { // Loops through all instances of `parallax-mirror`
+            arr.push(arrReg.exec(element[i]));
+        }
+
+        console.log(arr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // var element = FEATURES.fetchParallaxImages();
+        // var visibleReg = /(\.*visibility: visible)(.*translate3d)\((.*)px\)/g;
+        // var answerReg = /(\+|-)?([0-9]+(\.|[0-9]+))+((px))/g;
+        // var visible;
+
+        // for (var i = 0; element.length > i; i++) { // Loops through all instances of `parallax-mirror`
+        //     if (visible !== null) {
+        //         visible = visibleReg.exec(element[i]);
+        //     }
+        // }
+
+        // if (visible[1] === 'visibility: visible') {
+        //     var answer = answerReg.exec(visible[3]);
+        //     console.log(answer[2]);
+        // }
+
+
+
+
+
+
+
+
+
+        // var element = FEATURES.fetchParallaxImages();
+
+        // for (var i = 0; element.length > i; i++) { // Loops through all instances of `parallax-mirror`
+
+        //     var visible = /(\.*visibility: visible)(.*translate3d)\((.*)px\)/g.exec(element[i]);
+
+        //     if (visible !== null) {
+
+        //         if (visible[1] === 'visibility: visible') {
+        //             var answer = /(\+|-)?([0-9]+(\.|[0-9]+))+((px))/g.exec(visible[3]);
+        //             console.log(answer[0]);
+        //         }
+        //     }
+
+        // }
+    },
+
     navigationMenu: function () {
-        var hamburger_icon = document.getElementsByClassName('js-hamburger-icon')[0];
-        var overlay = document.getElementsByClassName('js-navigation-overlay')[0];
+        var hamburger_icon = document.getElementsByClassName('openNav')[0];
+        var nav = document.querySelectorAll('nav')[0];
+        var body = document.getElementsByClassName('js-no-scroll')[0];
+        var wrapper = document.getElementsByClassName('wrapper')[0];
 
         hamburger_icon.addEventListener('click', function() {
-            hamburger_icon.classList.toggle('is-active');
-            overlay.classList.toggle('is-overlay');
+            hamburger_icon.classList.toggle('open');
+            nav.classList.toggle('open');
+            body.classList.toggle('navOpen');
+            wrapper.classList.toggle('open');
+
+            FEATURES.calculateParallaxPosition();
         });
     },
 
