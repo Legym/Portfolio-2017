@@ -30,83 +30,40 @@ var FEATURES = {
 
     // Returns all classes `parallax-mirror` on current page
     fetchParallaxImages: function () {
-        var array = [];
+        var instance = [];
         var nodelist = document.getElementsByClassName('parallax-mirror');
 
         for (var i = 0; nodelist.length > i; i++) {
-            array.push(nodelist[i].getAttribute('style'));
+            instance.push(nodelist[i].getAttribute('style')); //pushes all instances of parallax-mirror (inline styles properties)
         }
 
-        return array;
+        return instance;
     },
 
     calculateParallaxPosition: function () {
+        // Grabs all instances of `parallax-mirror` on current page
         var element = FEATURES.fetchParallaxImages();
+        var test;
 
-        var arrReg = /(\.*visibility: visible)(.*translate3d)\((.*)px\)/g;
-        var arr = [];
+        // RegExp
+        var visibleReg = /(\.*visibility: visible)(.*translate3d)\((.*)px\)/g; // Searches for visibility: visible and transform property
+        var activeReg = /(\+|-)?([0-9]+(\.|[0-9]+))+((px))/g; // Grabs y-value from transform property
 
-        for (var i = 0; element.length > i; i++) { // Loops through all instances of `parallax-mirror`
-            arr.push(arrReg.exec(element[i]));
+        for (var i = 0; element.length > i; i++) {
+
+            var visible = visibleReg.exec(element[i]);
+
+            if (visible !== null) {
+
+                if (visible[1] === 'visibility: visible') {
+                    var answer = activeReg.exec(visible[3]);
+                    test = answer[0];
+                    console.log(test);
+                }
+            }
         }
 
-        console.log(arr);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // var element = FEATURES.fetchParallaxImages();
-        // var visibleReg = /(\.*visibility: visible)(.*translate3d)\((.*)px\)/g;
-        // var answerReg = /(\+|-)?([0-9]+(\.|[0-9]+))+((px))/g;
-        // var visible;
-
-        // for (var i = 0; element.length > i; i++) { // Loops through all instances of `parallax-mirror`
-        //     if (visible !== null) {
-        //         visible = visibleReg.exec(element[i]);
-        //     }
-        // }
-
-        // if (visible[1] === 'visibility: visible') {
-        //     var answer = answerReg.exec(visible[3]);
-        //     console.log(answer[2]);
-        // }
-
-
-
-
-
-
-
-
-
-        // var element = FEATURES.fetchParallaxImages();
-
-        // for (var i = 0; element.length > i; i++) { // Loops through all instances of `parallax-mirror`
-
-        //     var visible = /(\.*visibility: visible)(.*translate3d)\((.*)px\)/g.exec(element[i]);
-
-        //     if (visible !== null) {
-
-        //         if (visible[1] === 'visibility: visible') {
-        //             var answer = /(\+|-)?([0-9]+(\.|[0-9]+))+((px))/g.exec(visible[3]);
-        //             console.log(answer[0]);
-        //         }
-        //     }
-
-        // }
+        return test;
     },
 
     navigationMenu: function () {
@@ -115,13 +72,40 @@ var FEATURES = {
         var body = document.getElementsByClassName('js-no-scroll')[0];
         var wrapper = document.getElementsByClassName('wrapper')[0];
 
+        var nodelist = document.getElementsByClassName('parallax-mirror');
+        var isOpen = false;
+
+        var position;
+
         hamburger_icon.addEventListener('click', function() {
+
             hamburger_icon.classList.toggle('open');
             nav.classList.toggle('open');
             body.classList.toggle('navOpen');
             wrapper.classList.toggle('open');
 
-            FEATURES.calculateParallaxPosition();
+            // Closing
+            if (isOpen) {
+
+                for (var i = 0; nodelist.length > i; i++) {
+                    nodelist[i].style.transform = 'translate3d(0px, ' + position + ', 0px)';
+                }
+
+                isOpen = false;
+
+            } else {
+                // OPENING
+
+                // Grab position of Parallax Image
+                position = FEATURES.calculateParallaxPosition();
+
+                for (var j = 0; nodelist.length > j; j++) {
+                    nodelist[j].style.transform = 'translate3d(250px, ' + position + ', 0px)';
+                }
+
+                isOpen = true;
+            }
+
         });
     },
 
