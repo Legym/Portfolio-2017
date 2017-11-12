@@ -1,4 +1,5 @@
 body {
+    background-color: $color-black;
     font-family: 'LeagueGothic';
     font-size: 1.4em;
     letter-spacing: .05em;
@@ -293,4 +294,8 @@ p {
     &.in {
         bottom: 0;
     }
+}
+
+.parallax-mirror {
+    z-index: 1 !important;
 }
