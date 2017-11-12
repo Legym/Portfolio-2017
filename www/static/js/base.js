@@ -28,13 +28,24 @@ var FEATURES = {
         $(document).foundation();
     },
 
-    // Returns all classes `parallax-mirror` on current page
-    fetchParallaxImages: function () {
+    fetchParallaxLocations: function () {
         var instance = [];
         var nodelist = document.getElementsByClassName('parallax-mirror');
 
         for (var i = 0; nodelist.length > i; i++) {
-            instance.push(nodelist[i].getAttribute('style')); //pushes all instances of parallax-mirror (inline styles properties)
+            instance.push(nodelist[i]); //pushes all instances of parallax-mirror (inline styles properties)
+        }
+
+        return instance;
+    },
+
+    // Returns all classes `parallax-mirror` on current page
+    fetchParallaxStyles: function () {
+        var instance = [];
+        var test = FEATURES.fetchParallaxLocations();
+
+        for (var i = 0; test.length > i; i++) {
+            instance.push(test[i].getAttribute('style')); //pushes all instances of parallax-mirror (inline styles properties)
         }
 
         return instance;
@@ -42,12 +53,12 @@ var FEATURES = {
 
     calculateParallaxPosition: function () {
         // Grabs all instances of `parallax-mirror` on current page
-        var element = FEATURES.fetchParallaxImages();
-        var test;
+        var element = FEATURES.fetchParallaxStyles();
+        var position;
 
         // RegExp
         var visibleReg = /(\.*visibility: visible)(.*translate3d)\((.*)px\)/g; // Searches for visibility: visible and transform property
-        var activeReg = /(\+|-)?([0-9]+(\.|[0-9]+))+((px))/g; // Grabs y-value from transform property
+        var activeReg = /(\-)?([0-9])+(\.)?([0-9])?([0-9])+(px)/g; // Grabs y-value from transform property
 
         for (var i = 0; element.length > i; i++) {
 
@@ -57,13 +68,12 @@ var FEATURES = {
 
                 if (visible[1] === 'visibility: visible') {
                     var answer = activeReg.exec(visible[3]);
-                    test = answer[0];
-                    console.log(test);
+                    position = answer[0];
                 }
             }
         }
 
-        return test;
+        return position;
     },
 
     navigationMenu: function () {
@@ -88,7 +98,9 @@ var FEATURES = {
             if (isOpen) {
 
                 for (var i = 0; nodelist.length > i; i++) {
+                    nodelist[i].style.transitionDuration = '';
                     nodelist[i].style.transform = 'translate3d(0px, ' + position + ', 0px)';
+                    nodelist[i].style.zIndex = 1;
                 }
 
                 isOpen = false;
@@ -99,8 +111,12 @@ var FEATURES = {
                 // Grab position of Parallax Image
                 position = FEATURES.calculateParallaxPosition();
 
+                var equation = parseInt(position, 10) + parseInt('50', 10) + 'px';
+
                 for (var j = 0; nodelist.length > j; j++) {
-                    nodelist[j].style.transform = 'translate3d(250px, ' + position + ', 0px)';
+                    nodelist[j].style.transitionDuration = '.5s';
+                    nodelist[j].style.transform = 'translate3d(250px, ' + equation + ', 0px)';
+                    nodelist[j].style.zIndex = 1;
                 }
 
                 isOpen = true;
