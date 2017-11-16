@@ -25,7 +25,7 @@
 
 .page-homepage {
 
-	.content-deck-1 {
+    .content-deck-1 {
         background: #f6f6f6;
 
         .tech-container {
@@ -76,9 +76,9 @@
             }
 
         }
-	}
+    }
 
-	.content-deck-2 {
+    .content-deck-2 {
         background-color: $color-white;
 
         .parallax-window {
@@ -159,9 +159,9 @@
             display: block;
             margin: 0 auto;
         }
-	}
+    }
 
-	.content-deck-3 {
+    .content-deck-3 {
         background-color: #f6f6f6;
 
         h2 {
@@ -292,38 +292,38 @@
                 margin-top: 40px;
             }
         }
-	}
+    }
 
-	.content-deck-4 {
-		@extend %content-deck-contact;
-	}
+    .content-deck-4 {
+        @extend %content-deck-contact;
+    }
 }
 
 .page-experience {
 
-	.content-deck-1 {
+    // .content-deck-1 {
 
-	}
+    // }
 
-	.content-deck-2 {
+    .content-deck-2 {
         @extend %content-deck-contact;
-	}
+    }
 }
 
 .page-blog {
 
-	.content-deck-1 {
+    // .content-deck-1 {
 
-	}
+    // }
 
-	.content-deck-2 {
+    .content-deck-2 {
         @extend %content-deck-contact;
-	}
+    }
 }
 
 .page-contact {
 
-	.contact-deck-1 {
+    .contact-deck-1 {
         position: relative;
 
         @include breakpoint(medium) {
@@ -475,6 +475,6 @@
                     }
                 }
             }
-    	}
+        }
     }
 }

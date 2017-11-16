@@ -99,8 +99,7 @@ gulp.task('sass-compile', function() {
         /* Resolve sass imports for app.css */
         .pipe(sass({
             includePaths: [
-                './node_modules/foundation-sites/scss/',
-                './node_modules/slick-carousel/slick/'
+                './node_modules/foundation-sites/scss/'
             ]
         }).on('error', sass.logError))
 

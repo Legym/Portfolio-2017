@@ -50,7 +50,7 @@ p {
         color: $color-white;
     }
 
-    &:after {
+    &::after {
         background: $color-black;
         color: $color-white;
         content: '';
@@ -65,7 +65,7 @@ p {
         z-index: -1;
     }
 
-    &:hover:after {
+    &:hover::after {
         transform: translateY(10%) translateX(-25px) rotate(-45deg);
     }
 }
@@ -80,7 +80,7 @@ p {
         width: 250px;
     }
 
-    &:after {
+    &::after {
         background: $color-black;
     }
 }
