@@ -1,7 +1,5 @@
-FROM gpmidi/centos-6.4
+FROM centos:7
 MAINTAINER Mygel Bergstresser version: 0.1
-
-RUN yum groupinstall -y 'Development Tools'
 
 # Install Git
 RUN yum install -y \
