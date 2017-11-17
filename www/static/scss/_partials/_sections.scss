@@ -25,7 +25,7 @@
 
 .page-homepage {
 
-	.content-deck-1 {
+    .content-deck-1 {
         background: #f6f6f6;
 
         .tech-container {
@@ -38,7 +38,6 @@
                 margin-top: 100px;
                 text-align: left;
                 width: 45%;
-
             }
 
             h2 {
@@ -74,11 +73,10 @@
                 vertical-align: top;
                 width: 55%;
             }
-
         }
-	}
+    }
 
-	.content-deck-2 {
+    .content-deck-2 {
         background-color: $color-white;
 
         .parallax-window {
@@ -159,9 +157,9 @@
             display: block;
             margin: 0 auto;
         }
-	}
+    }
 
-	.content-deck-3 {
+    .content-deck-3 {
         background-color: #f6f6f6;
 
         h2 {
@@ -292,44 +290,39 @@
                 margin-top: 40px;
             }
         }
-	}
+    }
 
-	.content-deck-4 {
-		@extend %content-deck-contact;
-	}
+    .content-deck-4 {
+        @extend %content-deck-contact;
+    }
 }
 
 .page-experience {
 
-	.content-deck-1 {
+    // .content-deck-1 {
 
-	}
+    // }
 
-	.content-deck-2 {
+    .content-deck-2 {
         @extend %content-deck-contact;
-	}
+    }
 }
 
 .page-blog {
 
-	.content-deck-1 {
+    // .content-deck-1 {
 
-	}
+    // }
 
-	.content-deck-2 {
+    .content-deck-2 {
         @extend %content-deck-contact;
-	}
+    }
 }
 
 .page-contact {
 
-	.contact-deck-1 {
+    .contact-deck-1 {
         position: relative;
-
-        @include breakpoint(medium) {
-            margin: 0 auto;
-            width: 75%;
-        }
 
         form {
             position: relative;
@@ -411,14 +404,8 @@
 
         button {
             background-color: $color-white;
-            border: 1px solid #2199e8;
             color: #2199e8;
             transition: .3s ease-in;
-
-            &:hover {
-                background-color: #07a1f2;
-                color: $color-white;
-            }
         }
 
         .contact-sidebar {
@@ -475,6 +462,6 @@
                     }
                 }
             }
-    	}
+        }
     }
 }

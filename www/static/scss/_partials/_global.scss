@@ -50,7 +50,7 @@ p {
         color: $color-white;
     }
 
-    &:after {
+    &::after {
         background: $color-black;
         color: $color-white;
         content: '';
@@ -65,7 +65,7 @@ p {
         z-index: -1;
     }
 
-    &:hover:after {
+    &:hover::after {
         transform: translateY(10%) translateX(-25px) rotate(-45deg);
     }
 }
@@ -80,7 +80,7 @@ p {
         width: 250px;
     }
 
-    &:after {
+    &::after {
         background: $color-black;
     }
 }
@@ -205,10 +205,31 @@ p {
 
     .footer-contact {
 
-        .fa-facebook {
+        .icon-facebook {
 
             &::before {
                 @include icon-facebook();
+            }
+        }
+
+        .icon-github {
+
+            &::before {
+                @include icon-github();
+            }
+        }
+
+        .icon-email {
+
+            &::before {
+                @include icon-email();
+            }
+        }
+
+        .icon-linkedin {
+
+            &::before {
+                @include icon-linkedin();
             }
         }
 
@@ -230,7 +251,7 @@ p {
 
         li {
             display: inline-block;
-            margin-right: 15px;
+            margin-right: 4px;
         }
 
         i {
@@ -272,7 +293,7 @@ p {
     bottom: -100px;
     color: rgb(255, 255, 255);
     display: none;
-    font-size: 32px;
+    font-size: 16px;
     margin: 20px;
     padding: 10px 10px 15px;
     position: fixed;
@@ -282,13 +303,11 @@ p {
     z-index: 999;
 
     @include breakpoint(medium) {
-        padding: 20px 20px 25px;
+        padding: 18px 18px 25px;
     }
 
-    .fa {
-        color: $color-white;
-        display: block;
-        font-size: 16px;
+    &::before {
+        @include icon-chevron();
     }
 
     &.in {

@@ -39,7 +39,6 @@ var FEATURES = {
         return instance;
     },
 
-    // Returns all classes `parallax-mirror` on current page
     fetchParallaxStyles: function () {
         var instance = [];
         var test = FEATURES.fetchParallaxLocations();
@@ -58,18 +57,14 @@ var FEATURES = {
 
         // RegExp
         var visibleReg = /(\.*visibility: visible)(.*translate3d)\((.*)px\)/g; // Searches for visibility: visible and transform property
-        var activeReg = /(\-)?([0-9])+(\.)?([0-9])?([0-9])+(px)/g; // Grabs y-value from transform property
 
         for (var i = 0; element.length > i; i++) {
 
             var visible = visibleReg.exec(element[i]);
 
-            if (visible !== null) {
-
-                if (visible[1] === 'visibility: visible') {
-                    var answer = activeReg.exec(visible[3]);
-                    position = answer[0];
-                }
+            if (visible !== null && visible[1] === 'visibility: visible') {
+                var answer = visible[3].split(', ');
+                position = answer[1];
             }
         }
 
@@ -77,15 +72,14 @@ var FEATURES = {
     },
 
     navigationMenu: function () {
-        var hamburger_icon = document.getElementsByClassName('openNav')[0];
-        var nav = document.querySelectorAll('nav')[0];
-        var body = document.getElementsByClassName('js-no-scroll')[0];
-        var wrapper = document.getElementsByClassName('wrapper')[0];
 
-        var nodelist = document.getElementsByClassName('parallax-mirror');
-        var isOpen = false;
-
-        var position;
+        var hamburger_icon = document.getElementsByClassName('openNav')[0],
+            nav = document.querySelectorAll('nav')[0],
+            body = document.getElementsByClassName('js-no-scroll')[0],
+            wrapper = document.getElementsByClassName('wrapper')[0],
+            nodelist = FEATURES.fetchParallaxLocations(),
+            state = true,
+            position;
 
         hamburger_icon.addEventListener('click', function() {
 
@@ -94,32 +88,29 @@ var FEATURES = {
             body.classList.toggle('navOpen');
             wrapper.classList.toggle('open');
 
-            // Closing
-            if (isOpen) {
+            if (state) {
 
-                for (var i = 0; nodelist.length > i; i++) {
-                    nodelist[i].style.transitionDuration = '';
-                    nodelist[i].style.transform = 'translate3d(0px, ' + position + ', 0px)';
-                    nodelist[i].style.zIndex = 1;
-                }
-
-                isOpen = false;
-
-            } else {
-                // OPENING
-
-                // Grab position of Parallax Image
                 position = FEATURES.calculateParallaxPosition();
 
                 var equation = parseInt(position, 10) + parseInt('50', 10) + 'px';
 
+                // OPENING
                 for (var j = 0; nodelist.length > j; j++) {
                     nodelist[j].style.transitionDuration = '.5s';
                     nodelist[j].style.transform = 'translate3d(250px, ' + equation + ', 0px)';
-                    nodelist[j].style.zIndex = 1;
                 }
 
-                isOpen = true;
+                state = false;
+
+            } else {
+
+                // Closing
+                for (var i = 0; nodelist.length > i; i++) {
+                    nodelist[i].style.transitionDuration = '';
+                    nodelist[i].style.transform = 'translate3d(0px, ' + position + ', 0px)';
+                }
+
+                state = true;
             }
 
         });

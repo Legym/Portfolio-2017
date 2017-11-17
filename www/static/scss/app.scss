@@ -1,6 +1,6 @@
 // Install ZURB Foundation
 @import 'util/util',
-		'_global',
+		'global',
 		'grid/grid',
 		'typography/typography',
 		'components/breadcrumbs',
@@ -17,11 +17,10 @@
 @include foundation-menu();
 
 // Plugins
-@import 'slick.scss';
+@import '_partials/slick';
 
 @import '_partials/mixins',
 		'_partials/variables';
-
 
 // Custom
 @import '_partials/fonts',
@@ -30,10 +29,3 @@
 		'_partials/navigation',
 		'_partials/sections',
 		'_partials/heroes';
-
-.parallax-mirror {
-
-	&.open {
-		transition-duration: 0.5s;
-	}
-}
