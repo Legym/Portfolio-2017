@@ -98,7 +98,6 @@ var FEATURES = {
                 for (var j = 0; nodelist.length > j; j++) {
                     nodelist[j].style.transitionDuration = '.5s';
                     nodelist[j].style.transform = 'translate3d(250px, ' + equation + ', 0px)';
-                    // nodelist[j].style.zIndex = 1;
                 }
 
                 state = false;
@@ -107,7 +106,7 @@ var FEATURES = {
 
                 // Closing
                 for (var i = 0; nodelist.length > i; i++) {
-                    // nodelist[i].style.transitionDuration = '';
+                    nodelist[i].style.transitionDuration = '';
                     nodelist[i].style.transform = 'translate3d(0px, ' + position + ', 0px)';
                 }
 

@@ -1,7 +1,8 @@
 .icon-facebook::before { content: '\f30c'; }
 .icon-github-circled::before { content: '\f09b'; }
 .icon-linkedin::before { content: '\f0e1'; }
-.icon-mail::before { content: '\e800'; }
+.icon-mail-alt::before { content: '\e800'; }
+.icon-up-open::before { content: '\f0e0'; }
 
 %icon-defaults {
 
@@ -34,6 +35,11 @@
 
     // Uncomment for 3D effect
     // text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+}
+
+@mixin icon-chevron() {
+    @extend %icon-defaults;
+    content: '\f0e0';
 }
 
 @mixin icon-facebook() {

@@ -38,7 +38,6 @@
                 margin-top: 100px;
                 text-align: left;
                 width: 45%;
-
             }
 
             h2 {
@@ -74,7 +73,6 @@
                 vertical-align: top;
                 width: 55%;
             }
-
         }
     }
 
@@ -326,11 +324,6 @@
     .contact-deck-1 {
         position: relative;
 
-        @include breakpoint(medium) {
-            margin: 0 auto;
-            width: 75%;
-        }
-
         form {
             position: relative;
 
@@ -411,14 +404,8 @@
 
         button {
             background-color: $color-white;
-            border: 1px solid #2199e8;
             color: #2199e8;
             transition: .3s ease-in;
-
-            &:hover {
-                background-color: #07a1f2;
-                color: $color-white;
-            }
         }
 
         .contact-sidebar {

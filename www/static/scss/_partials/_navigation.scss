@@ -17,7 +17,7 @@
 }
 
 .openNav {
-    background-color: #14b9ff;
+    background-color: $color-white;
     height: 50px;
     left: 20px;
     position: fixed;
@@ -32,7 +32,7 @@
     }
 
     .icon {
-        background-color: $color-white;
+        background-color: $color-black;
         height: 2px;
         left: 10px;
         position: absolute;
@@ -42,7 +42,7 @@
 
         &::before,
         &::after {
-            background-color: $color-white;
+            background-color: $color-black;
             content: '';
             height: 2px;
             left: 0;
