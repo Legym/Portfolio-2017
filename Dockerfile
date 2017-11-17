@@ -1,11 +1,28 @@
-FROM debian:latest
+FROM gpmidi/centos-6.4
 MAINTAINER Mygel Bergstresser version: 0.1
 
-ENV HUGO_VERSION=0.26
-ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb /tmp
+RUN yum groupinstall -y 'Development Tools'
 
-RUN dpkg -i /tmp/hugo_${HUGO_VERSION}_Linux-64bit.deb \
-	&& rm /tmp/hugo_${HUGO_VERSION}_Linux-64bit.deb
+# Install Git
+RUN yum install -y \
+	git \
+	wget \
+	tar
 
+WORKDIR /usr/local/bin
+
+# Install Hugo
+RUN wget https://github.com/gohugoio/hugo/releases/download/v0.30.2/hugo_0.30.2_Linux-64bit.tar.gz
+
+# Uncompress tarbar and remove installation file
+RUN tar xvzf hugo_0.30.2_Linux-64bit.tar.gz \
+	&& rm -rf hugo_0.30.2_Linux-64bit.tar.gz
+
+# Make Hugo accessible
+RUN ln -s /hugo /bin
+
+# Change Directory
 RUN mkdir /www
 WORKDIR /www
+
+CMD hugo server -v --bind=0.0.0.0 --port=80
