@@ -118,22 +118,6 @@ p {
     }
 }
 
-.header {
-    background-color: $color-black;
-    height: 60px;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-
-    @include breakpoint(medium) {
-        background-color: transparent;
-        height: 73px;
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
-}
-
 .footer {
     background-color: $color-black;
     padding: 20px 0 7px;

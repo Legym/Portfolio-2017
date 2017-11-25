@@ -8,7 +8,7 @@
     </div>
 </section>
 
-<section class="content-deck-1">
+<section class="content-deck content-deck-1">
 
 	<div class="row column">
         {{ partial "breadcrumbs" . }}
@@ -67,7 +67,11 @@
 	</div>
 </section>
 
-<section class="content-deck-2">
+<section class="content-deck content-deck-2 content-deck--parallax">
+    {{ partial "blog" . }}
+</section>
+
+<section class="content-deck-3">
 	{{ partial "contact" . }}
 </section>
 

@@ -2,10 +2,6 @@
     background-color: $color-white;
 }
 
-.content-deck--padding {
-    padding: 100px 0 120px;
-}
-
 .content-deck--parallax {
     background-color: transparent;
 }
@@ -13,7 +9,7 @@
 .page-homepage {
 
     .content-deck-1 {
-        background: #f6f6f6;
+        background: $color-primary-gray;
 
         .tech-container {
             margin-top: 45px;
@@ -162,6 +158,10 @@
     // }
 
     .content-deck-2 {
+        @include content-deck-blog();
+    }
+
+    .content-deck-3 {
         @include content-deck-contact();
     }
 }

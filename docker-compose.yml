@@ -1,0 +1,12 @@
+version: '3'
+services:
+    nginx-proxy:
+        image: jwilder/nginx-proxy
+
+    Hugo:
+        build: .
+        image: mygel/rv1
+
+    commento:
+        image: adtac/commento
+

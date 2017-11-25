@@ -5,14 +5,15 @@
             <h3 class="blog__subhead">What we’re buzzing about:</h3>
         </div>
 
-        {{ range ( first 3 ( where .Data.Pages.Reverse "Section" "blog" ) ) }}
+        {{ range ( first 3 ( where .Site.Pages.Reverse "Section" "blog" ) ) }}
             <div class="medium-6 large-4 columns">
                 <div class="blog__item">
                     <a href="{{ .Permalink }}">
-                        <div class="blog__content" style="background-image: url({{ .Params.image }})">
+                        <img class="blog__image" src="{{ .Params.image }}">
+                        <div class="blog__content">
                             <h3>{{ .Params.title }}</h3>
+                            <p class="blog__link">Read More</p>
                         </div>
-                        <p class="blog__link">Read More</p>
                     </a>
                 </div>
             </div>
