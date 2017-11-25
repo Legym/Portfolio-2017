@@ -3,7 +3,6 @@
 	"layout": "blog-post",
 	"title": "blog1",
 	"image": "/images/blog/blog-hero.jpg",
-	"enabled": "true",
 	"tags": [
 		"blog1-tag"
 	],

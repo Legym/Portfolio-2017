@@ -1,6 +1,6 @@
 body {
     background-color: $color-black;
-    font-family: 'LeagueGothic';
+    font-family: $font-primary-display;
     font-size: 1.4em;
     letter-spacing: .05em;
 }
@@ -11,7 +11,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'LeagueGothic';
+    font-family: $font-primary-display;
     letter-spacing: .05em;
     line-height: 1em;
 }
@@ -27,7 +27,7 @@ h2 {
 }
 
 p {
-    font-family: 'Lato';
+    font-family: $font-primary-text;
     font-size: 16px;
     letter-spacing: normal;
 }
@@ -274,7 +274,7 @@ p {
 
         p {
             color: $color-white;
-            font-family: 'LeagueGothic';
+            font-family: $font-primary-display;
             font-size: 16px;
             margin: 0;
 
@@ -286,7 +286,7 @@ p {
     }
 }
 
-#to-top {
+.to-top {
     background-color: rgba(0, 0, 0, .298039);
     border: 0;
     border-radius: 5px;

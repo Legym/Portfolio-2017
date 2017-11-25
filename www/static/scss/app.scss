@@ -19,8 +19,9 @@
 // Plugins
 @import '_partials/slick';
 
-@import '_partials/mixins',
-		'_partials/variables';
+@import '_partials/variables',
+		'_partials/mixins',
+		'_partials/typography';
 
 // Custom
 @import '_partials/fonts',

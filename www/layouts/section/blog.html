@@ -8,67 +8,66 @@
     </div>
 </section>
 
-<section class="content-deck-1">
+<section class="content-deck content-deck-1">
+
     <div class="row">
         <div class="small-12 columns">
             {{ partial "breadcrumbs" . }}
         </div>
 
-        <div class="medium-12 columns">
-            <div id="blog-sticky" class="blog-sidebar-desktop">
-                <h6>FILTER BY:</h6>
+        <div class="small-12 columns">
+            <h6>FILTER BY:</h6>
 
-                <ul class="vertical menu accordion-menu" data-accordion-menu>
-                    <li>
-                        <a href="javascript:void(0);">View By Tag</a>
-                        <ul class="menu vertical" style="display: none;">
-                            <li>
-                                {{ if isset .Site.Taxonomies "tags" }}
-                                    {{ if not (eq (len .Site.Taxonomies.tags) 0) }}
-                                        {{ range $name, $items := .Site.Taxonomies.tags }}
-                                            <a href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | title }}</a>
-                                        {{ end }}
+            <ul class="vertical menu accordion-menu" data-accordion-menu>
+                <li>
+                    <a href="javascript:void(0);">View By Tag</a>
+                    <ul class="menu vertical" style="display: none;">
+                        <li>
+                            {{ if isset .Site.Taxonomies "tags" }}
+                                {{ if not (eq (len .Site.Taxonomies.tags) 0) }}
+                                    {{ range $name, $items := .Site.Taxonomies.tags }}
+                                        <a href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | title }}</a>
                                     {{ end }}
                                 {{ end }}
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">View By Category</a>
-                        <ul class="menu vertical" style="display: none;">
-                            <li>
-                                {{ if isset .Site.Taxonomies "categories" }}
-                                    {{- if not (eq (len .Site.Taxonomies.categories) 0) }}
-                                        {{ range $name, $items := .Site.Taxonomies.categories }}
-                                            <a class="smartCategory" href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | title }}</a>
-                                        {{ end }}
+                            {{ end }}
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">View By Category</a>
+                    <ul class="menu vertical" style="display: none;">
+                        <li>
+                            {{ if isset .Site.Taxonomies "categories" }}
+                                {{- if not (eq (len .Site.Taxonomies.categories) 0) }}
+                                    {{ range $name, $items := .Site.Taxonomies.categories }}
+                                        <a class="smartCategory" href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | title }}</a>
                                     {{ end }}
                                 {{ end }}
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+                            {{ end }}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
+    </div>
 
-        <div class="large-12 columns blog-main-content">
-            <div class="postList">
-                {{ range .Data.Pages }}
-                    <div class="post">
-                        <div class="post-image">
-                            <a href="{{ .Permalink }}"><img src="{{ .Params.image }}"></a>
-                            <span>Aug 23</span>
-                        </div>
-                        <div class="post-metadata">
-                            <h3>
-                                <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
-                            </h3>
-                            <p>This website was originally built to start a career as a web developer. Many redesigns later it turned into a web portfolio, but with one page dedicated to express my observations. Social media is an echo chamber of: memes, motivational quotes...</p>
-                        </div>
+    <div class="row" data-equalizer>
+        {{ range .Data.Pages }}
+            <div class="small-12 medium-6 large-4 columns end">
+                <div class="post" data-equalizer-watch>
+                    <div class="post-image">
+                        <a href="{{ .Permalink }}"><img src="{{ .Params.image }}"></a>
+                        <span>Aug 23</span>
                     </div>
-                {{ end }}
+                    <div class="post-metadata">
+                        <h3>
+                            <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+                        </h3>
+                        <p>This website was originally built to start a career as a web developer. Many redesigns later it turned into a web portfolio, but with one page dedicated to express my observations. Social media is an echo chamber of: memes, motivational quotes...</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        {{ end }}
     </div>
 </section>
 

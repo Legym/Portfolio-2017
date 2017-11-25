@@ -133,7 +133,7 @@ var FEATURES = {
         scroll_top_duration = 700,
 
         //grab the "back to top" link
-        $back_to_top = $('#to-top');
+        $back_to_top = $('.js-to-top');
 
           //hide or show the "back to top" link
         $(window).scroll(function(){

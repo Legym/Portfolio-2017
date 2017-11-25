@@ -1,0 +1,25 @@
+<div class="blog">
+    <div class="row">
+        <div class="small-12 columns">
+            <h2 class="blog__headline">News & articles from our team</h2>
+            <h3 class="blog__subhead">What we’re buzzing about:</h3>
+        </div>
+
+        {{ range ( first 3 ( where .Data.Pages.Reverse "Section" "blog" ) ) }}
+            <div class="medium-6 large-4 columns">
+                <div class="blog__item">
+                    <a href="{{ .Permalink }}">
+                        <div class="blog__content" style="background-image: url({{ .Params.image }})">
+                            <h3>{{ .Params.title }}</h3>
+                        </div>
+                        <p class="blog__link">Read More</p>
+                    </a>
+                </div>
+            </div>
+        {{ end }}
+
+        <div class="small-12 columns">
+            <a class="btn btn-inverse" href="/blog/">View Blog Posts</a>
+        </div>
+    </div>
+</div>
