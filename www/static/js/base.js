@@ -97,7 +97,7 @@ var FEATURES = {
                 // OPENING
                 for (var j = 0; nodelist.length > j; j++) {
                     nodelist[j].style.transitionDuration = '.5s';
-                    nodelist[j].style.transform = 'translate3d(250px, ' + equation + ', 0px)';
+                    nodelist[j].style.transform = 'translate3d(-250px, ' + equation + ', 0px)';
                 }
 
                 state = false;
@@ -118,7 +118,7 @@ var FEATURES = {
 
     homepageSlideshow: function () {
         $(window).on('resize', function () {
-            $('.hero__parallax-window').height($(window).height() - 200);
+            $('.hero__parallax-window').height($(window).height());
         }).resize();
     },
 
