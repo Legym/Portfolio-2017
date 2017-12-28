@@ -31,8 +31,8 @@ h4,
 h5,
 h6 {
     font-family: $font-primary-display;
-    text-transform: uppercase;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .logo {
@@ -40,6 +40,11 @@ h6 {
     font-family: $font-primary-display;
     font-size: calc(18px + .5vw);
     text-transform: uppercase;
+
+    .page-contact &,
+    .page-blog & {
+        color: $color-black;
+    }
 }
 
 .main-navigation {
@@ -80,22 +85,6 @@ h6 {
             color: orange;
         }
     }
-
-    .icon-linkedin {
-        @include icon-linkedin();
-    }
-
-    .icon-github {
-        @include icon-github();
-    }
-
-    .icon-email {
-        @include icon-email();
-    }
-
-    .icon-facebook {
-        @include icon-facebook();
-    }
 }
 
 .hamburger {
@@ -132,6 +121,11 @@ h6 {
         transform: rotate(0deg);
         transition: ease .3s;
         width: 100%;
+
+        .page-contact &,
+        .page-blog & {
+            background-color: $color-black;
+        }
 
         &.hamburger__line--one {
             top: 0;

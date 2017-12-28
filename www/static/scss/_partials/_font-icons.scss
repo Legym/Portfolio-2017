@@ -1,3 +1,10 @@
+.icon-chevron::before { content: '\F0E0'; }
+.icon-facebook::before { content: '\F308'; }
+.icon-github::before { content: '\F300'; }
+.icon-email::before { content: '\F199'; }
+.icon-linkedin::before { content: '\F30C'; }
+.icon-instagram::before { content: '\F16D'; }
+
 %icon-defaults {
 
     // Font smoothing. That was taken from TWBS
@@ -33,32 +40,72 @@
 
 @mixin icon-chevron() {
     @extend %icon-defaults;
-    content: '\f0e0';
+    content: '\F0E0';
 }
 
 @mixin icon-facebook() {
     @extend %icon-defaults;
-    content: '\f30c';
+    content: '\F308';
 }
 
 @mixin icon-github() {
     @extend %icon-defaults;
-    content: '\f09b';
+    content: '\F300';
 }
 
 @mixin icon-email() {
     @extend %icon-defaults;
-    content: '\e800';
+    content: '\F199';
 }
 
 @mixin icon-linkedin() {
     @extend %icon-defaults;
-    content: '\f0e1';
+    content: '\F30C';
 }
 
-.icon-facebook::before { content: '\f30c'; }
-.icon-github::before { content: '\f09b'; }
-.icon-linkedin::before { content: '\f0e1'; }
-.icon-email::before { content: '\e800'; }
-.icon-up-open::before { content: '\f0e0'; }
-.icon-instagram::before { content: '\f0e0'; }
+@mixin icon-instagram() {
+    @extend %icon-defaults;
+    content: '\F16D';
+}
+
+.icon-chevron {
+
+    &::before {
+        @include icon-chevron();
+    }
+}
+
+.icon-linkedin {
+
+    &::before {
+        @include icon-linkedin();
+    }
+}
+
+.icon-github {
+
+    &::before {
+        @include icon-github();
+    }
+}
+
+.icon-email {
+
+    &::before {
+        @include icon-email();
+    }
+}
+
+.icon-facebook {
+
+    &::before {
+        @include icon-facebook();
+    }
+}
+
+.icon-instagram {
+
+    &::before {
+        @include icon-instagram();
+    }
+}

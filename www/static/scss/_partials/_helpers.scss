@@ -22,6 +22,18 @@
 
 .is-menu-open {
 
+    &.page-contact,
+    &.page-blog {
+
+        .logo {
+            color: $color-white;
+        }
+
+        .hamburger__line {
+            background-color: $color-white;
+        }
+    }
+
     .main-navigation {
         transform: translate(0);
     }
