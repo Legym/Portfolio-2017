@@ -1,87 +1,23 @@
-.page-homepage {
-
-    .hero {
-        position: relative;
-
-        &::after {
-            background-color: rgba(0, 0, 0, .3);
-            content: '';
-            display: block;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            width: 100%;
-        }
-
-        .hero__container {
-            position: relative;
-            text-align: center;
-            top: 30%;
-            z-index: 1;
-        }
-
-        h1 {
-            background-color: rgba(255, 255, 255, .5);
-            color: #111;
-            font-size: 40px;
-            margin: 0 auto;
-            padding: .5% 1.1% .6%;
-            text-shadow: 0 3px 10px rgba(0, 0, 0, .2);
-            text-transform: uppercase;
-            width: 68%;
-
-            @include breakpoint(medium) {
-                font-size: 60px;
-                width: 65%;
-            }
-
-            @include breakpoint(large) {
-                font-size: 75px;
-                max-width: 575px;
-                width: 45%;
-            }
-        }
-
-        h2 {
-            background-color: $color-black;
-            color: $color-white;
-            font-size: 40px;
-            margin: 0 auto;
-            padding: .5% 1.1% .6%;
-            text-shadow: 0 3px 10px rgba(0, 0, 0, .2);
-            width: 70%;
-
-            @include breakpoint(medium) {
-                font-size: 60px;
-                width: 70%;
-            }
-
-            @include breakpoint(large) {
-                font-size: 120px;
-                max-width: 625px;
-                width: 70%;
-            }
-        }
-    }
+.hero__parallax-window {
+    height: 100vh;
 }
 
-// .page-experience {
+.hero-homepage {
+    color: $color-white;
 
-//     .hero {
-//         // empty
-//     }
-// }
+    h1 {
+        font-size: 5.5vw;
+        line-height: 88px;
+        text-shadow: 5px 5px 10px #333;
+    }
 
-// .page-blog {
+    h2 {
+        font-size: 1.5vw;
+    }
 
-//     .hero {
-//         // empty
-//     }
-// }
-
-// .page-contact {
-
-//     .hero {
-//         // empty
-//     }
-// }
+    h3 {
+        background-color: $homepage-color;
+        display: inline-block;
+        padding: 0 10px;
+    }
+}

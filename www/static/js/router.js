@@ -21,14 +21,15 @@
         global: {
             init: function () {
                 FEATURES.runFoundaton();
-                FEATURES.toTop();
-                FEATURES.navigationMenu();
+                FEATURES.navigationHamburger();
+                FEATURES.navigationStickyNav();
+                // FEATURES.toTop();
             }
         },
 
         page_homepage: {
             init: function () {
-                FEATURES.homepageSlideshow();
+                //
             }
         },
 

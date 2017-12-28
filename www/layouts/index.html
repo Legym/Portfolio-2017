@@ -1,118 +1,33 @@
 {{ define "main" }}
 
-<section class="hero">
-    <div class="hero__parallax-window" data-parallax="scroll" data-image-src="/images/hero-mount-helens.jpg">
-        <div class="hero__container">
-            <div class="row column">
-                <h2>The Traveling</h2>
-                <h1>Web Developer</h1>
+<section class="hero hero-homepage">
+    <div class="hero__parallax-window" data-parallax="scroll" data-image-src="/images/homepage/hero-front-end-developer.jpg">
+        <div class="grid-container">
+            <div class="grid-y" style="height: 100vh">
+                <div class="cell auto"></div>
+                <div class="cell shrink">
+                    <h3>Who we are</h3>
+                    <h1>Front-End<br>Developer</h1>
+                    <h2>Authentic connections energized by innovation.</h2>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <section class="content-deck content-deck-1">
-    <div class="row">
-        <div class="small-12 columns">
-            <div class="tech-container">
-                <h2>
-                    Looking for a web developer to <br />
-                     build your product?<br />
-                </h2>
-
-                <p>Wire framing, prototyping, and developing websites is intricate. Having worked at an award winning web agency, Mygel has the skills necessary to build quality websites from the ground up.</p>
-
-                <a class="btn btn-inverse" style="margin: 0" href="/about/">Learn More</a>
-            </div>
-
-            <img src="/images/homepage/main-image.png" alt="Mygelb - Front End developer"/>
-        </div>
-
-    </div>
+    Intro
 </section>
 
 <section class="content-deck content-deck-2">
-    <div class="row">
-        <div class="large-8 large-offset-2 columns centered">
-            <div class="message-title">
-                <h2>A large variety of technologies</h2>
-                <h4>Looking to see what type of services that I can work with?</h4>
-            </div>
-        </div>
-    </div>
-
-    <div class="row" data-equalizer>
-        <div class="large-3 small-6 columns service">
-            <div class="service-style" data-equalizer-watch>
-                <i class="fa fa-laptop" aria-hidden="true"></i>
-                <h5>Website Design</h5>
-                <p>Wire framing websites with Adobe Photoshop or Illustrator is a crucial tool for prototyping a finished product.</p>
-            </div>
-        </div>
-
-        <div class="large-3 small-6 columns service">
-            <div class="service-style" data-equalizer-watch>
-                <i class="fa fa-code" aria-hidden="true"></i>
-                <h5>Website Development</h5>
-                <p>Delivering clean, organize, and optimize code allows for other developers to reuse and build on a pre existing codebase. </p>
-            </div>
-        </div>
-
-        <div class="large-3 small-6 columns service">
-            <div class="service-style" data-equalizer-watch>
-                <i class="fa fa-mobile" aria-hidden="true"></i>
-                <h5>Responsive Design</h5>
-                <p>More and more web browsing is occurring on mobile devices and building websites to fit on any screen is a must.</p>
-            </div>
-        </div>
-
-        <div class="large-3 small-6 columns service">
-            <div class="service-style" data-equalizer-watch>
-                <i class="fa fa-search" aria-hidden="true"></i>
-                <h5>Search Engine Optimization</h5>
-                <p>Ranking a website on Google's search page is important; Knowing best practices helps increase your site's web presence.</p>
-            </div>
-        </div>
-
-        <div class="large-3 small-6 columns service">
-            <div class="service-style" data-equalizer-watch>
-                <i class="fa fa-sitemap" aria-hidden="true"></i>
-                <h5>Single Page Applications</h5>
-                <p>More users want websites that are more dynamic and interactive. Angular and React are perfect tools to build data-driven websites.</p>
-            </div>
-        </div>
-
-        <div class="large-3 small-6 columns service">
-            <div class="service-style" data-equalizer-watch>
-                <i class="fa fa-share-square-o" aria-hidden="true"></i>
-                <h5>Traditional Websites</h5>
-                <p>Not everyone needs an application and would rather just want to a normal website about their company or idea.</p>
-            </div>
-        </div>
-
-        <div class="large-3 small-6 columns service">
-            <div class="service-style" data-equalizer-watch>
-                <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                <h5>Content Management Systems</h5>
-                <p>Working with a CMS can be tricky. Setting up Wordpress, Umbraco, and 3rd party systems is handy to know.</p>
-            </div>
-        </div>
-
-        <div class="large-3 small-6 columns service">
-            <div class="service-style" data-equalizer-watch>
-                <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-                <h5>eCommerce Sites</h5>
-                <p>Buying and selling products online can be complicated and confusing. Experience with shopify and woocommerce has proven beneficial.</p>
-            </div>
-        </div>
-    </div>
+    Professional Experience
 </section>
 
 <section class="content-deck content-deck-3">
     {{ partial "blog" . }}
 </section>
 
-<section class="content-deck content-deck-4 content-deck--parallax">
+<section class="content-deck content-deck-4">
     {{ partial "contact" . }}
 </section>
 

@@ -1,0 +1,59 @@
+.is-no-scroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+.is-header-banner {
+
+    &::before {
+        background-color: $color-white;
+        transform: scale(20);
+        z-index: -1;
+    }
+
+    .logo {
+        color: $color-black;
+    }
+
+    .hamburger__line {
+        background-color: $color-black;
+    }
+}
+
+.is-menu-open {
+
+    .main-navigation {
+        transform: translate(0);
+    }
+
+    .hamburger {
+
+        .hamburger__inner:hover {
+
+            .hamburger__line--one {
+                top: 6px;
+            }
+
+            .hamburger__line--three {
+                top: 6px;
+            }
+        }
+
+        .hamburger__line {
+
+            &.hamburger__line--one {
+                top: 6px;
+                transform: rotate(45deg);
+            }
+
+            &.hamburger__line--two {
+                opacity: 0;
+            }
+
+            &.hamburger__line--three {
+                top: 6px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

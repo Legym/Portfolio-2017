@@ -1,0 +1,41 @@
+rules:
+  class-name-format:
+  - 1
+  - convention: hyphenatedbem
+  empty-args:
+  - 1
+  - include: true
+  extends-before-declarations: 1
+  extends-before-mixins: 1
+  final-newline: 0
+  force-attribute-nesting: 0
+  force-element-nesting: 0
+  force-pseudo-nesting: 0
+  hex-length: 0
+  hex-notation:
+  - 1
+  - style: lowercase
+  indentation:
+    - 1
+    -
+      size: 4
+  nesting-depth:
+    - 1
+    -
+      max-depth: 4
+  no-color-literals: 0
+  no-ids: 1
+  no-important: 0
+  no-qualifying-elements: 0
+  no-trailing-whitespace: 0
+  no-vendor-prefixes: 0
+  pseudo-element: 0
+  quotes:
+  - 1
+  - style: single
+  variable-name-format:
+  - 1
+  - allow-leading-underscore: false
+  zero-unit:
+  - 1
+  - include: false

@@ -1,32 +1,21 @@
-// Install ZURB Foundation
-@import 'util/util',
-		'global',
-		'grid/grid',
-		'typography/typography',
-		'components/breadcrumbs',
-		'components/accordion',
-		'components/accordion-menu',
-		'components/menu';
+// sass-lint:disable indentation
 
-@include foundation-global-styles();
-@include foundation-grid();
-@include foundation-typography();
-@include foundation-breadcrumbs();
-@include foundation-accordion();
-@include foundation-accordion-menu();
-@include foundation-menu();
+// Install Foundation
+@import '_partials/foundation';
 
 // Plugins
 @import '_partials/slick';
 
 @import '_partials/variables',
-		'_partials/mixins',
-		'_partials/typography';
+        '_partials/mixins',
+        '_partials/typography';
 
 // Custom
 @import '_partials/fonts',
-		'_partials/font-icons',
-		'_partials/global',
-		'_partials/navigation',
-		'_partials/sections',
-		'_partials/heroes';
+        '_partials/font-icons',
+        '_partials/navigation',
+        '_partials/sections',
+        '_partials/heroes',
+        '_partials/footer';
+
+@import '_partials/helpers';

@@ -1,122 +1,149 @@
-.navOpen {
-    overflow: hidden;
-}
-
-.wrapper {
-    height: 100%;
+body {
     position: relative;
-    transition-duration: .5s;
-    transition-timing-function: swing;
-    width: 100%;
-    z-index: 22;
-
-    &.open {
-        transform: translateX(-250px) translateY(50px);
-        z-index: 99;
-    }
 }
 
-.openNav {
-    background-color: $color-white;
-    height: 50px;
-    right: 40px;
+header {
+    left: 0;
     position: fixed;
-    top: 20px;
-    transition-duration: .5s;
-    transition-timing-function: swing;
-    width: 50px;
-    z-index: 9999;
-
-    &:hover {
-        cursor: pointer;
-    }
-
-    .icon {
-        background-color: $color-black;
-        height: 2px;
-        left: 10px;
-        position: absolute;
-        top: 24px;
-        transition-duration: .2s;
-        width: 30px;
-
-        &::before,
-        &::after {
-            background-color: $color-black;
-            content: '';
-            height: 2px;
-            left: 0;
-            position: absolute;
-            transition-duration: .5s;
-            width: 30px;
-        }
-
-        &::before {
-            top: -7px;
-        }
-
-        &::after {
-            top: 7px;
-        }
-    }
-
-    &.open {
-        transform: translateX(-250px) translateY(50px);
-
-        .icon {
-            background-color: transparent;
-
-            &:before,
-            &:after {
-                top: 0;
-            }
-
-            &:before {
-                transform: rotate(-45deg);
-            }
-
-            &:after {
-                transform: rotate(45deg);
-            }
-        }
-    }
-}
-
-nav {
-    background-color: $color-black;
-    display: none;
-    height: 100%;
     right: 0;
-    position: fixed;
-    top: 0;
+    z-index: 999;
 
-    &.open {
+    &::before {
+        background-color: $homepage-color;
+        content: '';
         display: block;
+        height: 5px;
+        position: absolute;
+        transition: .3s ease;
+        width: 100%;
     }
+}
 
-    ul {
-        margin-top: 50px;
-        width: 250px;
+ul {
+    list-style: none;
+    margin: 0;
+}
 
-    &:hover {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-primary-display;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.logo {
+    color: $color-white;
+    font-family: $font-primary-display;
+    font-size: calc(18px + .5vw);
+    text-transform: uppercase;
+}
+
+.main-navigation {
+    background-color: $homepage-color;
+    color: $color-white;
+    position: fixed;
+    text-align: center;
+    transform: translate(-100%);
+    transition: .5s ease-out;
+    width: 100vw;
+
+    &__link {
+        font-family: $font-primary-display;
+        text-transform: uppercase;
 
         li {
-            color: fade($color-white, 50%);
+            line-height: 4vw;
+        }
+
+        a {
+            font-size: 6vw;
         }
     }
 
-    li {
-        color: $color-white;
-        display: block;
-        letter-spacing: .02em;
-        padding: 5px 40px;
-        text-align: right;
-        transition-duration: .25s;
+    &__contact {
 
-            &:hover {
-                color: $color-white;
-                cursor: pointer;
+    }
+
+    &__social {
+
+    }
+
+    a {
+        color: inherit;
+        transition: .3s ease;
+
+        &:hover {
+            color: orange;
+        }
+    }
+
+    .icon-linkedin {
+        @include icon-linkedin();
+    }
+
+    .icon-github {
+        @include icon-github();
+    }
+
+    .icon-email {
+        @include icon-email();
+    }
+
+    .icon-facebook {
+        @include icon-facebook();
+    }
+}
+
+.hamburger {
+    cursor: pointer;
+    height: 58px;
+    position: relative;
+    width: 64px;
+
+    .hamburger__inner {
+        height: 18px;
+        left: 50%;
+        margin-left: -12px;
+        margin-top: -9px;
+        position: absolute;
+        top: 50%;
+        width: 24px;
+
+        &:hover {
+
+            .hamburger__line--one {
+                top: -3px;
+            }
+
+            .hamburger__line--three {
+                top: 15px;
             }
         }
     }
+
+    .hamburger__line {
+        background-color: $color-white;
+        height: 3px;
+        position: absolute;
+        transform: rotate(0deg);
+        transition: ease .3s;
+        width: 100%;
+
+        &.hamburger__line--one {
+            top: 0;
+        }
+
+        &.hamburger__line--two {
+            top: 6px;
+        }
+
+        &.hamburger__line--three {
+            top: 12px;
+        }
+    }
 }
+

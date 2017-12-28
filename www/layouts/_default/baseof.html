@@ -15,14 +15,16 @@
         <link rel="stylesheet" href="{{ .Site.BaseURL }}css/app.min.css"/>
     </head>
 
-    <body class="page-{{ with .Section }}{{ . }}{{ else }}homepage{{ end }}  js-no-scroll">
+    <body class="page-{{ with .Section }}{{ . }}{{ else }}homepage{{ end }}">
 
         {{ partial "header" . }}
 
-        <main class="wrapper">
-            <button class="to-top js-to-top">
+        {{ partial "navigation" . }}
+
+        <main>
+<!--             <button class="to-top js-to-top">
                 <i class="fa fa-chevron-up"></i>
-            </button>
+            </button> -->
 
             {{ block "main" . }} {{ end }}
 

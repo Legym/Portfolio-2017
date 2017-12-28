@@ -5,13 +5,6 @@ module.exports = {
         "jquery": true
     },
     "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true
-        },
-        "sourceType": "module"
-    },
     "rules": {
         "linebreak-style": [
             "error",

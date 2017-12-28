@@ -1,0 +1,24 @@
+@import '../_vendor/normalize-scss/sass/normalize';
+@import '../_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
+@import '../_vendor/sassy-lists/stylesheets/helpers/true';
+@import '../_vendor/sassy-lists/stylesheets/functions/contain';
+@import '../_vendor/sassy-lists/stylesheets/functions/purge';
+@import '../_vendor/sassy-lists/stylesheets/functions/remove';
+@import '../_vendor/sassy-lists/stylesheets/functions/replace';
+@import '../_vendor/sassy-lists/stylesheets/functions/to-list';
+
+@import 'util/util';
+@import '_partials/foundation-settings';
+@import 'global';
+
+@import 'grid/grid';
+@import 'xy-grid/xy-grid';
+@import 'typography/typography';
+
+@import 'components/flex';
+
+@include foundation-global-styles();
+@include foundation-flex-grid();
+@include foundation-xy-grid-classes();
+@include foundation-flex-classes();
+@include foundation-typography();

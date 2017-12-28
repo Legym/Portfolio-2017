@@ -1,325 +1,120 @@
-.content-deck {
-    background-color: $color-white;
-}
+%content-deck-blog {
+    background-color: $color-primary-gray;
 
-.content-deck--parallax {
-    background-color: transparent;
+    .blog {
+
+        .small-4 {
+
+            &:nth-of-type(2) {
+                border: 1px solid $color-black;
+            }
+        }
+
+        &__image {
+            width: 210px;
+            height: 200px;
+        }
+
+        &__content {
+
+            h3 {
+
+            }
+
+            h4 {
+                color: $color-black;
+            }
+
+            p {
+
+            }
+        }
+    }
 }
 
 .page-homepage {
 
     .content-deck-1 {
-        background: $color-primary-gray;
-
-        .tech-container {
-            margin-top: 45px;
-            text-align: center;
-
-            @include breakpoint(large) {
-                display: inline-block;
-                margin-bottom: 65px;
-                margin-top: 100px;
-                text-align: left;
-                width: 45%;
-            }
-
-            h2 {
-                font-size: 1.5em;
-                text-transform: uppercase;
-
-                @include breakpoint(large) {
-                    font-size: 2.5em;
-                }
-            }
-
-            p {
-
-                @include breakpoint(large) {
-                    width: 80%;
-                }
-            }
-        }
-
-        img {
-            border: 2px solid $color-white;
-            display: block;
-            margin: 0 auto;
-            position: relative;
-            top: 45px;
-            width: 80%;
-
-            @include breakpoint(large) {
-                display: inline-block;
-                height: 460px;
-                margin-left: -5px;
-                top: 100px;
-                vertical-align: top;
-                width: 55%;
-            }
-        }
+        //
     }
 
     .content-deck-2 {
-        background-color: $color-white;
-
-        .parallax-window {
-            padding-bottom: 100px;
-
-            @include breakpoint(medium) {
-                padding-bottom: 60px;
-            }
-        }
-
-        .parallax-content {
-            height: 300px;
-            padding-top: 150px;
-        }
-
-        .message-title {
-            margin: 100px 0 40px;
-            text-align: center;
-
-            h2 {
-                color: #111;
-                font-size: 1.5em;
-
-                @include breakpoint(medium) {
-                    font-size: 2.4em;
-                }
-            }
-
-            h4 {
-                color: #111;
-            }
-
-            p {
-                color: #111;
-                display: none;
-
-                @include breakpoint(medium) {
-                    display: block;
-                }
-            }
-        }
-
-        .service {
-            text-align: center;
-
-            .service-style {
-                background-color: $color-white;
-                box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .14), 0 2px 2px 0 rgba(0, 0, 0, .098), 0 1px 5px 0 rgba(0, 0, 0, .084);
-                margin-bottom: 40px;
-                padding: 20px 10px 16px;
-            }
-
-            .fa {
-                color: $primary-color;
-                font-size: 2.4em;
-            }
-
-            h5 {
-                color: #111;
-                font-size: 1.2em;
-                margin-bottom: 5px;
-                margin-top: 15px;
-                text-shadow: 7px 3px 4px #d4d4d4;
-            }
-
-            p {
-                display: none;
-
-                @include breakpoint(medium) {
-                    color: #111;
-                    display: block;
-                }
-            }
-        }
-
-        .btn {
-            background-color: $color-white;
-            display: block;
-            margin: 0 auto;
-        }
+        //
     }
 
     .content-deck-3 {
-        @include content-deck-blog();
+        @extend %content-deck-blog;
     }
 
     .content-deck-4 {
-        @include content-deck-contact();
-    }
-}
-
-.page-experience {
-
-    // .content-deck-1 {
-
-    // }
-
-    .content-deck-2 {
-        @include content-deck-blog();
-    }
-
-    .content-deck-3 {
-        @include content-deck-contact();
+        //
     }
 }
 
 .page-blog {
 
-    // .content-deck-1 {
-
-    // }
+    .content-deck-1 {
+        //
+    }
 
     .content-deck-2 {
-        @include content-deck-contact();
+        //
+    }
+
+    .content-deck-3 {
+        //
     }
 }
 
 .page-contact {
 
-    .contact-deck-1 {
-        position: relative;
+    .content-deck-1 {
+        //
+    }
 
-        form {
-            position: relative;
+    .content-deck-2 {
+        //
+    }
 
-            @include breakpoint(large) {
-                margin: 0 auto;
-                margin-left: 0;
-                width: 80%;
-            }
+    .content-deck-3 {
+        //
+    }
+}
 
-            &:after {
+.page-red-ventures {
 
-                @include breakpoint(large) {
-                    border-right: 1px solid #dddbd7;
-                    content: '';
-                    height: 100%;
-                    position: absolute;
-                    right: -100px;
-                    top: 0;
-                    width: 2px;
-                }
-            }
+    .content-deck-1 {
+        //
+    }
 
-            input {
-                background-color: #fefefe;
-                border: 1px solid #cacaca;
-                border-radius: 0;
-                box-shadow: inset 0 1px 2px rgba(10, 10, 10, .1);
-                box-sizing: border-box;
-                color: #0a0a0a;
-                display: block;
-                font-family: inherit;
-                font-size: 1rem;
-                height: 2.4375rem;
-                margin: 0 0 1rem;
-                padding: .5rem;
-                transition: box-shadow .5s, border-color .25s ease-in-out;
-                width: 100%;
-            }
+    .content-deck-2 {
+        @extend %content-deck-blog;
+    }
 
-            h4 {
-                color: #07a1f2;
-                font-size: 2.5rem;
-                margin-bottom: 0;
-            }
+    .content-deck-3 {
+        //
+    }
 
-            p {
-                border-bottom: 2px solid #07a1f2;
-                font-family: $font-primary-text;
-                font-size: 16px;
-                letter-spacing: normal;
-                line-height: 16px;
-                padding-bottom: 15px;
-                width: 100%;
-            }
-        }
+    .content-deck-4 {
+        //
+    }
+}
 
-        label {
-            font-size: 1.5625rem;
-        }
+.page-efelle-creative {
 
-        textarea {
-            background-color: #fefefe;
-            border: 1px solid #cacaca;
-            border-radius: 0;
-            box-shadow: inset 0 1px 2px rgba(10, 10, 10, .1);
-            box-sizing: border-box;
-            color: #0a0a0a;
-            display: block;
-            font-family: inherit;
-            font-size: 1rem;
-            height: 150px;
-            margin: 0 0 1rem;
-            margin-bottom: 30px;
-            padding: .5rem;
-            transition: box-shadow .5s, border-color .25s ease-in-out;
-            width: 100%;
-        }
+    .content-deck-1 {
+        //
+    }
 
-        button {
-            background-color: $color-white;
-            color: #2199e8;
-            transition: .3s ease-in;
-        }
+    .content-deck-2 {
+        @extend %content-deck-blog;
+    }
 
-        .contact-sidebar {
-            margin-top: 40px;
-            text-align: center;
+    .content-deck-3 {
+        //
+    }
 
-            @include breakpoint(medium) {
-                margin: 0 auto;
-                margin-top: 40px;
-                width: 75%;
-            }
-
-            @include breakpoint(large) {
-                margin: inherit;
-                text-align: inherit;
-            }
-
-            h2 {
-                color: $primary-color;
-                font-size: 2.5rem;
-                margin-bottom: 0;
-            }
-
-            > p {
-                border-bottom: 2px solid $primary-color;
-                line-height: 16px;
-                padding-bottom: 15px;
-            }
-
-
-            ul {
-                margin: 0;
-
-                h4 {
-                    color: #111;
-                    margin-bottom: 0;
-                }
-
-                li {
-                    list-style: none;
-                    margin-bottom: 25px;
-                }
-
-                a {
-                    border: 1px solid $primary-color;
-                    color: $primary-color;
-
-                    &:after {
-                        background: $primary-color;
-                    }
-
-                    &:hover {
-                        color: $color-white;
-                    }
-                }
-            }
-        }
+    .content-deck-4 {
+        //
     }
 }

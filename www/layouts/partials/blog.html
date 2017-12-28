@@ -1,26 +1,24 @@
 <div class="blog">
-    <div class="row">
-        <div class="small-12 columns">
-            <h2 class="blog__headline">News & articles from our team</h2>
-            <h3 class="blog__subhead">What we’re buzzing about:</h3>
-        </div>
-
-        {{ range ( first 3 ( where .Site.Pages.Reverse "Section" "blog" ) ) }}
-            <div class="medium-6 large-4 columns">
-                <div class="blog__item">
-                    <a href="{{ .Permalink }}">
-                        <img class="blog__image" src="{{ .Params.image }}">
-                        <div class="blog__content">
-                            <h3>{{ .Params.title }}</h3>
-                            <p class="blog__link">Read More</p>
-                        </div>
-                    </a>
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x align-center-middle text-center">
+            {{ range ( first 3 ( where .Site.Pages.Reverse "Section" "blog" ) ) }}
+                <div class="cell small-4">
+                    <div class="blog__item">
+                        <a href="{{ .Permalink }}">
+                            <img class="blog__image" src="{{ .Params.image }}">
+                            <div class="blog__content">
+                                <h3>{{ .Params.title }}</h3>
+                                <p class="blog__link">Read More</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        {{ end }}
+            {{ end }}
+        </div>
 
         <div class="small-12 columns">
             <a class="btn btn-inverse" href="/blog/">View Blog Posts</a>
         </div>
+
     </div>
 </div>
