@@ -1,9 +1,9 @@
-.hero__parallax-window {
-    height: 100vh;
-}
-
-.hero-homepage {
+.hero-parallax {
     color: $color-white;
+
+    &__background {
+        height: 100vh;
+    }
 
     h1 {
         font-size: 5.5vw;
