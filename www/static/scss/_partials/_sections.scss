@@ -100,7 +100,7 @@
     }
 
     .content-deck-2 {
-        @extend %content-deck-blog;
+        //
     }
 
     .content-deck-3 {
@@ -108,6 +108,10 @@
     }
 
     .content-deck-4 {
+        @extend %content-deck-blog;
+    }
+
+    .content-deck-5 {
         //
     }
 }

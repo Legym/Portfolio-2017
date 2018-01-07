@@ -50,6 +50,10 @@ var FEATURES = {
 
             header.classList.toggle('is-header-banner', window.scrollY > 1);
         });
+    },
+
+    efelleSlider: function() {
+
     }
 
     // toTop: function() {

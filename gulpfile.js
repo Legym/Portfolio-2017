@@ -87,7 +87,12 @@ gulp.task('javascript-compile', function() {
         './node_modules/foundation-sites/dist/js/plugins/foundation.core.js',
         './node_modules/foundation-sites/dist/js/plugins/foundation.util.mediaQuery.js',
         './node_modules/foundation-sites/dist/js/plugins/foundation.util.timerAndImageLoader.js',
-        './node_modules/slick-carousel/slick/slick.js',
+        './node_modules/foundation-sites/dist/js/plugins/foundation.util.keyboard.js',
+        './node_modules/foundation-sites/dist/js/plugins/foundation.util.motion.js',
+        './node_modules/foundation-sites/dist/js/plugins/foundation.util.timer.js',
+        './node_modules/foundation-sites/dist/js/plugins/foundation.util.imageLoader.js',
+        './node_modules/foundation-sites/dist/js/plugins/foundation.util.touch.js',
+        './node_modules/foundation-sites/dist/js/plugins/foundation.orbit.js',
         './www/static/js/vendor/parallax.min.js',
         './www/static/js/base.js',
         './www/static/js/router.js'

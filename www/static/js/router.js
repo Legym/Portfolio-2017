@@ -43,6 +43,12 @@
             init: function () {
                 //
             }
+        },
+
+        page_efelle_creative: {
+            init: function () {
+                FEATURES.efelleSlider();
+            }
         }
     };
 

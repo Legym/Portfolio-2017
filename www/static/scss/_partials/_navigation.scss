@@ -55,6 +55,7 @@ h6 {
     transform: translate(-100%);
     transition: .5s ease-out;
     width: 100vw;
+    z-index: 1;
 
     &__link {
         font-family: $font-primary-display;
