@@ -23,6 +23,5 @@ RUN ln -s /hugo /bin
 RUN mkdir /www
 WORKDIR /www
 COPY www .
-RUN npm run gulp
 
-CMD hugo server -v --bind=0.0.0.0 --port=80
+CMD hugo server --port=80
