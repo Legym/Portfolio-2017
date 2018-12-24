@@ -24,4 +24,4 @@ RUN mkdir /www
 WORKDIR /www
 COPY www .
 
-CMD hugo --port=80
+CMD hugo
