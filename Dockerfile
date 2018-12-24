@@ -22,5 +22,6 @@ RUN ln -s /hugo /bin
 # Change Directory
 RUN mkdir /www
 WORKDIR /www
+COPY www .
 
 CMD hugo server -v --bind=0.0.0.0 --port=80
