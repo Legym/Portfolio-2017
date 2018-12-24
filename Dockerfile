@@ -24,4 +24,4 @@ RUN mkdir /www
 WORKDIR /www
 COPY www .
 
-CMD hugo server -v -b https://mygelb.com -p 80
+CMD hugo server -v -b http://mygelb.com --port 80
