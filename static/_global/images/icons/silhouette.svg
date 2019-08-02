@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Header-Alternate" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-869.000000, -9.000000)">
+        <g id="Header" fill="#000000" fill-rule="nonzero">
+            <g id="aux-navigation" transform="translate(328.000000, 0.000000)">
+                <g id="links-right" transform="translate(386.000000, 9.000000)">
+                    <g id="my-account" transform="translate(155.000000, 0.000000)">
+                        <path d="M9,0 C4.029,0 0,4.029 0,9 C0,13.971 4.029,18 9,18 C13.971,18 18,13.971 18,9 C18,4.029 13.971,0 9,0 Z M9,1.125 C13.342,1.125 16.875,4.658 16.875,9 C16.875,10.955 16.154,12.742 14.97,14.121 C13.515,12.323 11.334,11.258 9,11.258 C6.665,11.258 4.485,12.323 3.03,14.121 C1.846,12.742 1.125,10.955 1.125,9 C1.125,4.658 4.658,1.125 9,1.125 Z M3.828,14.924 C5.07,13.33 6.966,12.383 9,12.383 C11.034,12.383 12.93,13.33 14.172,14.924 C12.787,16.135 10.98,16.875 9,16.875 C7.02,16.875 5.213,16.135 3.828,14.924 Z M9,10.125 C10.864,10.125 12.375,8.614 12.375,6.75 C12.375,4.886 10.864,3.375 9,3.375 C7.136,3.375 5.625,4.886 5.625,6.75 C5.625,8.614 7.136,10.125 9,10.125 Z M9,4.5 C10.241,4.5 11.25,5.509 11.25,6.75 C11.25,7.991 10.241,9 9,9 C7.759,9 6.75,7.991 6.75,6.75 C6.75,5.509 7.759,4.5 9,4.5 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

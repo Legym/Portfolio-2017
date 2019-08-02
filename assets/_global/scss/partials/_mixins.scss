@@ -1,0 +1,192 @@
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@function convert($value, $newUnit){
+  $units: (
+    'px': 0px,
+    'cm': 0cm,
+    'mm': 0mm,
+    '%': 0%,
+    'ch': 0ch,
+    'in': 0in,
+    'em': 0em,
+    'rem': 0rem,
+    'pt': 0pt,
+    'pc': 0pc,
+    'ex': 0ex,
+    'vw': 0vw,
+    'vh': 0vh,
+    'vmin': 0vmin,
+    'vmax': 0vmax,
+    'deg': 0deg,
+    'turn': 0turn,
+    'rad': 0rad,
+    'grad': 0grad,
+    's': 0s,
+    'ms': 0ms,
+    'Hz': 0Hz,
+    'kHz': 0kHz,
+    'dppx': 0dppx,
+    'dpcm': 0dpcm,
+    'dpi': 0dpi,
+  );
+
+  @if map-has-key($units, $newUnit) {
+    @return map-get($units, $newUnit) + $value;
+  }
+
+  @error "Unknown unit `#{$unit}`.";
+}
+
+@mixin body-copy($class-name, $font-family: null, $font-size: null, $font-weight: null) {
+  @if $class-name == '' and $font-size == null {
+    @error '$font-size is undefined. This is a required value.';
+  } // @if
+
+  @if $class-name != '' {
+    $font-size: map-get(map-get($body-copy, unquote($class-name)), font-size);
+  } // @if
+
+  font-family: if($font-family, $font-family, $font-primary-display);
+  font-size: $font-size;
+  font-weight: if($font-weight, $font-weight, 400);
+  line-height: $font-size * 1.2;
+}
+
+@mixin buttons($class-name, $font-family: null, $font-size: null, $font-weight: null) {
+  @if $class-name == '' and $font-size == null {
+    @error '$font-size is undefined. This is a required value.';
+  } // @if
+
+  @if $class-name != '' {
+    $font-size: map-get(map-get($buttons, unquote($class-name)), font-size);
+  } // @if
+
+  display: inline-block;
+  font-family: if($font-family, $font-family, $font-primary-display);
+  font-size: $font-size;
+  font-weight: if($font-weight, $font-weight, 700);
+  line-height: $font-size * .95;
+  text-decoration: none;
+}
+
+@mixin headline($class-name, $font-size: null) {
+  @if $class-name == '' and $font-size == null {
+    @error '$font-size is undefined. This is a required value.';
+  }
+
+  @if $class-name != '' and str-index($class-name, 'headline') or str-index($class-name, 'subhead') {
+    $font-size: map-get(map-get($headlines, unquote($class-name)), font-size);
+  }
+
+  @include typography('Display', $font-size);
+}
+
+@mixin has-rule($placement, $padding, $border-thickness: 2px) {
+  border-#{unquote($placement)}: $border-thickness solid;
+  padding-#{unquote($placement)}: if($padding, $padding, 18px);
+}
+
+@mixin is-divider-title($color: inherit, $border-color: inherit, $height-of-line: 2px, $margin: 12px, $text-width: 173px) {
+  // line width is 100% minus text width and margin widths
+  $text-plus-margin: $text-width + 2 * $margin;
+  $line-width: '(100% - #{$text-plus-margin})/2';
+
+  margin: 18px 0;
+  color: $color;
+  text-align: center;
+
+  // Psuedo elements act as bar "lines" that bookend either side of the title
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    width: calc(#{$line-width}); // width is 100% minus text width and margin widths
+    height: $height-of-line;
+    margin-right: $margin;
+    background: $border-color;
+    vertical-align: middle;
+  } // &::before, &::after
+
+  &::after {
+    margin-right: 0;
+    margin-left: $margin;
+  } // &::after
+
+  .divider-title__inner {
+    display: inline-block;
+    width: $text-width;
+  } // .divider-title__inner
+}
+
+@mixin labels($class-name, $font-family: null, $font-size: null, $font-weight: null) {
+  $line-height: null;
+
+  @if $class-name == '' and $font-size == null {
+    @error '$font-size is undefined. This is a required value.';
+  } // @if
+
+  @if $class-name != '' {
+    $font-size: map-get(map-get($labels, unquote($class-name)), font-size);
+    $line-height: $font-size * 1.2;
+  } // @if
+
+  @if $class-name == 'label-3' {
+    $line-height: $font-size * .95;
+  } // @if
+
+  font-family: if($font-family, $font-family, $font-primary-text);
+  font-size: $font-size;
+  font-weight: if($font-weight, $font-weight, 700);
+  line-height: $line-height;
+}
+
+@mixin legal($class-name, $font-family: null, $font-size: null, $font-weight: null) {
+  @if $class-name == '' and $font-size == null {
+    @error '$font-size is undefined. This is a required value.';
+  } // @if
+
+  @if $class-name != '' {
+    $font-size: map-get(map-get($legal, unquote($class-name)), font-size);
+  } // @if
+
+  @include typography('Arial', $font-size);
+}
+
+@mixin typography($font-family: null, $font-size: null, $font-weight: null) {
+
+  @if $font-size == null {
+    @error '$font-size is undefined. This is a required value.';
+  }
+
+  @if $font-family == null {
+    @error '$font-family, is undefined. This is a required value.';
+  }
+
+  font-size: convert($font-size, px); // 24px
+
+  @if $font-family == 'Display' {
+    font-family: $font-primary-display;
+    line-height: convert($font-size, px) * 0.95;
+    font-weight: 700;
+  } @else if $font-family == 'Arial' {
+    font-family: $font-legal;
+    line-height: 1;
+  } @else if $font-family == 'Text' {
+    font-family: $font-primary-text;
+    line-height: convert($font-size, px) * 1.2;
+  } @else if $font-family != '' and $font-family != null {
+    font-family: $font-family;
+  }
+
+  @if $font-weight != null {
+    font-weight: $font-weight;
+  }
+}

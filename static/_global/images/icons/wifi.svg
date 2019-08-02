@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="14px" viewBox="0 0 18 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>wifi</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="wifi" fill="#000000" fill-rule="nonzero">
+            <path d="M5.222,9.633 L6.032,10.443 C7.6,8.873 10.336,8.874 11.905,10.443 L12.715,9.633 C11.714,8.633 10.384,8.081 8.968,8.081 C7.554,8.081 6.223,8.632 5.222,9.633 Z" id="Shape"></path>
+            <path d="M2.549,6.96 L3.359,7.77 C4.857,6.272 6.85,5.446 8.969,5.446 C11.087,5.446 13.08,6.271 14.578,7.77 L15.388,6.96 C13.674,5.245 11.394,4.3 8.969,4.3 C6.544,4.301 4.264,5.245 2.549,6.96 Z" id="Shape"></path>
+            <path d="M9,0.613 C5.6,0.613 2.404,1.937 0,4.341 L0.81,5.151 C2.998,2.964 5.906,1.759 9,1.759 C12.094,1.759 15.003,2.964 17.19,5.151 L18,4.341 C15.596,1.937 12.4,0.613 9,0.613 Z" id="Shape"></path>
+            <path d="M7.605,12.05 L8.942,13.387 L10.279,12.05 C9.54,11.312 8.343,11.312 7.605,12.05 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

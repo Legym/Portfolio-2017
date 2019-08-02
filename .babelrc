@@ -1,0 +1,27 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "styled-jsx": {
+          "plugins": [
+            [
+              "styled-jsx-plugin-sass"],
+          ]
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "@assets": "./assets",
+        "@components": "./components",
+        "@providers": "./providers",
+        "@layout": "./layout",
+        "@wp-config": "./lib/wp-config",
+      }
+    }],
+  ]
+}

@@ -1,0 +1,36 @@
+/*
+ * SCSS includes. Allows to style elements using mixins
+ *
+*/
+
+@each $title, $value in $headlines {
+  // $class-name: str-replace(#{$title}, '-', '--');
+
+  .#{$title} {
+    @include headline(#{$title});
+  }
+}
+
+@each $title, $value in $body-copy {
+  $class-name: str-replace(#{$title}, '-', '--');
+
+  .#{$class-name} {
+    @include body-copy(#{$title});
+  }
+}
+
+@each $title, $value in $labels {
+  $class-name: str-replace(#{$title}, '-', '--');
+
+  .#{$class-name} {
+    @include labels(#{$title});
+  }
+}
+
+@each $title, $value in $legal {
+  $class-name: str-replace(#{$title}, '-', '--');
+
+  .#{$class-name} {
+    @include legal(#{$title});
+  }
+}

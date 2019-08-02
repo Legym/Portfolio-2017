@@ -1,4 +1,5 @@
-.DS_Store
-bower_components
+.next
 node_modules
+out
+.DS_Store
 public

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="15px" viewBox="0 0 28 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>scroll-down-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0.413563579,1.76102155 L13.3673612,15.0006256 L27.6447602,1.5236246 C28.7091838,0.59865201 27.194134,-0.577115931 25.5250378,0.342031225 L13.5176266,11.6410837 L2.52749122,0.59865201 C1.3824587,-0.713582138 -0.946736367,0.342031225 0.413563579,1.76102155 Z" id="scroll-down-arrow" fill="#F70000" fill-rule="nonzero"></path>
+    </g>
+</svg>
