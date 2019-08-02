@@ -1,0 +1,10 @@
+stages:
+- name: Compile and Build
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: mygel/portfolio
+      pushRemote: true
+      registry: index.docker.io
+timeout: 60
